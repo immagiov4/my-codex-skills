@@ -1,0 +1,27 @@
+{
+  "name": "my-codex-skills",
+  "version": "0.1.0",
+  "description": "Personal Codex engineering workflows shared across local and cloud environments.",
+  "author": {
+    "name": "immagiov4",
+    "url": "https://github.com/immagiov4"
+  },
+  "homepage": "https://github.com/immagiov4/my-codex-skills",
+  "repository": "https://github.com/immagiov4/my-codex-skills",
+  "license": "MIT",
+  "keywords": ["codex", "skills", "engineering-workflow"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "My Codex Skills",
+    "shortDescription": "Personal engineering workflows for Codex",
+    "longDescription": "A maintained collection of Codex skills for discovery, implementation, verification, review, documentation, and web performance work.",
+    "developerName": "immagiov4",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://github.com/immagiov4/my-codex-skills",
+    "defaultPrompt": [
+      "Choose the right workflow for this engineering task",
+      "Audit this web application with web-performance"
+    ]
+  }
+}

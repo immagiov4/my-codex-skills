@@ -1,0 +1,6 @@
+interface:
+  display_name: "Create verification skill"
+  short_description: "Create a reusable runtime verification skill"
+  default_prompt: "Use $create-verification-skill to create a runtime verification workflow for this project."
+policy:
+  allow_implicit_invocation: false

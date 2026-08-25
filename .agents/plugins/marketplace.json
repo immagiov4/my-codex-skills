@@ -1,0 +1,22 @@
+{
+  "name": "my-codex-skills",
+  "interface": {
+    "displayName": "My Codex Skills"
+  },
+  "plugins": [
+    {
+      "name": "my-codex-skills",
+      "version": "0.1.0",
+      "description": "Personal Codex engineering workflows shared across local and cloud environments.",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

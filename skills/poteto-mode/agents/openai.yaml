@@ -1,0 +1,6 @@
+interface:
+  display_name: "Poteto mode"
+  short_description: "Run the complete Poteto engineering workflow"
+  default_prompt: "Use $poteto-mode to run this engineering task through the appropriate playbook."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Blast radius"
+  short_description: "Trace the full impact of a proposed code change"
+  default_prompt: "Use $blast-radius to trace the affected contracts and downstream behavior."
+policy:
+  allow_implicit_invocation: false
