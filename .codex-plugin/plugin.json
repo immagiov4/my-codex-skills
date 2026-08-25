@@ -1,6 +1,6 @@
 {
   "name": "my-codex-skills",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Personal Codex engineering workflows shared across local and cloud environments.",
   "author": {
     "name": "immagiov4",
@@ -14,7 +14,7 @@
   "interface": {
     "displayName": "My Codex Skills",
     "shortDescription": "Personal engineering workflows for Codex",
-    "longDescription": "A maintained collection of Codex skills for discovery, implementation, verification, review, documentation, and web performance work.",
+    "longDescription": "A maintained collection of Codex skills for discovery, issue governance, implementation, verification, review, documentation, and web performance work.",
     "developerName": "immagiov4",
     "category": "Productivity",
     "capabilities": ["Interactive", "Read", "Write"],

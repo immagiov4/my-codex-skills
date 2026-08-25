@@ -45,6 +45,8 @@ Each directory under `skills/` is an independently discoverable Codex skill. The
 
 `web-performance` measures browser-facing performance when runtime evidence is available. When it only has source code, it reports possible performance effects without pretending that static analysis measured Core Web Vitals.
 
+`problem-to-github-issue` keeps evidence, hypotheses, options, and approved requirements separate when an agent creates or rewrites an issue.
+
 ## License
 
 Original work and local adaptations are released under the MIT License. Upstream material remains covered by its original license and copyright notice.
