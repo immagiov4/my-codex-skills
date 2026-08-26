@@ -87,3 +87,5 @@ After a meaningful feature or refactor, use `$maintain-system-map`. Update docum
 ## Respect Git authorization
 
 Read repository Git rules before any state change. Do not initialize a repository, create or switch branches, commit, push, merge, open a pull request, or rewrite history unless the user authorized that action and the repository permits it. Read-only Git commands are fine when they support the task.
+
+After publishing a Codex Cloud result to a pull request, remove any auto-added `[Codex Task](https://chatgpt.com/codex/...)` footer from the pull-request body and verify it is absent. Preserve the rest of the description; private task URLs are not durable pull-request metadata.
