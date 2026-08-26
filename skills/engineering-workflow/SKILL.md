@@ -88,4 +88,6 @@ After a meaningful feature or refactor, use `$maintain-system-map`. Update docum
 
 Read repository Git rules before any state change. Do not initialize a repository, create or switch branches, commit, push, merge, open a pull request, or rewrite history unless the user authorized that action and the repository permits it. Read-only Git commands are fine when they support the task.
 
+Use the exact `@codex review` trigger for GitHub reviews. Send implementation and fix instructions through the active Codex task, not through pull-request comments: any other `@codex` mention starts a private Cloud task and adds noise to the public pull request.
+
 After publishing a Codex Cloud result to a pull request, remove any auto-added `[Codex Task](https://chatgpt.com/codex/...)` footer from the pull-request body and verify it is absent. Preserve the rest of the description; private task URLs are not durable pull-request metadata.
