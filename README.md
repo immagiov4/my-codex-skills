@@ -47,6 +47,8 @@ Each directory under `skills/` is an independently discoverable Codex skill. The
 
 `problem-to-github-issue` keeps evidence, hypotheses, options, and approved requirements separate when an agent creates or rewrites an issue.
 
+`receiving-pr-reviews` checks review findings against real product paths, fixes bounded problem classes, and pauses a PR when feedback exposes an architectural or product decision.
+
 ## License
 
 Original work and local adaptations are released under the MIT License. Upstream material remains covered by its original license and copyright notice.
