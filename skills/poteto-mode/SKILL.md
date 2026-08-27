@@ -13,6 +13,10 @@ These rules apply to every playbook and reference linked from this skill.
 
 - Follow the system, developer, user, and repository instructions. This skill grants no extra permission.
 - Do not commit, push, merge, open a pull request, edit a ticket, send a message, deploy, or change an external system unless the user authorized that action and the repository allows it.
+- GitHub issues, pull requests, and review threads are durable project records, not Codex chat. Keep plans, progress, promises, self-corrections, and tool narration in the Codex task commentary, including during Codex Cloud work.
+- Before an authorized GitHub comment, assemble the complete evidence, decision, disposition, or maintainer request. Publish it once.
+- Use separate comments only for separate durable events, distinct review threads, review commands, or explicit user requests.
+- When possible, edit an incomplete comment instead of appending progress notes.
 - Use Codex collaboration tools for subagents. Spawn subagents only when the user or the active workflow asks for independent work. Respect the available slot limit and give each writer a separate path or worktree.
 - Use Codex collaboration, wait, browser, and terminal tools. If a linked playbook names an unavailable mechanism, keep the useful intent and report what Codex could not reproduce.
 - Use installed Codex skills with `$skill-name`. Use `$skill-creator` for skill authoring.
