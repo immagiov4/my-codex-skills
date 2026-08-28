@@ -270,6 +270,12 @@ restart services outside the execution-authority boundary.
 
 Before publication, re-check remote state and the complete worktree.
 
+- For every GitHub issue, PR, or comment mutation, write the Markdown body to a file with real
+  newline characters and pass that file to the GitHub CLI or API. Do not interpolate Markdown
+  through a shell string that can flatten its structure. Read back the returned or rendered body
+  and verify the applicable title, headings, lists, and paragraph breaks before completion. When
+  updating a skill or workflow that generates GitHub content, repeat this round-trip check after
+  every content-generation change and during final validation.
 - Stage only the approved scope. Use `git add -A` only when the user explicitly approved the whole
   worktree.
 - Scan staged additions for credentials and inspect every hit; environment-variable references are
