@@ -45,9 +45,9 @@ Each directory under `skills/` is an independently discoverable Codex skill. The
 
 `web-performance` measures browser-facing performance when runtime evidence is available. When it only has source code, it reports possible performance effects without pretending that static analysis measured Core Web Vitals.
 
-`problem-to-github-issue` keeps evidence, hypotheses, options, and approved requirements separate when an agent creates or rewrites an issue.
+`problem-to-github-issue` checks requirements against `AGENTS.md` and maintainer decisions before creating or rewriting an issue. Acceptance criteria describe the approved change; they do not add requirements.
 
-`receiving-pr-reviews` checks review findings against real product paths, fixes bounded problem classes, and pauses a PR when feedback exposes an architectural or product decision.
+`receiving-pr-reviews` validates the issue and PR contract before investigating review findings. Repository instructions take precedence over conflicting review comments; unresolved conflicts in the original requirements go to the maintainer.
 
 ## License
 
