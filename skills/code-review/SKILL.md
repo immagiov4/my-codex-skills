@@ -87,6 +87,13 @@ If the spec is missing, skip the Spec sub-agent and note this in the final repor
 
 ### 5. Aggregate
 
+Before applying corrections, use
+[receiving-pr-reviews](../receiving-pr-reviews/SKILL.md) to validate and dispose of
+findings, including those from local agents and subsequent self-review. For user
+decisions during a long-running task, use
+[agent-question-notifications](../agent-question-notifications/SKILL.md).
+A review-only request remains read-only.
+
 Present the two reports under `## Standards` and `## Spec` headings. Keep the axes separate, but remove duplicates and findings that do not pass the materiality gate. Do not inflate a weak finding because both agents mentioned it.
 
 End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
