@@ -33,3 +33,11 @@ Source: [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)
 Copyright 2025 Addy Osmani. MIT License. See [`licenses/ADDYOSMANI-MIT.txt`](licenses/ADDYOSMANI-MIT.txt).
 
 `web-performance` adapts the metric-honesty rules and measurement workflow from `performance-optimization`, `/webperf`, and the web performance auditor. It removes Claude-specific commands, personas, and hooks.
+
+## No AI Slop
+
+Source: [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop)
+
+Copyright 2026 Peter Yang. MIT License. See [`licenses/NO-AI-SLOP-MIT.txt`](licenses/NO-AI-SLOP-MIT.txt).
+
+`docs-doc` adapts its audit boundary, voice-preservation rule, portability test, and prose-pattern checks that were not already present in this collection.
