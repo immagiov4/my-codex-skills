@@ -225,18 +225,21 @@ Keep stable reference prose free of incidental chronology. Reports and histories
 - Replace vague timing such as "recently" with a relevant date, or remove it when timing does no work. State a shared consultation date once when the required citation style permits.
 - Keep future plans only if they are explicitly authored or explicitly requested by the user.
 
-## 9. Do not answer unasked questions
+## 9. State conclusions and material limits
 
-Documentation describes what something does.
+Lead an analytical paragraph with the supported result and its meaning, followed
+by the precise condition that limits that interpretation. State each material
+condition once; retain distinct limits when they change the conclusion.
 
-- Remove "it does not ..." statements unless the omitted behavior is something a reasonable reader would strongly and naturally expect.
-- Do not add defensive clarifications for hypothetical misunderstandings the reader is unlikely to have.
+Replace chains such as "does not equal", "does not demonstrate", and "does not
+imply" that repeat the same misunderstanding with one affirmative conclusion
+and its material condition. Preserve negative findings and substantive limits
+on scope, uncertainty, comparability, causality, and verification. Necessary
+negation remains valid: this is a rule about reasoning, not a word ban.
 
-This rule does not override foundational contracts. If the reader cannot use the API without knowing a behavior, it is no longer an unasked question.
-
-Preserve qualifications that affect interpretation: scope, uncertainty,
-comparability, causal limits, and consequential verification gaps. A warning
-about a real inference is different from a disclaimer about an implausible one.
+For documentation, describe behavior and foundational contracts the reader needs.
+Keep clarifications that affect use or interpretation; omit defensive answers
+to hypothetical misunderstandings the reader is unlikely to have.
 
 ## Evidence and claimed applications
 
@@ -343,7 +346,7 @@ Apply to any prose this skill covers. Item 1 applies only to document sets:
 10. Would a developer say these words out loud? Replace invented metaphors and fancy synonyms with the plain word or the real symbol name.
 11. Are all symbols, paths, and counts real at this commit, with the commands that regenerate the counts?
 12. Are defaults, sentinel values, and lifecycle contracts verified against the code, not inferred?
-13. Are dates and qualifications relevant, and are claims supported in the author's voice?
+13. Does analysis lead with a supported result and its meaning, state each material condition once, and preserve negative findings, relevant dates, and the author's voice?
 
 ## Editing rules
 
