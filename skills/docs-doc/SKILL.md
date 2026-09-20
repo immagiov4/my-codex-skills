@@ -24,6 +24,12 @@ for someone, use their first-person or impersonal authorial voice. References
 to "the student," "the user," or "the author" belong only where that person is
 actually the subject of analysis, not as commentary about the requester.
 
+Set voice separately for each deliverable. An analytical report speaks from its
+analyst's position; a public-facing page may adopt the organization's voice or
+describe it in third person. Choose according to purpose and attribution, then
+keep that position consistent. Move methodological detail to the analytical
+report when the page's reader needs activities, results, and documents.
+
 A report develops an argument through evidence, interpretation, and consequences.
 A manual explains how to act. Apply Diátaxis to documentation where it helps;
 preserve a report's required sections and supplied template rather than forcing
@@ -191,7 +197,7 @@ A doc can obey every layer and still read machine-written: every sentence clippe
 - Read the whole text before editing isolated sentences; treat each prose paragraph as a coherent unit of thought rather than a sequence of individually correct facts.
 - Organize facts around the paragraph's point through supported relationships such as cause, comparison, evidence, or consequence. Move or remove details that do not develop that point.
 - Conjunctions alone do not create cohesion. Make the relationship clear using the available evidence, without inventing causality to smooth the prose. Let the material and genre determine paragraph structure rather than applying one fixed pattern.
-- Mix sentence lengths on purpose. Short sentences land a point. Longer ones that take their time carry a fact with its condition or consequence.
+- Let rhythm follow the thought. Use a short sentence to land a point and a longer one to carry connected reasoning. Elegance comes from precise relationships and proportionate syntax; ordinary ideas can share a sentence when the reader can readily follow them.
 - Join closely related statements when the connection matters. Avoid both stacked fragments and chains of clauses that obscure the point.
 - Have a view where the mode allows it. Explanation weighs trade-offs, so say what you make of them instead of listing pros and cons. Reference stays dry.
 - Be specific over sterile. Not "schema changes can cause issues" but "a column rename fails the build".
@@ -259,7 +265,12 @@ them or citation is required. Preserve required attribution and provenance.
 
 Distinguish observed practices from assumptions about audiences or genres.
 Verify comparisons with examples, or state the project's own design choice
-without inventing a contrast to justify it.
+without inventing a contrast to justify it. When using another project's work as
+a reference, identify each artifact's author, audience, and role before borrowing
+its presentation. A company's source report, a demonstrative website, and the
+student's analysis provide evidence about different writing choices. Compare
+the actual passages; treat observed choices as examples and establish binding
+requirements from the assignment or governing instructions.
 
 ## 10. Make implicit contracts explicit
 
@@ -342,7 +353,7 @@ Apply to any prose this skill covers. Item 1 applies only to document sets:
 3. Does the structure suit the genre and preserve required sections or fields?
 4. Is the file structure consistent, or do multiple documentation styles coexist? Normalize first.
 5. Is every instruction written as a command, with its condition in front?
-6. Does the syntax clarify relationships at the reader's level, with varied sentence lengths?
+6. Does every prose paragraph develop a connected thought, with syntax proportionate to the reader's knowledge? Read consecutive paragraphs together to check progression, rather than approving each sentence in isolation.
 7. Can any word be cut without losing meaning? Cut it.
 8. Is "only" next to the word it changes? Does every "it" point at one thing? Does every clause keep its verb?
 9. Does each thing have exactly one name across the docs?
