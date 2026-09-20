@@ -188,6 +188,9 @@ Source: Kohl, The Global English Style Guide (SAS Press). Guideline text fetched
 
 A doc can obey every layer and still read machine-written: every sentence clipped short, no view anywhere, nothing specific.
 
+- Read the whole text before editing isolated sentences; treat each prose paragraph as a coherent unit of thought rather than a sequence of individually correct facts.
+- Organize facts around the paragraph's point through supported relationships such as cause, comparison, evidence, or consequence. Move or remove details that do not develop that point.
+- Conjunctions alone do not create cohesion. Make the relationship clear using the available evidence, without inventing causality to smooth the prose. Let the material and genre determine paragraph structure rather than applying one fixed pattern.
 - Mix sentence lengths on purpose. Short sentences land a point. Longer ones that take their time carry a fact with its condition or consequence.
 - Join closely related statements when the connection matters. Avoid both stacked fragments and chains of clauses that obscure the point.
 - Have a view where the mode allows it. Explanation weighs trade-offs, so say what you make of them instead of listing pros and cons. Reference stays dry.
