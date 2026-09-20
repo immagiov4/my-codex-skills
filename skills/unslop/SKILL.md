@@ -11,18 +11,18 @@ Edit text to remove AI patterns and add human voice.
 
 1. Scan for the patterns below.
 2. Rewrite. Preserve meaning, match intended tone.
-3. Add soul (see next section).
-4. Self-audit: "What makes this obviously AI generated?" Fix remaining tells.
+3. Preserve the author's voice and the reader's level (see next section).
+4. Check the whole text for the recurring patterns found, not only the quoted examples. Judge clarity and substance rather than guessing authorship.
 
 ## Adding soul
 
 Removing patterns is half the job. Sterile, voiceless writing is just as obvious.
 
-- **Have opinions.** React to facts instead of neutrally listing pros and cons.
+- **Use judgment where the genre calls for it.** Ground interpretation in evidence and preserve the author's position; do not invent opinions to make prose lively.
 - **Vary rhythm.** Short sentences. Then longer ones that take their time. Mix it up.
 - **Acknowledge complexity.** "Impressive but also kind of unsettling" beats "impressive."
 - **Use "I" when it fits.** First person isn't unprofessional.
-- **Let some mess in.** Perfect structure looks machine-made.
+- **Preserve natural voice.** Keep useful variation and deliberate rough edges; invent neither mistakes nor personal experience to simulate authenticity.
 - **Be specific.** Not "this is concerning" but "there's something unsettling about agents churning away at 3am."
 
 ## Patterns to detect and fix
@@ -47,7 +47,7 @@ Removing patterns is half the job. Sterile, voiceless writing is just as obvious
 
 ### Style
 
-13. **Em dash overuse.** Avoid em dashes entirely. Use periods or commas only (no parentheses, no en dashes, no hyphen-as-dash substitutes). Em dashes are an AI tell, and reaching for parentheses instead just trades one tell for another. If a thought needs separation, end the sentence or use a comma.
+13. **Staged punctuation.** Replace decorative interruptions with a direct grammatical connection. Choose punctuation for meaning and genre, rather than turning every clause into a separate sentence.
 14. **Colon overuse.** Colons are fine before a list or example. Not as mid-sentence connectors. "If you're coming from traditional automation: instead of registering event handlers, you describe conditions" adds nothing with the colon. Rewrite to let the point stand on its own without comparison framing. "Describing when the scheduler should fire works best as plain English." Same meaning, no crutch punctuation.
 15. **Boldface overuse.** Don't bold every proper noun or acronym.
 16. **Inline-header lists.** The tell is a bold label and colon that restates the line: "**Performance:** Performance improved...". Convert those to prose. A bold lead-in that ends in a period, names the item, and is followed by genuinely new detail ("**Schema in TypeScript.** Tables live in one file.") is fine, not a tell.
@@ -74,7 +74,8 @@ Removing patterns is half the job. Sterile, voiceless writing is just as obvious
 ### Plain speech
 
 27. **Say what it does, not how it feels.** "the database stays close at hand", "SQL you can read", "types that follow your schema" name a feeling. The fix names the mechanism or a number: "`.toSQL()` returns the exact string sent to the database", "a column rename fails the build". Ask what the sentence tells the reader to do or know, then write that. If you can't restate it as a concrete instruction, fact, or number, cut it. One more check: if the sentence could appear unchanged in another project's docs, it says nothing about this one. Cut it.
-28. **Shorten or split dense sentences.** If the reader has to backtrack to parse a sentence, break it in two or drop clauses. One idea per sentence.
+28. **Match syntax to the thought.** If readers must backtrack, split or simplify. When nearby statements share a cause, contrast, or condition, connect them naturally. Avoid mechanically short prose as well as overloaded sentences; ordinary ideas do not need remedial explanations for expert readers.
 29. **Active voice.** Prefer it. Catch "is/are/was/were + past participle" and name the actor: "queries are validated" becomes "the compiler validates queries", "the file is parsed by the loader" becomes "the loader parses the file". Passive is fine only when the actor is unknown or genuinely doesn't matter.
 30. **Cut adverbs, or use a stronger verb.** "runs quickly" becomes "is fast" or the number. "significantly improves" becomes the measured delta. An adverb propping up a weak verb means the verb is wrong.
 31. **Prefer the plain word.** "utilize" becomes "use", "leverage" becomes "use", "facilitate" becomes "help", "numerous" becomes "many", "in the event that" becomes "if". The fancier synonym is rarely clearer.
+32. **Obviousness and defensive padding.** Cut adjectives, process narration, and exclusions that the context already establishes. Keep the specific fact that changes interpretation, including uncertainty or a real limitation. When `$docs-doc` also applies, it owns document-level voice, evidence, and genre decisions.

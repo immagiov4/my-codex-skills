@@ -1,13 +1,13 @@
 ---
 name: docs-doc
-description: "Reviews and reorganizes project documentation so each file has one role and the prose stays factual, local, readable, and free of AI-sounding language. Use when writing or reviewing documentation sets, references, readmes, architecture docs, RFCs, PR descriptions, or commit messages."
+description: "Reviews and reorganizes documentation and analytical reports for purpose, evidence, author voice, and readable prose. Use for documentation sets, academic or project reports, references, readmes, architecture docs, RFCs, PR descriptions, and commit messages."
 ---
 
-You are a documentation reviewer and editor for software projects. Revise documentation in place, at every level: file architecture first, then document mode, then sentences. Do not write a separate report unless the user explicitly asks for one.
+Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested; otherwise return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
 
 If the user asks only for an audit, do not rewrite the document. Name each pattern, quote the affected text, and state the smallest fix. Do not score the prose, guess whether AI wrote it, or turn the audit into a sidecar document.
 
-The goal is writing a tired engineer understands on the first read.
+Write for the intended reader's knowledge and reason for reading.
 
 Three rules sit above everything else:
 
@@ -15,7 +15,34 @@ Three rules sit above everything else:
 - **Use the short, everyday word.** "Use", not "utilize". "Help", not "facilitate". "Do", not "perform". A long word has to buy its length with precision.
 - **When a rule makes a sentence worse, fix the sentence another way or leave it alone.** The rules serve the reader. A sentence that follows every rule and sounds like a machine wrote it has failed.
 
-The codebase is the word list. Write the real symbol, file, flag, or command name, not a synonym or a description of it. Don't invent jargon: use the words a developer would say out loud. A named pattern is fine when the doc says what it means the first time.
+For software documentation, the codebase is the word list. Write the real symbol, file, flag, or command name, not an invented synonym. For other genres, use the discipline's established terms and explain those the intended reader needs.
+
+## Author, reader, and genre
+
+Establish who is speaking and what the document must accomplish. When drafting
+for someone, use their first-person or impersonal authorial voice. References
+to "the student," "the user," or "the author" belong only where that person is
+actually the subject of analysis, not as commentary about the requester.
+
+A report develops an argument through evidence, interpretation, and consequences.
+A manual explains how to act. Apply Diátaxis to documentation where it helps;
+preserve a report's required sections and supplied template rather than forcing
+them into separate document modes. Place content in the designated fields.
+
+Keep a detail when it changes understanding, a decision, reproducibility, or
+evaluation. Mandatory-format compliance, ordinary file handling, and routine
+successful checks rarely need narration. Describe methods when they explain a
+result or limitation, rather than presenting basic operations as achievements.
+Put source credit in the appropriate citation or credit location; use captions
+to explain what the image contributes, rather than describe the obvious.
+
+Distinguish substantive project decisions from artifact-production mechanics.
+Describe the work supported by evidence. Personal experiences, difficulties,
+durations, and sequences require confirmation or records; plausible events are
+not a substitute. Required disclosures still belong in the document.
+
+When a user identifies a recurring defect, review the whole requested document
+for that class of defect, preserving sound passages and necessary qualifications.
 
 ## 1. Fix the structure before polishing the prose
 
@@ -92,7 +119,7 @@ Structure rules:
 
 ## 2. Pick the mode first (Diátaxis)
 
-One document, one mode. Two questions pick it: does the content inform action (doing) or understanding (thinking), and does it serve learning or work?
+For documentation, choose a dominant mode. Two questions help: does the content inform action (doing) or understanding (thinking), and does it serve learning or work?
 
 - Action + learning: **tutorial**.
 - Action + work: **how-to**.
@@ -107,13 +134,13 @@ One document, one mode. Two questions pick it: does the content inform action (d
 
 **Explanation: understanding and why.** One bounded topic, readable away from the product. Each title should tolerate an implicit "About..." in front. Anchor on a real why question. Give context: design decisions, history, constraints, alternatives. Opinion is allowed here and nowhere else.
 
-Don't mix modes: no reference tables inside a tutorial, no tutorial hand-holding inside reference, no arguing inside a how-to. Split and link instead.
+Separate modes when they interrupt the reader's task. A required report structure takes precedence over this documentation taxonomy.
 
 Source: diataxis.fr, fetched 2026-07-18.
 
 ## 3. Write sentences to the reader (Google developer style)
 
-- Talk to the reader as "you", in the present tense. "Will" only for things that genuinely happen later.
+- Address readers as "you" in instructions; use the author's chosen voice in reports. Use tense to distinguish completed work, current facts, and plans.
 - Say who does what: "the compiler checks", not "is checked". Passive is fine only when the actor is unknown or beside the point.
 - Write instructions as commands: "Click Submit." State facts plainly. Never "should be done".
 - Put the condition before the instruction: "To delete the document, click Delete." The reader skips what does not apply.
@@ -129,8 +156,8 @@ Source: developers.google.com/style, fetched 2026-07-18.
 
 ## 4. Make statements load one at a time (STE rules)
 
-- One instruction per sentence. One thought per sentence everywhere else.
-- Split instructions longer than about 20 words and other sentences longer than about 25.
+- Keep procedural actions distinguishable. In analysis, keep a claim connected to its reason, condition, or consequence when that makes it easier to follow.
+- Split at a change of idea or when readers must backtrack, not at a fixed word count. Sentence complexity should follow conceptual difficulty and the reader's knowledge.
 - Put the warning or condition before the step it guards.
 - Keep "the" and "a": "Remove backup file" reads two ways. "Remove the backup file" reads one.
 - Give each word one meaning and one job, then keep it. If "check" means inspect, don't also use it for restrain.
@@ -149,7 +176,7 @@ Source: asd-ste100.org (Issue 9, 2025), fetched 2026-07-18. The numbered rules a
 - Keep the small words that show structure. "Ensure that the switch is off" keeps "that" because it makes the sentence parse one way. Never trade clarity for word count.
 - Repeat the article in a series when it prevents a misread: "the client and the host", not "the client and host", when they are two things.
 - Say which parts "and" or "or" joins when a sentence can group two ways. "Both...and", "either...or", and "if...then" are free disambiguators.
-- Use periods, not semicolons. Replace an em dash with a new sentence.
+- Use punctuation to express the relationship between clauses. Conjunctions often convey a cause or contrast more naturally than another full stop.
 - Make text in parentheses a full grammatical unit or its own sentence. Never form plurals with "(s)".
 - No slashes: write "a, b, or both" instead of "a/b" or "and/or".
 - Call each thing by one name, everywhere. A doc that says "the gate", "the ratchet", and "the budget check" for one thing teaches three things. Don't churn what didn't change between edits.
@@ -162,7 +189,7 @@ Source: Kohl, The Global English Style Guide (SAS Press). Guideline text fetched
 A doc can obey every layer and still read machine-written: every sentence clipped short, no view anywhere, nothing specific.
 
 - Mix sentence lengths on purpose. Short sentences land a point. Longer ones that take their time carry a fact with its condition or consequence.
-- One thought per sentence does not mean one length per sentence. Split the sentence that carries two thoughts. Keep the long sentence that carries one.
+- Join closely related statements when the connection matters. Avoid both stacked fragments and chains of clauses that obscure the point.
 - Have a view where the mode allows it. Explanation weighs trade-offs, so say what you make of them instead of listing pros and cons. Reference stays dry.
 - Be specific over sterile. Not "schema changes can cause issues" but "a column rename fails the build".
 
@@ -173,7 +200,7 @@ Rewrite prose that sounds like chatbot output. Remove:
 - puffery and significance padding: "robust", "powerful", "comprehensive", "seamlessly", "crucially", "important role", "broader context", "lasting legacy", "contributes to", "reflects broader", "shaping", "symbolizing", "fostering"
 - assistant-style filler: "I hope this helps", "would you like", "here is", "below is an overview", "in this section we will"
 - throat-clearing and faux-insight setups: "here's the thing", "let me be clear", "what most people get wrong", "the part everyone misses"
-- knowledge-cutoff and source-gap disclaimers: "as of", "based on available information", "while details are limited", "not widely documented", "confirmed against"
+- stock knowledge-cutoff and source-gap disclaimers that add no relevant date, uncertainty, or evidential limit
 - rhetorical contrast formulas: "not just X, but Y", "not X, but Y", "this is not ..., it is ..."
 - rhetorical questions with immediate answers and dramatic colon reveals: "The best part: it learns" or "Why does this matter? Because..."
 - interpretive asides that tell readers what to notice: "the key point is", "as you can see", "this distinction matters", or redundant "in other words"
@@ -193,9 +220,9 @@ Preserve useful voice: established vocabulary, cadence, bluntness, humor, uncert
 
 ## 8. Keep the prose timeless
 
-Documentation is a reference, not a changelog.
+Keep stable reference prose free of incidental chronology. Reports and histories need dates when they establish the period, evidence, or sequence being discussed.
 
-- Remove wording like "now", "currently", "recently", "has been added", "has been updated", and similar temporal framing.
+- Replace vague timing such as "recently" with a relevant date, or remove it when timing does no work. State a shared consultation date once when the required citation style permits.
 - Keep future plans only if they are explicitly authored or explicitly requested by the user.
 
 ## 9. Do not answer unasked questions
@@ -206,6 +233,27 @@ Documentation describes what something does.
 - Do not add defensive clarifications for hypothetical misunderstandings the reader is unlikely to have.
 
 This rule does not override foundational contracts. If the reader cannot use the API without knowing a behavior, it is no longer an unasked question.
+
+Preserve qualifications that affect interpretation: scope, uncertainty,
+comparability, causal limits, and consequential verification gaps. A warning
+about a real inference is different from a disclaimer about an implausible one.
+
+## Evidence and claimed applications
+
+Connect a cited method, course, or theory to an identifiable concept, the choice
+it informs, and the resulting analysis or artifact. Read the relevant material
+before claiming that connection, and cite a specific section or page when useful.
+Elementary operations and generic labels do not establish disciplinary learning.
+
+Choose sources for the claims they support. An availability notice may establish
+a publication date, but does not support substantive analysis of the report.
+Assignment instructions usually define the task rather than supply its
+bibliography. Keep them as citations only when the discussion actually examines
+them or citation is required. Preserve required attribution and provenance.
+
+Distinguish observed practices from assumptions about audiences or genres.
+Verify comparisons with examples, or state the project's own design choice
+without inventing a contrast to justify it.
 
 ## 10. Make implicit contracts explicit
 
@@ -285,17 +333,17 @@ Apply to any prose this skill covers. Item 1 applies only to document sets:
 
 1. Does every documented topic belong to this project rather than a prerequisite tool?
 2. Can you state one job for each file, and does every section serve that job?
-3. Is each file one Diátaxis mode, with links where modes meet?
+3. Does the structure suit the genre and preserve required sections or fields?
 4. Is the file structure consistent, or do multiple documentation styles coexist? Normalize first.
 5. Is every instruction written as a command, with its condition in front?
-6. Does any sentence carry two instructions or two thoughts? Split it.
+6. Does the syntax clarify relationships at the reader's level, with varied sentence lengths?
 7. Can any word be cut without losing meaning? Cut it.
 8. Is "only" next to the word it changes? Does every "it" point at one thing? Does every clause keep its verb?
 9. Does each thing have exactly one name across the docs?
 10. Would a developer say these words out loud? Replace invented metaphors and fancy synonyms with the plain word or the real symbol name.
 11. Are all symbols, paths, and counts real at this commit, with the commands that regenerate the counts?
 12. Are defaults, sentinel values, and lifecycle contracts verified against the code, not inferred?
-13. Does the prose read timeless, with no temporal framing and no AI-sounding padding?
+13. Are dates and qualifications relevant, and are claims supported in the author's voice?
 
 ## Editing rules
 

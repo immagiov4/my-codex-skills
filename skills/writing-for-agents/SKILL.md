@@ -75,6 +75,13 @@ You win twice: fewer tokens, and a sharper hook for the agent to hang its thinki
 
 ## Pruning
 
+When incorporating user corrections, identify the recurring decision error and
+edit its owning rule, including contradictory instructions already present.
+Generalize the principle, not the incident: a report's audience, template, or
+page limit is not a rule for every document. Shared prompts and agents should
+point to the owner rather than duplicate its catalogue. Use `$docs-doc` for
+document voice, relevance, and evidence; `$unslop` owns sentence-level patterns.
+
 - Keep each meaning in a **single source of truth**: one authoritative place, so changing the behaviour is a one-place edit. **Duplication** (the same meaning in more than one place) costs maintenance and tokens, and inflates a meaning's prominence on the ladder past its real rank. (The accidental inverse of a leading word, which repeats a token on purpose, never the meaning.)
 - The **environment** is a source of truth too (`package.json` scripts, config files, the directory layout, `--help` output), and a document that restates it is a **cache**: a copy of a lookup, earning its load only when the lookup is expensive. Cache what the agent cannot find by looking: the unwritten convention, the reason behind a choice, the gotcha no config confesses. Leave the one-file, one-command lookups to the environment, where they cannot go stale.
 - Check every line for **relevance**: does it still bear on what the document does? A line loses relevance by never bearing on the task (mere exposition, or a branch that should be disclosed) or by going stale as the behaviour or world it describes changes. Shorter documents are easier to keep relevant. Without a pruning discipline the default fate is **sediment**: stale layers that settle because adding feels safe and removing feels risky, until you must core down through them to find what is still live.
