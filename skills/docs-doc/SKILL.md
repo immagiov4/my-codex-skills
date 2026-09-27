@@ -3,7 +3,7 @@ name: docs-doc
 description: "Reviews and reorganizes documentation and analytical reports for purpose, evidence, author voice, and readable prose. Use for documentation sets, academic or project reports, references, readmes, architecture docs, RFCs, PR descriptions, and commit messages."
 ---
 
-Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested. Otherwise, return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
+Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested, otherwise return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
 
 If the user asks only for an audit, do not rewrite the document. Name each pattern, quote the affected text, and state the smallest fix. Do not score the prose, guess whether AI wrote it, or turn the audit into a sidecar document.
 
@@ -191,18 +191,12 @@ Source: Kohl, The Global English Style Guide (SAS Press). Guideline text fetched
 
 ## 6. Develop connected paragraphs
 
-Read each paragraph as a continuous explanation. Organize its facts around the
-point it develops, making cause, comparison, condition and consequence clear
-where the evidence supports them. Keep related clauses together with ordinary
-connections such as "and", "while", "because", "so" or "but". Use the grammar
-of the language being written, including a comma where it naturally connects
-or separates clauses. A conjunction takes a comma only when the syntax calls
-for one.
-
-Let sentence boundaries follow the thought. A sentence can carry several
-closely related ideas comfortably, and a new sentence helps when the idea
-changes or the reader would otherwise need to backtrack. Read consecutive
-sentences aloud to check that they develop the explanation at a natural pace.
+Develop each paragraph around a connected thought, making the relationships
+between its ideas clear from the context and evidence. Add connective words
+where they contribute meaning, allowing a comma alone to carry a natural
+transition when that is enough. Keep closely related ideas in the same sentence
+and start another when the idea changes or the reader needs a pause to follow
+the reasoning. Read the paragraph aloud to check its flow as a whole.
 
 - Have a view where the mode allows it. Explanation weighs trade-offs, so say what you make of them instead of listing pros and cons. Reference stays dry.
 - Be specific over sterile. Not "schema changes can cause issues" but "a column rename fails the build".
