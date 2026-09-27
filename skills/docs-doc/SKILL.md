@@ -3,7 +3,7 @@ name: docs-doc
 description: "Reviews and reorganizes documentation and analytical reports for purpose, evidence, author voice, and readable prose. Use for documentation sets, academic or project reports, references, readmes, architecture docs, RFCs, PR descriptions, and commit messages."
 ---
 
-Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested, and otherwise return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
+Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested. Otherwise, return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
 
 If the user asks only for an audit, do not rewrite the document. Name each pattern, quote the affected text, and state the smallest fix. Do not score the prose, guess whether AI wrote it, or turn the audit into a sidecar document.
 
