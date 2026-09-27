@@ -3,7 +3,7 @@ name: docs-doc
 description: "Reviews and reorganizes documentation and analytical reports for purpose, evidence, author voice, and readable prose. Use for documentation sets, academic or project reports, references, readmes, architecture docs, RFCs, PR descriptions, and commit messages."
 ---
 
-Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested; otherwise return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
+Revise at every level: purpose and structure first, then genre, then sentences. Edit files in place when requested, and otherwise return the requested text or review. Do not write a separate report unless the user explicitly asks for one.
 
 If the user asks only for an audit, do not rewrite the document. Name each pattern, quote the affected text, and state the smallest fix. Do not score the prose, guess whether AI wrote it, or turn the audit into a sidecar document.
 
@@ -11,8 +11,8 @@ Write for the intended reader's knowledge and reason for reading.
 
 Three rules sit above everything else:
 
-- **Cut every word that does no work.** If the sentence survives without a word, the word goes. "In order to" is "to". "It is important to note that" is nothing.
-- **Use the short, everyday word.** "Use", not "utilize". "Help", not "facilitate". "Do", not "perform". A long word has to buy its length with precision.
+- **Write a connected explanation.** Let the reader follow the thought naturally, keeping related ideas together and making their relationship clear. Sentence length follows the meaning and the reader's knowledge.
+- **Use familiar, precise words.** Remove filler while preserving the connective words and grammatical structure that make the explanation flow.
 - **When a rule makes a sentence worse, fix the sentence another way or leave it alone.** The rules serve the reader. A sentence that follows every rule and sounds like a machine wrote it has failed.
 
 For software documentation, the codebase is the word list. Write the real symbol, file, flag, or command name, not an invented synonym. For other genres, use the discipline's established terms and explain those the intended reader needs.
@@ -25,27 +25,27 @@ to "the student," "the user," or "the author" belong only where that person is
 actually the subject of analysis, not as commentary about the requester.
 
 Set voice separately for each deliverable. An analytical report speaks from its
-analyst's position; a public-facing page may adopt the organization's voice or
+analyst's position, while a public-facing page may adopt the organization's voice or
 describe it in third person. Choose according to purpose and attribution, then
 keep that position consistent. Move methodological detail to the analytical
 report when the page's reader needs activities, results, and documents.
 
 A report develops an argument through evidence, interpretation, and consequences.
-A manual explains how to act. Apply Diátaxis to documentation where it helps;
-preserve a report's required sections and supplied template rather than forcing
+A manual explains how to act. Apply Diátaxis to documentation where it helps,
+preserving a report's required sections and supplied template rather than forcing
 them into separate document modes. Place content in the designated fields.
 
 Keep a detail when it changes understanding, a decision, reproducibility, or
 evaluation. Mandatory-format compliance, ordinary file handling, and routine
 successful checks rarely need narration. Describe methods when they explain a
 result or limitation, rather than presenting basic operations as achievements.
-Put source credit in the appropriate citation or credit location; use captions
+Put source credit in the appropriate citation or credit location and use captions
 to explain what the image contributes, rather than describe the obvious.
 
 Distinguish substantive project decisions from artifact-production mechanics.
 Describe the work supported by evidence. Personal experiences, difficulties,
-durations, and sequences require confirmation or records; plausible events are
-not a substitute. Required disclosures still belong in the document.
+durations, and sequences require confirmation or records to support their
+inclusion. Required disclosures still belong in the document.
 
 When a user identifies a recurring defect, review the whole requested document
 for that class of defect, preserving sound passages and necessary qualifications.
@@ -146,7 +146,7 @@ Source: diataxis.fr, fetched 2026-07-18.
 
 ## 3. Write sentences to the reader (Google developer style)
 
-- Address readers as "you" in instructions; use the author's chosen voice in reports. Use tense to distinguish completed work, current facts, and plans.
+- Address readers as "you" in instructions and use the author's chosen voice in reports. Use tense to distinguish completed work, current facts, and plans.
 - Say who does what: "the compiler checks", not "is checked". Passive is fine only when the actor is unknown or beside the point.
 - Write instructions as commands: "Click Submit." State facts plainly. Never "should be done".
 - Put the condition before the instruction: "To delete the document, click Delete." The reader skips what does not apply.
@@ -160,7 +160,7 @@ Source: diataxis.fr, fetched 2026-07-18.
 
 Source: developers.google.com/style, fetched 2026-07-18.
 
-## 4. Make statements load one at a time (STE rules)
+## 4. Keep actions and reasoning easy to follow (STE rules)
 
 - Keep procedural actions distinguishable. In analysis, keep a claim connected to its reason, condition, or consequence when that makes it easier to follow.
 - Split at a change of idea or when readers must backtrack, not at a fixed word count. Sentence complexity should follow conceptual difficulty and the reader's knowledge.
@@ -182,7 +182,6 @@ Source: asd-ste100.org (Issue 9, 2025), fetched 2026-07-18. The numbered rules a
 - Keep the small words that show structure. "Ensure that the switch is off" keeps "that" because it makes the sentence parse one way. Never trade clarity for word count.
 - Repeat the article in a series when it prevents a misread: "the client and the host", not "the client and host", when they are two things.
 - Say which parts "and" or "or" joins when a sentence can group two ways. "Both...and", "either...or", and "if...then" are free disambiguators.
-- Use punctuation to express the relationship between clauses. Conjunctions often convey a cause or contrast more naturally than another full stop.
 - Make text in parentheses a full grammatical unit or its own sentence. Never form plurals with "(s)".
 - No slashes: write "a, b, or both" instead of "a/b" or "and/or".
 - Call each thing by one name, everywhere. A doc that says "the gate", "the ratchet", and "the budget check" for one thing teaches three things. Don't churn what didn't change between edits.
@@ -190,15 +189,21 @@ Source: asd-ste100.org (Issue 9, 2025), fetched 2026-07-18. The numbered rules a
 
 Source: Kohl, The Global English Style Guide (SAS Press). Guideline text fetched from the Internet Archive and the SAS sample chapter, 2026-07-18.
 
-## 6. Vary the rhythm
+## 6. Develop connected paragraphs
 
-A doc can obey every layer and still read machine-written: every sentence clipped short, no view anywhere, nothing specific.
+Read each paragraph as a continuous explanation. Organize its facts around the
+point it develops, making cause, comparison, condition and consequence clear
+where the evidence supports them. Keep related clauses together with ordinary
+connections such as "and", "while", "because", "so" or "but". Use the grammar
+of the language being written, including a comma where it naturally connects
+or separates clauses. A conjunction takes a comma only when the syntax calls
+for one.
 
-- Read the whole text before editing isolated sentences; treat each prose paragraph as a coherent unit of thought rather than a sequence of individually correct facts.
-- Organize facts around the paragraph's point through supported relationships such as cause, comparison, evidence, or consequence. Move or remove details that do not develop that point.
-- Conjunctions alone do not create cohesion. Make the relationship clear using the available evidence, without inventing causality to smooth the prose. Let the material and genre determine paragraph structure rather than applying one fixed pattern.
-- Let rhythm follow the thought. Use a short sentence to land a point and a longer one to carry connected reasoning. Elegance comes from precise relationships and proportionate syntax; ordinary ideas can share a sentence when the reader can readily follow them.
-- Join closely related statements when the connection matters. Avoid both stacked fragments and chains of clauses that obscure the point.
+Let sentence boundaries follow the thought. A sentence can carry several
+closely related ideas comfortably, and a new sentence helps when the idea
+changes or the reader would otherwise need to backtrack. Read consecutive
+sentences aloud to check that they develop the explanation at a natural pace.
+
 - Have a view where the mode allows it. Explanation weighs trade-offs, so say what you make of them instead of listing pros and cons. Reference stays dry.
 - Be specific over sterile. Not "schema changes can cause issues" but "a column rename fails the build".
 
@@ -215,17 +220,16 @@ Rewrite prose that sounds like chatbot output. Remove:
 - interpretive asides that tell readers what to notice: "the key point is", "as you can see", "this distinction matters", or redundant "in other words"
 - negative lists and stacked fragments: "Not X. Not Y. Z." or "X. And Y. And Z."
 - elegant variation used only to avoid repeating the right technical word
-- dramatic or formulaic em-dash usage
 - bold used for rhetorical emphasis instead of structure
 - emoji, decorative markers, or theatrical styling
 - tiny tables that would be clearer as prose or lists
 - formulaic section endings such as "Conclusion", "Challenges", or "Future outlook" when they only restate or speculate
-- fake-profound closing lines, aphorisms, and mic-drop metaphors; end on the last concrete fact or next action instead
+- fake-profound closing lines, aphorisms, and mic-drop metaphors that obscure the last concrete fact or next action
 - placeholder prose, fill-in-the-blank text, template-like wording, or TODO-shaped sentences
 
 Prefer the plainest accurate wording. If "is" or "has" is the clearest verb, use it. Don't inflate simple statements into "serves as", "stands as", "offers", or "features" unless the meaning genuinely changes.
 
-Preserve useful voice: established vocabulary, cadence, bluntness, humor, uncertainty, and deliberate rough edges. Fix the weak passage, not every sentence around it. If a sentence could move unchanged to another project, it is probably filler; replace it with a project-specific fact, mechanism, consequence, or judgment, or delete it.
+Preserve useful voice: established vocabulary, cadence, bluntness, humor, uncertainty, and deliberate rough edges. Fix the weak passage, not every sentence around it. If a sentence could move unchanged to another project, consider whether a project-specific fact, mechanism, consequence, or judgment would serve the reader better, or whether the sentence can be removed.
 
 ## 8. Keep the prose timeless
 
@@ -238,7 +242,7 @@ Keep stable reference prose free of incidental chronology. Reports and histories
 
 Lead an analytical paragraph with the supported result and its meaning, followed
 by the precise condition that limits that interpretation. State each material
-condition once; retain distinct limits when they change the conclusion.
+condition once and retain distinct limits when they change the conclusion.
 
 Replace chains such as "does not equal", "does not demonstrate", and "does not
 imply" that repeat the same misunderstanding with one affirmative conclusion
@@ -247,8 +251,8 @@ on scope, uncertainty, comparability, causality, and verification. Necessary
 negation remains valid: this is a rule about reasoning, not a word ban.
 
 For documentation, describe behavior and foundational contracts the reader needs.
-Keep clarifications that affect use or interpretation; omit defensive answers
-to hypothetical misunderstandings the reader is unlikely to have.
+Keep clarifications that affect use or interpretation, focusing on the questions
+the reader needs answered to understand or use the subject.
 
 ## Evidence and claimed applications
 
@@ -269,7 +273,7 @@ without inventing a contrast to justify it. When using another project's work as
 a reference, identify each artifact's author, audience, and role before borrowing
 its presentation. A company's source report, a demonstrative website, and the
 student's analysis provide evidence about different writing choices. Compare
-the actual passages; treat observed choices as examples and establish binding
+the actual passages, treating observed choices as examples and establishing binding
 requirements from the assignment or governing instructions.
 
 ## 10. Make implicit contracts explicit
@@ -319,6 +323,7 @@ Before documenting defaults, special values, runtime fields, callback contracts,
 
 ## 14. Formatting patterns
 
+- Use semicolons and em dashes occasionally, when their grammatical role makes the sentence clearer.
 - Headings carry the point, not just the topic ("Pick the mode first", not "Modes"). Sentence case. A task heading is a bare verb phrase ("Create an instance"). A concept heading is a noun phrase. One h1 per page, no skipped levels.
 - Avoid tiny tables when prose or lists are clearer.
 - Avoid inline-header list spam unless that shape is genuinely the clearest format.
@@ -354,7 +359,7 @@ Apply to any prose this skill covers. Item 1 applies only to document sets:
 4. Is the file structure consistent, or do multiple documentation styles coexist? Normalize first.
 5. Is every instruction written as a command, with its condition in front?
 6. Does every prose paragraph develop a connected thought, with syntax proportionate to the reader's knowledge? Read consecutive paragraphs together to check progression, rather than approving each sentence in isolation.
-7. Can any word be cut without losing meaning? Cut it.
+7. Can filler be removed while preserving useful connections and natural phrasing?
 8. Is "only" next to the word it changes? Does every "it" point at one thing? Does every clause keep its verb?
 9. Does each thing have exactly one name across the docs?
 10. Would a developer say these words out loud? Replace invented metaphors and fancy synonyms with the plain word or the real symbol name.
