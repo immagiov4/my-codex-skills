@@ -41,6 +41,8 @@ Pull the repository and run the install script again. For plugin installations, 
 
 ## Contents
 
+The optional [Luanti memory hook](hooks/luanti-memory/README.md) connects Codex to a chosen knowledge checkout. Its setup includes the checkout path and hook trust review.
+
 Each directory under `skills/` is an independently discoverable Codex skill. The repository also includes a plugin manifest, so the complete collection can be installed without copying directories by hand.
 
 `web-performance` measures browser-facing performance when runtime evidence is available. When it only has source code, it reports possible performance effects without pretending that static analysis measured Core Web Vitals.
