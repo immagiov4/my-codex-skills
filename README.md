@@ -45,6 +45,8 @@ The optional [Luanti memory hook](hooks/luanti-memory/README.md) connects Codex 
 
 Each directory under `skills/` is an independently discoverable Codex skill. The repository also includes a plugin manifest, so the complete collection can be installed without copying directories by hand.
 
+`code-review` is the default structured code review used by `engineering-workflow`. Two independent searches examine a fixed change and its contract, then a separate session verifies every candidate. The coordinator runs locally with Python 3.9 or newer and an authenticated Codex CLI; inference uses GPT-6.1 Sol with medium reasoning. Reports preserve findings, coverage, limitations, effective model, durations, and token usage. Resolve model requirements from repository instructions and maintainer decisions before starting the CLI. See [the review procedure](skills/code-review/SKILL.md) for inputs and execution.
+
 `web-performance` measures browser-facing performance when runtime evidence is available. When it only has source code, it reports possible performance effects without pretending that static analysis measured Core Web Vitals.
 
 `problem-to-github-issue` checks requirements against `AGENTS.md` and maintainer decisions before creating or rewriting an issue. Acceptance criteria describe the approved change; they do not add requirements.

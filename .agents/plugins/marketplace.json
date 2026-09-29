@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "my-codex-skills",
-      "version": "0.1.0",
+      "version": "0.3.0",
       "description": "Personal Codex engineering workflows shared across local and cloud environments.",
       "source": {
         "source": "local",

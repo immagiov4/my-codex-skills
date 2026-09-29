@@ -16,7 +16,13 @@ Source: [mattpocock/skills](https://github.com/mattpocock/skills)
 
 Copyright 2026 Matt Pocock. MIT License. See [`licenses/MATTPOCOCK-MIT.txt`](licenses/MATTPOCOCK-MIT.txt).
 
-The local collection includes adapted engineering and writing workflows from this project, including `code-review`, `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grill-with-docs`, `grilling`, `handoff`, `prototype`, `research`, `setup-matt-pocock-skills`, `tdd`, `teach`, `to-spec`, `to-tickets`, `wayfinder`, `wizard`, and `writing-for-agents`.
+The local collection includes adapted engineering and writing workflows from this project, including `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grill-with-docs`, `grilling`, `handoff`, `prototype`, `research`, `setup-matt-pocock-skills`, `tdd`, `teach`, `to-spec`, `to-tickets`, `wayfinder`, `wizard`, and `writing-for-agents`.
+
+## Qwen Code
+
+Source: [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code), Apache License 2.0.
+
+`code-review` uses an original Python coordinator and Italian instructions informed by Qwen Code's independent search, candidate verification, and coverage workflow. [Method provenance](skills/code-review/references/qwen-method.md) links the documentation and implementation at the revision studied.
 
 ## Draht
 

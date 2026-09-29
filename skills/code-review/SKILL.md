@@ -1,108 +1,112 @@
 ---
 name: code-review
-description: "Review a branch, PR, or work-in-progress diff along two axes: repository standards and the originating spec. Runs both reviews in parallel, calibrates findings to the project's actual risk, and reports only material problems."
+description: "Revisiona un ramo, una PR o modifiche locali con il Codex CLI e GPT-6.1 Sol: ricerche indipendenti, conferma dei rilievi, copertura e consumi misurati. È la procedura di base per la revisione del codice."
 ---
 
-Two-axis review of the diff between `HEAD` and a fixed point the user supplies:
+# Revisione del codice con Sol
 
-- **Standards**: does the code conform to this repo's documented coding standards?
-- **Spec**: does the code faithfully implement the originating issue / spec?
+Produci un rapporto sul cambiamento fissato, con rilievi sostenuti da percorsi reali,
+posizioni controllate, copertura e limiti. Il coordinamento avviene sul computer;
+l'inferenza usa l'autenticazione Codex esistente. Il risultato è una revisione
+assistita del cambiamento, con il livello di prova indicato per ciascun rilievo.
 
-Both axes run as **parallel sub-agents** so they do not influence each other's conclusions. This skill then checks their findings against the project's risk before reporting them.
+Usa questa procedura come revisione di base del codice. Fissa sorgenti e contratto,
+esegui ricerche indipendenti e verifica ogni candidato prima di confermarlo.
 
-## Materiality gate
+## Fissa il materiale
 
-Calibrate the review to the software in front of you. A personal utility, a game add-on, and critical production infrastructure do not need the same defensive depth.
+1. Identifica il contratto dal mandato del maintainer, dalle decisioni approvate e
+   dall'issue. Leggi le istruzioni `AGENTS.md` pertinenti. Per un repository remoto,
+   confronta la revisione disponibile con `git ls-remote`; annota la revisione
+   effettivamente esaminata. Il materiale deve avere un'identità ripetibile. Quando manca una specifica,
+   usa il mandato e gli invarianti documentati, registrando i requisiti indeterminati.
+2. Prepara una cartella isolata fuori dal repository con `before/`, `after/`,
+   `diff.patch`, `contract.md` e `manifest.json`. Per revisioni Git fissate usa
+   `git archive` e `git diff --binary --no-ext-diff`. Per una PR, la base del confronto
+   è il merge-base effettivo. Per cambiamenti locali acquisisci i file tracciati,
+   modificati ed eventuali nuovi file pertinenti, preservando il confronto con HEAD.
+   Le cartelle contengono sorgenti e istruzioni; escludi credenziali e dipendenze.
+3. Scrivi nel manifest `target`, `changed_files` come percorsi relativi alle due
+   versioni, e l'identità delle revisioni quando disponibile. Controlla che ogni
+   differenza nei file sia rappresentata dalla patch e dal manifest. Il contratto
+   registra anche le decisioni che prevalgono sulle istruzioni del repository.
+   Mantieni prove attese e risultati precedenti fuori dal materiale dei revisori.
 
-Report a finding only when all three conditions hold:
+Il controllo automatico confronta il manifest con i file modificati e congela
+l'impronta di tutto il materiale prima delle chiamate. L'esattezza del confronto
+Git e l'autorità del contratto sono responsabilità del coordinatore.
 
-1. The diff contains evidence for it.
-2. A realistic execution path reaches it.
-3. The likely impact justifies the code, tests, and maintenance needed to fix it.
+## Verifica il CLI e avvia
 
-Judge severity from likelihood and impact together. A rare path still matters when it can cause a security breach, data loss, silent corruption, or a costly outage. A theoretical edge case with a cheap manual workaround usually does not. Do not turn advisory linter output, a possible smell, or a preference into a finding without a concrete consequence in this project.
+Leggi `codex --version`, `codex exec --help` e `codex login status`. Usa il CLI
+autenticato disponibile. Se serve un aggiornamento, eseguilo con l'autorizzazione
+del maintainer. Su Windows individua il vero `codex.exe` dietro il lanciatore npm;
+`--codex` riceve quel percorso. Verifica versione e autenticazione senza stampare
+credenziali. Usa la documentazione ufficiale quando il CLI cambia comportamento.
 
-Apply the user's stated tolerance first. Then use repository context such as deployment model, users, stored data, trust boundaries, and recovery cost. When the context is unclear, use the least dramatic interpretation supported by the repository.
+Risolvi `$reviewSkill` dalla cartella di questo `SKILL.md`, anche nelle installazioni
+come plugin. Esegui `scripts/run_review.py --help`, poi passa la cartella del caso, una cartella
+nuova dei risultati esterna al caso, il percorso del CLI e un limite di tempo
+per ciascuna chiamata coerente con il mandato tramite `--timeout-seconds`.
 
-## Process
+```powershell
+python "$reviewSkill/scripts/run_review.py" `
+  --case $reviewCase --output $reviewOutput --codex $codexExe `
+  --timeout-seconds $reviewTimeoutSeconds
+```
 
-### 1. Pin the fixed point
+Se le istruzioni applicabili chiedono un altro modello, registra nel contratto la
+decisione autorizzata che risolve il conflitto prima di avviare il CLI.
 
-Use the comparison the user supplied. For a branch or PR, capture `git diff <fixed-point>...HEAD` and `git log <fixed-point>..HEAD --oneline`. For the current worktree, use `HEAD` when the user gives no other point, capture `git diff HEAD`, and list untracked files with `git ls-files --others --exclude-standard`.
+Lo script seleziona realmente `gpt-6.1-sol` con `-m`, imposta `review_model` nello
+stesso processo e usa `model_reasoning_effort=medium`. Verifica modello e livello
+nei dati `turn_context` della sessione. Una risposta con modello diverso, contesto
+assente o richiesta fallita interrompe la procedura. `--effort xhigh` richiede
+`--effort-reason` e una complessità che giustifichi il livello autorizzato.
 
-Before going further, confirm the fixed point resolves (`git rev-parse <fixed-point>`) and the diff is non-empty. A bad ref or empty diff should fail here, not inside two parallel sub-agents.
+`--ignore-user-config` mantiene gli override nella singola esecuzione e riusa
+l'autenticazione esistente. `--sandbox read-only` e `-a never` regolano gli
+strumenti del revisore. Le letture sono circoscritte al caso nelle istruzioni;
+la protezione di sola lettura impedisce scritture ma consente letture esterne.
+Il coordinatore controlla le trascrizioni per verificare l'ambito effettivo.
 
-### 2. Identify the spec source
+## Valuta le prove
 
-Look for the originating spec, in this order:
+Il processo esegue due ricerche in sessioni distinte: contratto e correttezza;
+flussi, regressioni e sicurezza. La seconda riceve lo stesso materiale della prima.
+Una terza sessione ripercorre ogni candidato e restituisce `accept`, `reject` o
+`unverified`, con prova e deduplicazione. Anche con candidati vuoti conserva i
+limiti delle letture. Le tre chiamate sono seriali e ogni cartella dei risultati
+conserva risposte, eventi, consumo, modello effettivo, durata e impronte.
 
-1. Issue references in the commit messages (`#123`, `Closes #45`, GitLab `!67`, etc.). If `docs/agents/issue-tracker.md` exists, use its workflow.
-2. A path the user passed as an argument.
-3. A spec file under `docs/`, `specs/`, or `.scratch/` matching the branch name or feature.
-4. The user's request and acceptance criteria from the conversation.
+Controlla ogni candidato con i principi di
+[receiving-pr-reviews](../receiving-pr-reviews/SKILL.md): requisito
+autorevole, percorso supportato, conseguenza materiale, prova nel cambiamento.
+L'accordo tra revisori è un indizio; il codice e le osservazioni sostengono la
+decisione. Un dubbio di contratto richiede una decisione del maintainer.
+Il mandato di revisione conserva i sorgenti come materiale di sola lettura.
 
-If nothing is found, skip the **Spec** sub-agent and report "no spec available". Ask the user only when the missing spec would materially change the review scope.
+Per confermare un comportamento, esegui una riproduzione leggera in un'altra copia
+e confrontala con la base. Coordina i controlli costosi con chi possiede il gate
+del repository. Distingui analisi statica, riproduzione eseguita e verifica visiva.
+Se una prova resta aperta, conserva il candidato con il suo limite.
 
-### 3. Identify the standards sources
+## Consegna il risultato
 
-Anything in the repo that documents how code should be written, such as `CODING_STANDARDS.md` or `CONTRIBUTING.md`.
+Usa `report.md`, `findings.json` e `metrics.json`. Riporta posizione, gravità,
+attivazione, conseguenza, contratto ed evidenza per ogni rilievo confermato;
+conserva le decisioni su tutti i candidati, la copertura e le parti da verificare.
+Le righe sono riferite alla versione `after`; quando il file è eliminato e assente
+in `after`, usa il sorgente e le righe di `before`. Il rapporto indica la versione
+accanto alla posizione. Ogni rilievo canonico accettato ha una propria decisione
+`accept` riferita a sé stesso; altri candidati accettati possono riferirsi a esso.
+Il rapporto conserva `target`, `base` e `head` disponibili nel manifest e riepiloga
+il consumo registrato e la somma delle durate delle chiamate seriali.
 
-On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below: a fixed set of Fowler code smells (_Refactoring_, ch.3) that applies even when a repo documents nothing. Two rules bind it:
+Controlla negli eventi le letture effettive rispetto alla copertura dichiarata.
+Un consumo registrato è una misura della singola esecuzione; un risultato vuoto
+descrive soltanto l'ambito e le prove effettivamente raggiunti.
 
-- **The repo overrides.** A documented repo standard always wins; where it endorses something the baseline would flag, suppress the smell.
-- **Always a judgement call.** Each smell is a labelled heuristic ("possible Feature Envy"), never a hard violation. Like any standard here, skip anything tooling already enforces.
-
-Each smell reads *what it is* → *how to fix*. Match it against the diff only when it passes the materiality gate:
-
-- **Mysterious Name**: a function, variable, or type whose name doesn't reveal what it does or holds. → rename it; if no honest name comes, the design's murky.
-- **Duplicated Code**: the same logic shape appears in more than one hunk or file in the change. → extract the shared shape, call it from both.
-- **Feature Envy**: a method that reaches into another object's data more than its own. → move the method onto the data it envies.
-- **Data Clumps**: the same few fields or params keep travelling together (a type wanting to be born). → bundle them into one type, pass that.
-- **Primitive Obsession**: a primitive or string standing in for a domain concept that deserves its own type. → give the concept its own small type.
-- **Repeated Switches**: the same `switch`/`if`-cascade on the same type recurs across the change. → replace with polymorphism, or one map both sites share.
-- **Shotgun Surgery**: one logical change forces scattered edits across many files in the diff. → gather what changes together into one module.
-- **Divergent Change**: one file or module is edited for several unrelated reasons. → split so each module changes for one reason.
-- **Speculative Generality**: abstraction, parameters, or hooks added for needs the spec doesn't have. → delete it; inline back until a real need shows.
-- **Message Chains**: long `a.b().c().d()` navigation the caller shouldn't depend on. → hide the walk behind one method on the first object.
-- **Middle Man**: a class or function that mostly just delegates onward. → cut it, call the real target direct.
-- **Refused Bequest**: a subclass or implementer that ignores or overrides most of what it inherits. → drop the inheritance, use composition.
-
-### 4. Spawn both sub-agents in parallel
-
-**Standards sub-agent prompt** should include:
-
-- The full diff command and commit list.
-- The list of standards-source files you found in step 3, **plus the smell baseline from step 3** pasted in full (the sub-agent has no other access to it).
-- The project's risk context and the materiality gate above.
-- The brief: "Report only material violations of documented standards and material baseline smells. Cite the standard or name the smell, quote the relevant hunk, and state the realistic consequence in this project. Documented repository rules override the smell baseline. Tooling output is evidence only when it points to a concrete problem. Omit preferences and low-value edge cases. Under 400 words."
-
-**Spec sub-agent prompt** should include:
-
-- The diff command and commit list.
-- The path or fetched contents of the spec.
-- The project's risk context and the materiality gate above.
-- The brief: "Report material requirements that are missing or partial, material scope creep, and implementations that violate the spec. Quote the relevant spec line and state the realistic consequence. Omit harmless differences, preferences, and edge cases whose likely cost is lower than the fix. Under 400 words."
-
-If the spec is missing, skip the Spec sub-agent and note this in the final report.
-
-### 5. Aggregate
-
-Before applying corrections, use
-[receiving-pr-reviews](../receiving-pr-reviews/SKILL.md) to validate and dispose of
-findings, including those from local agents and subsequent self-review. For user
-decisions during a long-running task, use
-[agent-question-notifications](../agent-question-notifications/SKILL.md).
-A review-only request remains read-only.
-
-Present the two reports under `## Standards` and `## Spec` headings. Keep the axes separate, but remove duplicates and findings that do not pass the materiality gate. Do not inflate a weak finding because both agents mentioned it.
-
-End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
-
-## Why two axes
-
-A change can pass one axis and fail the other:
-
-- Code that follows every standard but implements the wrong thing → **Standards pass, Spec fail.**
-- Code that does exactly what the issue asked but breaks the project's conventions → **Spec pass, Standards fail.**
-
-Reporting them separately stops one axis from masking the other.
+Per la provenienza Qwen e le differenze di copertura leggi
+[references/qwen-method.md](references/qwen-method.md). Il processo conserva
+ricerca separata e verifica; una prova piccola permette di giudicare quel campione.

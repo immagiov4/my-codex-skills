@@ -41,6 +41,7 @@ user-facing prose       -> <skills-dir>/unslop/SKILL.md
 module design           -> <skills-dir>/codebase-design/SKILL.md
 cheap regression seam   -> <skills-dir>/tdd/SKILL.md
 diagram                 -> <skills-dir>/diagram-design/SKILL.md
+code review             -> <skills-dir>/code-review/SKILL.md
 ```
 
 Give the subagent the repository instructions, exact scope, output path, and completion check. Re-send those pointers when work moves to a fresh agent or task.
@@ -72,7 +73,9 @@ Never report `INCONCLUSIVE` as success. When a project has a controllable runtim
 
 ## Review
 
-For a meaningful change, verify first and then use `$code-review`. For high-risk, cross-cutting, shared-state, public-interface, migration, or architecture-heavy work, add `$blast-radius` and `$interrogate`.
+For a meaningful change, verify first and then use `$code-review` as the default code review. It owns the structured local CLI procedure with GPT-6.1 Sol, candidate verification, coverage, and consumption records. Follow its model-authorization check before starting the CLI.
+
+Use `$receiving-pr-reviews` before applying findings. For high-risk, cross-cutting, shared-state, public-interface, migration, or architecture-heavy work, add `$blast-radius` and `$interrogate`.
 
 Use `$show-me-your-work` when a long autonomous run needs a decision trail. Judge review findings against the code and the user's goal before applying them.
 

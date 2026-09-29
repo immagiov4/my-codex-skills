@@ -1,3 +1,4 @@
 interface:
-  display_name: "Code Review"
-  short_description: "Review a diff on standards and spec"
+  display_name: "Revisione del codice"
+  short_description: "Revisione con Sol, prove e consumi misurati"
+  default_prompt: "Usa $code-review per revisionare localmente questo cambiamento con GPT-6.1 Sol."
