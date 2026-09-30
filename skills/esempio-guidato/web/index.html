@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Esempio guidato</title>
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">{ }</span><span>Esempio guidato</span></div>
+        <div class="top-context"><strong id="project-name"></strong><span id="goal"></span></div>
+        <span id="connection" class="connection">Collegamento in corso</span>
+        <label class="theme-switch"><input id="light-theme" type="checkbox" role="switch" /><span>Tema chiaro</span></label>
+      </header>
+      <main class="workspace">
+        <aside class="explorer">
+          <div class="pane-heading"><span>File del progetto</span><span class="pane-hint">Sfoglia</span></div>
+          <label class="file-search"><span id="search-icon" aria-hidden="true"></span><input id="file-search" type="search" aria-label="Cerca file per nome" placeholder="Cerca file..." autocomplete="off" /></label>
+          <div id="tree" class="tree"></div>
+          <div id="search-results" class="tree" hidden></div>
+        </aside>
+        <div id="explorer-splitter" class="splitter column-splitter" role="separator" aria-label="Ridimensiona elenco file" aria-orientation="vertical" tabindex="0"></div>
+        <section class="code-pane">
+          <div class="code-heading">
+            <div class="file-heading"><nav class="code-navigation" aria-label="Navigazione nel codice"><button id="code-back" type="button" title="Indietro nel codice" aria-label="Indietro nel codice" disabled></button><button id="code-forward" type="button" title="Avanti nel codice" aria-label="Avanti nel codice" disabled></button><button id="notes-toggle" type="button" title="Taccuino" aria-label="Taccuino" aria-expanded="false" aria-controls="notebook"></button><button id="map-toggle" type="button" title="Mappa concettuale" aria-label="Mappa concettuale" aria-expanded="false" aria-controls="concept-map"></button></nav><span id="file-icon">▤</span><span id="file-name">In attesa del primo passo</span></div>
+            <span id="code-mode" class="mode-badge"></span>
+          </div>
+          <div id="editor" class="editor"><div class="empty-code">Codex sta esplorando il progetto. Il primo punto utile comparirà qui.</div></div>
+          <div class="code-footer"><span id="line-range"></span><span id="file-status"></span></div>
+        </section>
+        <div id="guide-splitter" class="splitter column-splitter" role="separator" aria-label="Ridimensiona colonna destra" aria-orientation="vertical" tabindex="0"></div>
+        <aside class="guide-pane">
+          <div class="guide-scroll">
+            <div class="step-top"><span id="step-index" class="step-index">In attesa</span><span id="step-kind" class="kind"></span></div>
+            <h1 id="step-title">Un passo alla volta</h1>
+            <p id="step-overview" class="overview">Codex mostrerà una scoperta o una modifica quando sarà utile per capire il progetto.</p>
+            <section id="why-section" class="lesson-section" hidden><h2>Perché qui</h2><p id="step-why"></p></section>
+            <section id="annotations-section" class="lesson-section" hidden><h2>Riga per riga</h2><div id="annotations" class="annotations"></div></section>
+            <div id="finish-summary" class="finish-summary" hidden></div>
+            <div class="navigation"><button id="previous" type="button" class="secondary" disabled>Precedente</button><button id="next" type="button" class="primary" disabled>Avanti</button></div>
+            <div id="history" class="history"></div>
+          </div>
+          <div id="questions-splitter" class="splitter row-splitter" role="separator" aria-label="Ridimensiona domande" aria-orientation="horizontal" tabindex="0"></div>
+          <section class="questions"><div class="questions-heading"><strong>Domande su questo passo</strong><span id="answer-status"></span><button id="questions-expand" type="button" aria-label="Espandi domande" title="Espandi domande" aria-expanded="false"></button></div><div id="messages" class="messages"></div><form id="question-form" class="question-form"><input id="question" type="text" placeholder="Chiedi a Codex perché o come funziona..." autocomplete="off" maxlength="4000" /><button type="submit" aria-label="Invia domanda">Invia</button></form></section>
+        </aside>
+      </main>
+      <section id="notebook" class="notebook" aria-label="Taccuino del progetto" hidden>
+        <header class="notebook-heading"><div id="notes-drag" class="notebook-title" role="button" tabindex="0" aria-label="Sposta taccuino"><span id="notes-grip" aria-hidden="true"></span><strong>Taccuino</strong></div><button id="notes-export" type="button" title="Scarica note" aria-label="Scarica note" disabled></button><button id="notes-close" type="button" title="Chiudi taccuino" aria-label="Chiudi taccuino"></button></header>
+        <textarea id="notes-text" aria-label="Le tue note" spellcheck="false" disabled></textarea>
+        <footer class="notebook-footer"><span id="notes-status" role="status"></span><button id="notes-save" type="button" title="Riprova salvataggio" aria-label="Riprova salvataggio" hidden></button></footer>
+      </section>
+      <section id="concept-map" class="notebook concept-map" aria-label="Mappa concettuale del percorso" hidden>
+        <header class="notebook-heading"><div id="map-drag" class="notebook-title" role="button" tabindex="0" aria-label="Sposta mappa"><span id="map-grip" aria-hidden="true"></span><strong>Mappa concettuale</strong></div><button id="map-source-toggle" type="button" title="Sorgente Mermaid" aria-label="Sorgente Mermaid" aria-pressed="false"></button><button id="map-export" type="button" title="Scarica Mermaid" aria-label="Scarica Mermaid" disabled></button><button id="map-expand" type="button" title="Espandi mappa" aria-label="Espandi mappa" aria-expanded="false"></button><button id="map-close" type="button" title="Chiudi mappa" aria-label="Chiudi mappa"></button></header>
+        <div id="map-viewport" class="map-viewport"><div id="map-canvas" class="map-canvas"></div></div>
+        <textarea id="map-source" aria-label="Sorgente della mappa" readonly spellcheck="false" hidden></textarea>
+        <footer class="notebook-footer"><span id="map-status" role="status">Mappa in preparazione</span><div class="map-tools"><button id="map-zoom-out" type="button" title="Riduci diagramma" aria-label="Riduci diagramma"></button><button id="map-fit" type="button" title="Adatta alla finestra" aria-label="Adatta alla finestra"></button><button id="map-zoom-in" type="button" title="Ingrandisci diagramma" aria-label="Ingrandisci diagramma"></button></div></footer>
+      </section>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
