@@ -49,18 +49,16 @@ evidence, and paragraph flow.
 
 ## Reader knowledge and paragraph flow
 
-Write at the reader's established level, using each paragraph to develop the
-mechanism, evidence or decision they need. Keep a claim connected to its reason
-and consequence, with sentence boundaries where the thought changes or the reader
-would otherwise need to backtrack. This applies equally to the main text and
-working notes: a sentence such as "the topic is how" adds nothing unless it
-actually explains the relationship.
+Keep related ideas connected throughout the document, developing each mechanism
+and its consequence as a coherent paragraph at the reader's established level.
+Use sentence boundaries where the thought changes or the reader would otherwise
+need to backtrack, checking that each sentence advances the explanation in both
+the main text and working notes.
 
-For experienced readers, spend that space on relevant facts rather than obvious
-distinctions or reminders of elementary reasoning. A qualification belongs beside
-the claim when it changes its meaning or a concrete decision; state the specific
-condition once and remove repeated cautions that merely anticipate implausible
-misunderstandings.
+For experienced readers, focus on the evidence and decisions they need, placing
+a qualification beside its claim when the condition changes the meaning or a
+concrete decision. State that condition once so the paragraph develops the
+reasoning without repeated cautions or explanations of obvious distinctions.
 
 ## Prose principles
 
