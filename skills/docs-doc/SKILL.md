@@ -3,13 +3,10 @@ name: docs-doc
 description: "Revise documentation, analytical reports, and existing policies or legal notices for purpose, structure, evidence, author voice, and readable prose. Use for document sets, reports, manuals, references, readmes, RFCs, PR descriptions, and commit messages."
 ---
 
-Revise purpose and structure before polishing sentences. Edit the requested files
-in place, or return the requested text. For an audit-only request, identify the
-affected passages and the smallest fixes without rewriting them. Create a separate
-report only when the user asks for one.
-
-The user's instructions, required format, and substantive requirements determine
-the document's shape. Apply editorial defaults within those constraints.
+Revise the requested files in place or return the requested text, starting with
+its purpose and structure before polishing sentences. The user's instructions, format and substantive requirements
+determine the document's shape; for an audit-only request, identify the affected
+passages and the smallest fixes, producing a separate report when requested.
 
 ## Choose the relevant guidance
 
@@ -35,50 +32,38 @@ evidence, and paragraph flow.
 
 ## Editing workflow
 
-1. Establish scope and attribution. Use the requested files and directly linked
-   material needed to understand them. Choose the author's first-person or
-   impersonal voice, keeping it consistent within each deliverable.
-2. Check the substance. Connect claims to the supplied evidence, verified sources,
-   or code when applicable. Distinguish observations, interpretations, plans, and
-   unresolved facts. Preserve required fields, qualifications, and attribution.
-3. Organize for the reader's task. Give each section a purpose and a natural place
-   in the reading path. Consolidate repetition and relocate material when it
-   belongs elsewhere; split files when distinct reader needs justify the split.
-4. Revise connected prose using the principles below and the relevant reference.
-   Preserve sound passages. When the user reports a recurring defect, review the
-   whole requested document for that defect.
-5. Read consecutive paragraphs together. Check the progression, the author's
-   voice, and the retained meaning, then verify affected anchors and cross-links.
+1. Establish the scope and authorial voice from the requested files and the linked
+   material needed to understand them, choosing first-person or impersonal prose
+   according to who speaks in each deliverable.
+2. Check claims against the supplied evidence, verified sources or relevant code,
+   preserving attribution and required fields while distinguishing observations,
+   interpretations, plans and unresolved facts.
+3. Organize sections around the reader's task so each has a purpose and a natural
+   place in the reading path. Consolidate repetition and move detail to its owning
+   section; split files where distinct reader needs justify it.
+4. Revise using the principles below and the relevant reference, preserving sound
+   passages and checking the whole document, including notes, for any recurring
+   defect the user has identified.
+5. Read consecutive paragraphs together to check the progression, authorial voice
+   and retained meaning, then verify affected anchors and cross-links.
 
-The revision is complete when every section serves the intended reader, required
-content and material limits remain visible, supported claims stay accurate, and
-the reading path works. Identify unresolved substantive facts rather than making
-them sound certain.
+## Reader knowledge and paragraph flow
 
-## Respect the reader's competence
+Write at the reader's established level, using each paragraph to develop the
+mechanism, evidence or decision they need. Keep a claim connected to its reason
+and consequence, with sentence boundaries where the thought changes or the reader
+would otherwise need to backtrack. This applies equally to the main text and
+working notes: a sentence such as "the topic is how" adds nothing unless it
+actually explains the relationship.
 
-Keep related ideas connected throughout the document. Develop a mechanism and
-its consequence as a coherent paragraph rather than a sequence of isolated short
-sentences. Sentence breaks belong where the thought changes; meta-sentences such
-as "the topic is how" do not supply the missing connection. Apply this check to
-working notes as well as the main prose.
-
-Write at the reader's established level. Internal material for experienced
-practitioners should develop the mechanism, evidence and decisions they need.
-Cut explanations of obvious distinctions, unsolicited writing instructions and
-repeated cautions such as "this does not imply", "this does not prove every case"
-or "this is not a guarantee". Do not pre-empt implausible misunderstandings.
-Keep a qualification when it changes a concrete decision or the supported claim;
-state its specific substance once, beside the relevant fact. When the user flags
-this tone, review the whole document for it, including working notes.
+For experienced readers, spend that space on relevant facts rather than obvious
+distinctions or reminders of elementary reasoning. A qualification belongs beside
+the claim when it changes its meaning or a concrete decision; state the specific
+condition once and remove repeated cautions that merely anticipate implausible
+misunderstandings.
 
 ## Prose principles
 
-- Develop each paragraph around a connected thought. Keep a claim with its reason,
-  condition, or consequence when that helps the reader follow it.
-- Let sentence length follow meaning and the reader's knowledge. Split where the
-  idea changes or the reader must backtrack; use connective words where they carry
-  a real relationship. Joining sentences solely to lengthen them also weakens prose.
 - Use familiar, precise words and the discipline's established terms. Explain the
   terms this reader needs, using one name consistently for each concept.
 - Make actors and references clear. Prefer active voice when it clarifies who acts;
@@ -101,5 +86,7 @@ revise it another way or preserve it.
 
 ## Completion
 
-Give a short note describing the categories of changes. When file architecture
-changes, include the compact `path -> role` map that guided the revision.
+The revision is complete when each section serves the reader's task, required
+content is present, claims match their evidence and the reading path works. Keep
+unresolved substantive facts visible and give a short note describing the changes,
+including the `path -> role` map when the file structure has changed.
