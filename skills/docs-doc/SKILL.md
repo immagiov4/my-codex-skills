@@ -55,6 +55,23 @@ content and material limits remain visible, supported claims stay accurate, and
 the reading path works. Identify unresolved substantive facts rather than making
 them sound certain.
 
+## Respect the reader's competence
+
+Keep related ideas connected throughout the document. Develop a mechanism and
+its consequence as a coherent paragraph rather than a sequence of isolated short
+sentences. Sentence breaks belong where the thought changes; meta-sentences such
+as "the topic is how" do not supply the missing connection. Apply this check to
+working notes as well as the main prose.
+
+Write at the reader's established level. Internal material for experienced
+practitioners should develop the mechanism, evidence and decisions they need.
+Cut explanations of obvious distinctions, unsolicited writing instructions and
+repeated cautions such as "this does not imply", "this does not prove every case"
+or "this is not a guarantee". Do not pre-empt implausible misunderstandings.
+Keep a qualification when it changes a concrete decision or the supported claim;
+state its specific substance once, beside the relevant fact. When the user flags
+this tone, review the whole document for it, including working notes.
+
 ## Prose principles
 
 - Develop each paragraph around a connected thought. Keep a claim with its reason,
