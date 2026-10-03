@@ -59,14 +59,19 @@ Before sending any prose, read it in context for the intended meaning, useful
 connections and the reader's level. When the user identifies a recurring defect,
 check every affected part, including notes, rather than repairing only the quote.
 
-A substantive draft or rewrite, or a user-requested correction across a document,
+Private responses and documents intended only for the requester use the guidance
+and local reread above, including substantive drafts and document-wide revisions.
+
+For material intended for publication or for people beyond the requester, a
+substantive draft or rewrite, or a user-requested correction across a document,
 requires an independent reviewer following
 [independent review](references/independent-review.md). A substantive change
 creates or reshapes a complete explanation, message or section; a typo or a
-routine short conversational reply needs the local check. A request to fix the writing throughout triggers review even when individual
-edits are small. Apply independent review to the requested human-facing deliverable;
-reviewer findings and brief coordination messages use the local check, with
-findings assessed through the resolution procedure.
+routine short conversational reply needs the local check. Within that audience
+scope, a request to fix the writing throughout triggers review even when
+individual edits are small. Apply independent review and its recheck procedure
+to the requested deliverable; reviewer findings and brief coordination messages
+use the local check, with findings assessed through the resolution procedure.
 
 Deliver once the required content and evidence are intact, consequential findings
 are resolved and the affected prose has been checked again. Save or edit in the

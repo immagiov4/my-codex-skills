@@ -2,9 +2,9 @@
 
 ## Prepare the packet
 
-For a substantive human-facing draft or rewrite, and for a correction requested
-across a document, dispatch a fresh reviewer without the author's conversation
-history. With collaboration tools, use `spawn_agent` with `fork_turns="none"`;
+For material that meets the [independent-review trigger](../SKILL.md#check-and-review),
+dispatch a fresh reviewer without the author's conversation history.
+With collaboration tools, use `spawn_agent` with `fork_turns="none"`;
 otherwise use an equivalent independent context when available. For a recurring
 document-wide correction, use two independent readers of the same packet and
 reconcile their findings; their separate passes can expose different omissions.
