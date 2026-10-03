@@ -6,9 +6,9 @@ Invoked at the end of every other playbook.
 
 **Commits.** Commit liberally; rebase into small, ordered commits before opening PRs. Each commit is a future PR: landable, ordered to tell the story. Amend when the fix belongs in a just-made commit; new commit when separable.
 
-**PRs.** Run `$unslop` over prose and comments before commit. Apply the root Comments rules before review. Write every pull-request title, description, and commit body with `$docs-doc`, then apply `$unslop`. Use one word for each action, keep articles, and avoid `-ing` when a plain verb works.
+**PRs.** Write the pull-request title, description and commit body with `$writing-for-humans`, including independent review for substantive prose. Apply the root Comments rules to comments before code review.
 
-**Titles.** Use Conventional Commits only when the repository follows that convention. Keep the subject short and imperative. Apply the same `$docs-doc` and `$unslop` pass as the body. Name a real symbol when one carries the change. Do not add a trailing period.
+**Titles.** Use Conventional Commits only when the repository follows that convention. Keep the subject short and imperative. Apply the same `$writing-for-humans` review as the body. Name a real symbol when one carries the change. Do not add a trailing period.
 
 **Descriptions.** Use these sections in order. Drop a section when it is empty.
 
@@ -26,4 +26,4 @@ After these sections, attach videos or screenshots when they prove a claim. Do n
 
 **Babysit.** Opening a PR does not start a babysit. Post the URL and keep building. Finish the phase or stack first. Run a separate babysit pass only when the user asks for one after the whole stack exists. A babysit for each new PR stalls the build and spends checks on commits that later waves restart. Push back when feedback drifts from intent.
 
-A subagent that opens an authorized pull request runs `$interrogate`, `$unslop`, and the root Comments rules. It returns the URL and does not babysit.
+A subagent that opens an authorized pull request runs `$interrogate`, `$writing-for-humans`, and the root Comments rules. It returns the URL and does not babysit.

@@ -36,7 +36,7 @@ These rules apply to every playbook and reference linked from this skill.
 - Use `$diagnosing-bugs` for hard bugs. Build a red-capable feedback loop before settling on a cause.
 - Use `$show-me-your-work` for long unattended runs that need a decision trail.
 - Verify the real artifact. Report `VERIFIED`, `NOT VERIFIED`, or `INCONCLUSIVE`. Inconclusive is not success.
-- Apply `$unslop` to user-facing prose. Keep comments only when they explain a non-obvious reason the code cannot express.
+- Apply `$writing-for-humans` to user-facing prose. Keep comments only when they explain a non-obvious reason the code cannot express.
 
 ## Design principles
 

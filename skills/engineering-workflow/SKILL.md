@@ -36,8 +36,7 @@ Do not write a spec merely because work exists. Use `$to-spec` when settled deci
 When dispatching a ticket to a subagent, include the exact installed skill path beside each governed step. A fresh subagent may not inherit the parent's loaded skill instructions.
 
 ```text
-documentation step      -> <skills-dir>/docs-doc/SKILL.md
-user-facing prose       -> <skills-dir>/unslop/SKILL.md
+human-facing writing    -> <skills-dir>/writing-for-humans/SKILL.md
 module design           -> <skills-dir>/codebase-design/SKILL.md
 cheap regression seam   -> <skills-dir>/tdd/SKILL.md
 diagram                 -> <skills-dir>/diagram-design/SKILL.md
@@ -81,7 +80,7 @@ Use `$show-me-your-work` when a long autonomous run needs a decision trail. Judg
 
 ## Write for humans
 
-Apply `$unslop` to user-facing engineering prose. Use `$bro` when the user asks for a simpler restatement. Use `$docs-doc` for durable technical documentation.
+Apply `$writing-for-humans` to engineering explanations, documentation and PR prose, including its independent review for substantive writing. Use `$bro` when the user asks for a simpler restatement.
 
 Keep permanent documentation small. `AGENTS.md` routes agents. `CONTEXT.md` defines domain terms. `docs/system-map.md` records stable ownership, dependencies, flows, invariants, and major entry points. Create an ADR only for a surprising, hard-to-reverse decision made through a real trade-off.
 

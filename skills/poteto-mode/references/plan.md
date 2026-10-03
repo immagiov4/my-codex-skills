@@ -93,7 +93,7 @@ In the overview, name which poteto-mode non-negotiables the implementer must app
 
 - the **how** skill over each unfamiliar subsystem before changing it.
 - the **interrogate** skill for adversarial review on contested designs before shipping.
-- `$unslop` over prose, comments, commit messages, and pull request text.
+- `$writing-for-humans` over prose, comments, commit messages, and pull request text.
 - the **show-me-your-work** skill to keep a decision trail when the plan is large enough to need an auditable record.
 - the Babysit playbook after opening an authorized pull request.
 

@@ -47,6 +47,8 @@ Each directory under `skills/` is an independently discoverable Codex skill. The
 
 `code-review` is the default structured code review used by `engineering-workflow`. Two independent searches examine a fixed change and its contract, then a separate session verifies every candidate. The coordinator runs locally with Python 3.9 or newer and an authenticated Codex CLI; inference uses GPT-6.1 Sol with medium reasoning. Reports preserve findings, coverage, limitations, effective model, durations, and token usage. Resolve model requirements from repository instructions and maintainer decisions before starting the CLI. See [the review procedure](skills/code-review/SKILL.md) for inputs and execution.
 
+`writing-for-humans` combines the former Docs Doc and Unslop guidance for conversation and documents, with genre references and independent review after substantive writing or document-wide corrections. `writing-for-agents` retains the design of agent instructions. The former names remain explicit compatibility routes; their editorial catalogues have a single home in the new skill.
+
 `web-performance` measures browser-facing performance when runtime evidence is available. When it only has source code, it reports possible performance effects without pretending that static analysis measured Core Web Vitals.
 
 `problem-to-github-issue` checks requirements against `AGENTS.md` and maintainer decisions before creating or rewriting an issue. Acceptance criteria describe the approved change; they do not add requirements.

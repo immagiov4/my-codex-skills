@@ -41,7 +41,7 @@ the action described by the target skill.
 | review finding triage | `$receiving-pr-reviews` | PR reviews, local reviewing agents, or self-review produce findings |
 | user decision notification | `$agent-question-notifications` | a long-running task needs an answer in its original conversation |
 | primary-source research | `$research` | docs, APIs, or external facts must be investigated |
-| durable technical prose or user-facing writing | `$docs-doc`, `$unslop` | documentation or human-facing prose is produced |
+| durable technical prose or user-facing writing | `$writing-for-humans` | documentation or human-facing prose is produced |
 | long unattended decision trail or handoff | `$show-me-your-work`, `$handoff` | the run needs an auditable log or another task must resume it |
 
 When dispatching a task, include only the applicable `$skill-name` invocations and their exact

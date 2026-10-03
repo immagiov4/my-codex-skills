@@ -33,8 +33,7 @@ Use actual symbols, paths, flags, and commands from the codebase. Preserve names
 and syntax in code formatting, keeping the terminology consistent with the code.
 
 Follow the manual's requested or established entry format. When choosing a format
-for a new API reference, list entries with full signatures in **bold monospace**
-make signatures easy to scan; describe their contracts beside them. The required
+for a new API reference, use full signatures in **bold monospace** to make them easy to scan; describe their contracts beside them. The required
 information matters more than the choice between a heading and a list entry.
 
 Use examples to clarify the documented contract, keeping short grammar examples

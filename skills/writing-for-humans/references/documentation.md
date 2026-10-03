@@ -6,8 +6,10 @@ tutorials, and how-to guides.
 ## Scope and ownership
 
 Inventory the requested files and directly linked material needed to decide
-ownership. Widen the scope when a demonstrated duplication or broken path crosses
-that boundary. In working notes, assign each file its reader, purpose, and
+ownership. Extend inspection to directly related material when a demonstrated duplication
+or broken path crosses the requested boundary, keeping edits within the
+authorized scope and identifying connected corrections that require a broader
+change. In working notes, assign each file its reader, purpose, and
 documentation mode; use the role map to decide where sections belong.
 
 Document the project's behavior, concepts, interfaces, and specific setup.
@@ -75,8 +77,8 @@ examples beside the fact they explain; move longer ones into local collapsible
 blocks or an existing examples section when they interrupt the flow. Correct or
 remove misleading and redundant examples.
 
-Credit borrowed material in its appropriate citation or credit location. A
-worked example from the earlier skill illustrates the sentence-level approach:
+Credit borrowed material in its appropriate citation or credit location. This
+worked example illustrates the sentence-level approach:
 
 > `budget.mjs` reads the committed budget from `budget.json` and counts the files
 > that import protos. If the count exceeds the budget, CI fails. Run

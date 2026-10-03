@@ -8,7 +8,7 @@ Source: [backnotprop/pstack](https://github.com/backnotprop/pstack)
 
 Copyright 2026 Lauren Tan. MIT License. See [`licenses/PSTACK-MIT.txt`](licenses/PSTACK-MIT.txt).
 
-The local collection includes adapted PStack workflows such as `architect`, `arena`, `blast-radius`, `bro`, `create-verification-skill`, `figure-it-out`, `how`, `interrogate`, `maintain-verification-skill`, `poteto-mode`, `show-me-your-work`, `unslop`, and `why`.
+The local collection includes adapted PStack workflows such as `architect`, `arena`, `blast-radius`, `bro`, `create-verification-skill`, `figure-it-out`, `how`, `interrogate`, `maintain-verification-skill`, `poteto-mode`, `show-me-your-work`, `writing-for-humans` (incorporating `unslop`), and `why`.
 
 ## Matt Pocock's skills
 
@@ -46,4 +46,4 @@ Source: [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop)
 
 Copyright 2026 Peter Yang. MIT License. See [`licenses/NO-AI-SLOP-MIT.txt`](licenses/NO-AI-SLOP-MIT.txt).
 
-`docs-doc` adapts its audit boundary, voice-preservation rule, portability test, and prose-pattern checks that were not already present in this collection.
+`writing-for-humans` incorporates the former `docs-doc` adaptation of its audit boundary, voice-preservation rule, portability test, and prose-pattern checks that were not already present in this collection.
