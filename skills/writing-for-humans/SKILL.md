@@ -59,6 +59,11 @@ Before sending any prose, read it in context for the intended meaning, useful
 connections and the reader's level. When the user identifies a recurring defect,
 check every affected part, including notes, rather than repairing only the quote.
 
+Then test each sentence against the reader: do they already know it, or would
+removing it change what they understand or decide? If neither, delete it. How
+the work was done in the session, such as commands run, restarts, attempts and
+the writer's own process, usually fails this test.
+
 Private responses and documents intended only for the requester use the guidance
 and local reread above, including substantive drafts and document-wide revisions.
 
