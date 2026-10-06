@@ -1,5 +1,5 @@
 interface:
-  display_name: "Retrospettiva"
+  display_name: "Retro"
   short_description: "Miglioramenti fondati sulle prove di una sessione"
   default_prompt: "Usa $retro per esaminare questa sessione e proporre miglioramenti agli strumenti e alle istruzioni."
 policy:

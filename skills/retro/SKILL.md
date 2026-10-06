@@ -3,7 +3,7 @@ name: retro
 description: "Esamina una sessione di sviluppo e propone miglioramenti agli strumenti, ai controlli e alle istruzioni dell'agente."
 ---
 
-# Retrospettiva di una sessione
+# Retro
 
 Su richiesta dell'utente, individua miglioramenti all'ambiente di lavoro dell'agente che rendano più affidabili le sessioni successive. Parti dagli errori e dagli attriti osservati nella sessione.
 
