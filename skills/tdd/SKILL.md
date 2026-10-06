@@ -12,7 +12,7 @@ Do not force a test when it would be impractical. If the available test would re
 ## Workflow
 
 1. **Understand the bug.** Identify the intended behavior, current behavior, affected path, and smallest observable reproduction.
-2. **Discover the repository's test path.** Read the package, build, test, and CI configuration. Use the existing focused-test command and neighboring test conventions instead of assuming a framework or default command.
+2. **Discover the repository's test path.** Read the project glossary designated by repository instructions, if present, so test names use its domain vocabulary. Read the package, build, test, and CI configuration. Use the existing focused-test command and neighboring test conventions instead of assuming a framework or default command.
 3. **Choose the narrowest executable check.** Prefer the closest unit, component, integration, or regression test already used for that codepath. If no practical test path is obvious, do not create one from scratch just to satisfy the workflow.
 4. **Write the failing test first.** Add the smallest focused test that would have caught the bug. The test should encode intended behavior, not mirror the current implementation.
 5. **Run the new test before fixing.** Confirm it fails for the intended reason. If it passes or fails for an unrelated reason, correct the test or reproduction before editing the implementation.

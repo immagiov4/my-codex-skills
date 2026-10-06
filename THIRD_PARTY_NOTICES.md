@@ -14,6 +14,8 @@ The local collection includes adapted PStack workflows such as `architect`, `are
 
 Source: [mattpocock/skills](https://github.com/mattpocock/skills)
 
+Reviewed against upstream revision [`6fd9479`](https://github.com/mattpocock/skills/commit/6fd947921b935b7e1e69293a200400f0fdd5c15f) on 2026-10-06. The adaptations support both glossary naming conventions and retain this collection's Codex invocation, writing, testing, and authorization rules.
+
 Copyright 2026 Matt Pocock. MIT License. See [`licenses/MATTPOCOCK-MIT.txt`](licenses/MATTPOCOCK-MIT.txt).
 
 The local collection includes adapted engineering and writing workflows from this project, including `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grill-with-docs`, `grilling`, `handoff`, `prototype`, `research`, `setup-matt-pocock-skills`, `tdd`, `teach`, `to-spec`, `to-tickets`, `wayfinder`, `wizard`, and `writing-for-agents`.

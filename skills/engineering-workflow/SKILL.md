@@ -82,7 +82,7 @@ Use `$show-me-your-work` when a long autonomous run needs a decision trail. Judg
 
 Apply `$writing-for-humans` to engineering explanations, documentation and PR prose, including its independent review for substantive writing. Use `$bro` when the user asks for a simpler restatement.
 
-Keep permanent documentation small. `AGENTS.md` routes agents. `CONTEXT.md` defines domain terms. `docs/system-map.md` records stable ownership, dependencies, flows, invariants, and major entry points. Create an ADR only for a surprising, hard-to-reverse decision made through a real trade-off.
+Keep permanent documentation small. `AGENTS.md` routes agents. The project glossary (`GLOSSARY.md` or existing `CONTEXT.md`, following the configured layout) defines domain terms. `docs/system-map.md` records stable ownership, dependencies, flows, invariants, and major entry points. Create an ADR only for a surprising, hard-to-reverse decision made through a real trade-off.
 
 After a meaningful feature or refactor, use `$maintain-system-map`. Update documentation when the system's meaning changed, not because lines changed.
 
