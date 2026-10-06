@@ -18,7 +18,7 @@ Reviewed against upstream revision [`6fd9479`](https://github.com/mattpocock/ski
 
 Copyright 2026 Matt Pocock. MIT License. See [`licenses/MATTPOCOCK-MIT.txt`](licenses/MATTPOCOCK-MIT.txt).
 
-The local collection includes adapted engineering and writing workflows from this project, including `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grill-with-docs`, `grilling`, `handoff`, `prototype`, `research`, `setup-matt-pocock-skills`, `tdd`, `teach`, `to-spec`, `to-tickets`, `wayfinder`, `wizard`, and `writing-for-agents`.
+The local collection includes adapted engineering and writing workflows from this project, including `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grill-with-docs`, `grilling`, `handoff`, `prototype`, `research`, `retro`, `setup-matt-pocock-skills`, `tdd`, `teach`, `to-spec`, `to-tickets`, `wayfinder`, `wizard`, and `writing-for-agents`.
 
 ## Qwen Code
 

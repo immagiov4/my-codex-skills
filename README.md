@@ -55,6 +55,8 @@ Each directory under `skills/` is an independently discoverable Codex skill. The
 
 `receiving-pr-reviews` validates the issue and PR contract before investigating review findings. Repository instructions take precedence over conflicting review comments; unresolved conflicts in the original requirements go to the maintainer.
 
+`retro` examines a requested coding session and proposes improvements to the agent environment, grounded in session evidence. Invoke it explicitly with `$retro`; implementing its proposals follows your authorization.
+
 ## License
 
 Original work and local adaptations are released under the MIT License. Upstream material remains covered by its original license and copyright notice.

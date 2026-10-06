@@ -86,6 +86,10 @@ Keep permanent documentation small. `AGENTS.md` routes agents. The project gloss
 
 After a meaningful feature or refactor, use `$maintain-system-map`. Update documentation when the system's meaning changed, not because lines changed.
 
+## Learn from a session
+
+When the user asks for a retrospective, use `$retro` to identify evidence-backed improvements to navigation, checks, instructions, tool cost, and information access. It presents proposals; implementing them follows the user's authorization.
+
 ## Respect Git authorization
 
 Read repository Git rules before any state change. Do not initialize a repository, create or switch branches, commit, push, merge, open a pull request, or rewrite history unless the user authorized that action and the repository permits it. Read-only Git commands are fine when they support the task.
