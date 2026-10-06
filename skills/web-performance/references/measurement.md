@@ -28,7 +28,7 @@ Record the commit, URL, build mode, cache state, Lighthouse version, emulation s
 
 ## Capture runtime behavior
 
-Use a representative user flow. Record page load separately from interaction work when both matter.
+Use a representative user flow. Record page load separately from interaction work when both matter. For an interaction regression, measure from the triggering input until the intended next action is usable, including work deferred past an animation. Replay sustained typing or scrolling when it caused the symptom, with representative content size and character sets.
 
 Inspect:
 

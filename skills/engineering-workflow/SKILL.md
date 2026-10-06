@@ -48,7 +48,7 @@ Give the subagent the repository instructions, exact scope, output path, and com
 ## Implement in checkable units
 
 1. Ground the affected system.
-2. State a falsifiable definition of done.
+2. State a falsifiable definition of done. When success depends on an external service or interface, test the smallest complete user path early, including entry to the result from the requested account or device. Verify any prerequisite that requires completed setup as soon as that setup permits it; treat each unobserved boundary as unresolved.
 3. Settle important data and interface shapes.
 4. Make the smallest useful change.
 5. Use `$tdd` when there is a cheap, meaningful test seam.

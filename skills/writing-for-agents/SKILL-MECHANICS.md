@@ -17,6 +17,10 @@ policy:
 
 The skill remains available as `$skill-name`. Keep the description accurate because the user still sees it in skill discovery.
 
+## Updating an existing collection
+
+For an upstream update, compare the source catalogue with installed skills and incorporated sections, including new entries within the requested scope. Account for each relevant entry as adopted, already covered or incompatible, preserving local decisions. Before synchronizing existing copies, compare their contents and reconcile intentional differences; verify the resulting files in each authorized destination. Repository publication follows its own authorization.
+
 ## Splitting
 
 Split a skill when a branch has its own trigger and enough instructions to justify a separate context load. Keep shared rules in one referenced file when several skills need them. Point to the file from each relevant `SKILL.md` and state when to read it.
