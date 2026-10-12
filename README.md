@@ -57,6 +57,8 @@ Each directory under `skills/` is an independently discoverable Codex skill. The
 
 `retro` examines a requested coding session and proposes improvements to the agent environment, grounded in session evidence. Invoke it explicitly with `$retro`; implementing its proposals follows your authorization.
 
+`skill-learning-patterns` turns verified lessons from the current chat into focused skill improvements and reviews collections for overlapping or outdated instructions when requested. It adapts e-bash's learning workflow and methods studied in Hermes `/refine` and curator; edits, installation, publication, and archival follow the user's authorization. Invoke `$skill-learning-patterns` with a chat lesson, a skill to refine, or a collection to review.
+
 ## License
 
 Original work and local adaptations are released under the MIT License. Upstream material remains covered by its original license and copyright notice.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Learning Patterns"
+  short_description: "Migliora le skill dalle prove emerse nelle chat"
+  default_prompt: "Usa $skill-learning-patterns per ricavare da questa chat miglioramenti verificabili alle skill e mostrarmi le modifiche proposte."

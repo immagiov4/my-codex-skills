@@ -49,3 +49,11 @@ Source: [petergyang/no-ai-slop](https://github.com/petergyang/no-ai-slop)
 Copyright 2026 Peter Yang. MIT License. See [`licenses/NO-AI-SLOP-MIT.txt`](licenses/NO-AI-SLOP-MIT.txt).
 
 `writing-for-humans` incorporates the former `docs-doc` adaptation of its audit boundary, voice-preservation rule, portability test, and prose-pattern checks that were not already present in this collection.
+
+## e-bash
+
+Source: [OleksandrKucherenko/e-bash](https://github.com/OleksandrKucherenko/e-bash/tree/26d905b30c65d57c6707049c8ace9aba2d20fe61/.claude/skills/skill-learning).
+
+Copyright (c) 2017-current Oleksandr Kucherenko. MIT License. See [`licenses/E-BASH-MIT.txt`](licenses/E-BASH-MIT.txt).
+
+`skill-learning-patterns` adapts the learning recognition, validation, and contribution workflow for Codex. Its [source notes](skills/skill-learning-patterns/references/sources.md) also identify the Hermes refinement and collection-maintenance mechanisms studied for the adaptation.
