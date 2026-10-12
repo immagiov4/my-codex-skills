@@ -43,6 +43,8 @@ Pull the repository and run the install script again. For plugin installations, 
 
 The optional [Luanti memory hook](hooks/luanti-memory/README.md) connects Codex to a chosen knowledge checkout. Its setup includes the checkout path and hook trust review.
 
+The optional [Mercury native memory hook](hooks/mercury-memory/README.md) selects relevant preferences from the current native Codex archive before each local user turn. It uses Python and OpenRouter with an explicit installer, keeps private memories and credentials outside this repository, and needs no background service or Docker container.
+
 Each directory under `skills/` is an independently discoverable Codex skill. The repository also includes a plugin manifest, so the complete collection can be installed without copying directories by hand.
 
 `code-review` is the default structured code review used by `engineering-workflow`. Two independent searches examine a fixed change and its contract, then a separate session verifies every candidate. The coordinator runs locally with Python 3.9 or newer and an authenticated Codex CLI; inference uses GPT-6.1 Sol with medium reasoning. Reports preserve findings, coverage, limitations, effective model, durations, and token usage. Resolve model requirements from repository instructions and maintainer decisions before starting the CLI. See [the review procedure](skills/code-review/SKILL.md) for inputs and execution.
