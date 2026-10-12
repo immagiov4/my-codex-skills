@@ -8,13 +8,16 @@ import hashlib
 import http.client
 import json
 import os
+import queue
 from pathlib import Path
 import re
 import sys
 import time
+import threading
 import urllib.request
 import uuid
 
+HISTORY_READ_BYTES = 1024 * 1024
 MODEL = "inception/mercury-decide"
 ENDPOINT = "https://openrouter.ai/api/alpha/decisions"
 DEFAULTS = {"threshold": 0.65, "request_timeout_seconds": 6,
@@ -113,33 +116,41 @@ def recent_history(event, settings):
     if not path or not Path(path).is_file():
         return []
     messages = []
-    # Transcript is an optional, version-dependent hook convenience, not a memory source.
-    with Path(path).open(encoding="utf-8") as stream:
-        for line in stream:
-            try:
-                row = json.loads(line)
-            except json.JSONDecodeError:
-                continue  # A session writer can have an unfinished last line.
-            if not isinstance(row, dict):
-                continue
-            payload = row.get("payload", {})
-            if not isinstance(payload, dict) or row.get("type") != "response_item" or payload.get("type") != "message":
-                continue
-            role = payload.get("role")
-            if role not in ("user", "assistant"):
-                continue
-            content = payload.get("content")
-            if not isinstance(content, list):
-                continue
-            text = "\n".join(part["text"] for part in content
-                             if isinstance(part, dict) and part.get("type") in ("input_text", "output_text")
-                             and isinstance(part.get("text"), str))
-            if not text or text.lstrip().startswith(("# AGENTS.md instructions", "<environment_context>")):
-                continue
-            if role == "user" and text == event.get("prompt"):
-                continue
-            messages.append({"role": role, "text": text})
-            messages = messages[-settings["history_messages"]:]
+    # Bound work independently of archive size, including multi-gigabyte tool/image lines.
+    with Path(path).open("rb") as stream:
+        stream.seek(0, os.SEEK_END)
+        offset = max(0, stream.tell() - HISTORY_READ_BYTES)
+        stream.seek(offset)
+        lines = stream.read(HISTORY_READ_BYTES).split(b"\n")
+    if offset:
+        lines = lines[1:]  # The first line may begin before the byte window.
+    for line in reversed(lines):
+        try:
+            row = json.loads(line)
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            continue  # A session writer can have an unfinished last line.
+        if not isinstance(row, dict):
+            continue
+        payload = row.get("payload", {})
+        if not isinstance(payload, dict) or row.get("type") != "response_item" or payload.get("type") != "message":
+            continue
+        role = payload.get("role")
+        if role not in ("user", "assistant"):
+            continue
+        content = payload.get("content")
+        if not isinstance(content, list):
+            continue
+        text = "\n".join(part["text"] for part in content
+                         if isinstance(part, dict) and part.get("type") in ("input_text", "output_text")
+                         and isinstance(part.get("text"), str))
+        if not text or text.lstrip().startswith(("# AGENTS.md instructions", "<environment_context>")):
+            continue
+        if role == "user" and text == event.get("prompt"):
+            continue
+        messages.append({"role": role, "text": text})
+        if len(messages) >= settings["history_messages"]:
+            break
+    messages.reverse()
     remaining, result = settings["history_characters"], []
     for message in reversed(messages):
         if remaining <= 0:
@@ -216,6 +227,30 @@ def retrieve(event, home, settings, receipt):
             + "\n</mercury_native_memory>")
 
 
+def retrieve_before_deadline(event, home, settings, receipt):
+    """Bound the whole retrieval, including DNS, TLS and a slowly streamed body."""
+    finished = queue.Queue(maxsize=1)
+
+    def worker():
+        details = {}
+        try:
+            context = retrieve(event, home, settings, details)
+            finished.put((context, details, None))
+        except Exception as error:
+            finished.put(("", details, error))
+
+    # A timed-out worker cannot retain the one-shot hook process or write late receipts.
+    threading.Thread(target=worker, daemon=True).start()
+    try:
+        context, details, error = finished.get(timeout=settings["request_timeout_seconds"])
+    except queue.Empty:
+        raise TimeoutError("Total retrieval deadline exceeded") from None
+    receipt.update(details)
+    if error is not None:
+        raise error
+    return context
+
+
 def run(event, home):
     settings = dict(DEFAULTS)
     config = home / "mercury-memory" / "settings.json"
@@ -240,7 +275,7 @@ def run(event, home):
                "prompt_sha256": digest(event["prompt"].encode())}
     context, warning = "", None
     try:
-        context = retrieve(event, home, settings, receipt)
+        context = retrieve_before_deadline(event, home, settings, receipt)
         receipt["status"] = "selected" if context else "no_relevant_memories"
     except (OSError, http.client.HTTPException, ValueError, KeyError, TypeError) as error:
         # Optional retrieval must never block the user's real task or native memory path.

@@ -7,6 +7,7 @@ import tempfile
 import subprocess
 import sys
 import unittest
+import time
 from unittest.mock import patch
 
 import hook
@@ -111,6 +112,47 @@ class NativeMemoryHookTests(unittest.TestCase):
                          "content": [{"type": "input_text", "text": text}]}}) for role, text in messages), encoding="utf-8")
         history = hook.recent_history(dict(self.event, transcript_path=str(path)), hook.DEFAULTS)
         self.assertEqual([item["text"] for item in history], ["Previous real question", "Previous answer"])
+
+    def test_large_transcript_reads_only_bounded_tail(self):
+        path = self.home / "large-transcript.jsonl"
+        with path.open("wb") as stream:
+            # A large tool result must not force reading or parsing the entire archive.
+            stream.write(b'{"type":"response_item","payload":{"type":"function_call_output","output":"')
+            stream.seek(8 * 1024 * 1024)
+            stream.write(b'"}}\n')
+            for role, text in [("user", "Recent question"), ("assistant", "Recent answer")]:
+                stream.write((json.dumps({"type": "response_item", "payload": {"type": "message", "role": role,
+                              "content": [{"type": "input_text", "text": text}]}}) + "\n").encode())
+        with path.open("rb") as stream, patch.object(Path, "open", return_value=stream), patch.object(
+                stream, "read", wraps=stream.read) as read:
+            history = hook.recent_history(dict(self.event, transcript_path=str(path)), hook.DEFAULTS)
+            read.assert_called_once_with(hook.HISTORY_READ_BYTES)
+        self.assertEqual([entry["text"] for entry in history], ["Recent question", "Recent answer"])
+
+    def test_total_deadline_covers_stalled_retrieval(self):
+        def stalled(*args):
+            time.sleep(0.3)
+            return "late context"
+        started = time.perf_counter()
+        with patch.object(hook, "retrieve", side_effect=stalled):
+            with self.assertRaises(TimeoutError):
+                hook.retrieve_before_deadline(self.event, self.home,
+                                             dict(hook.DEFAULTS, request_timeout_seconds=0.05), {})
+        self.assertLess(time.perf_counter() - started, 0.2)
+
+    def test_process_exits_at_deadline_even_when_worker_remains_stalled(self):
+        hook.write_json(self.home / "mercury-memory/settings.json", {"request_timeout_seconds": 1})
+        code = ("import sys,time;sys.path.insert(0,sys.argv[2]);import hook;"
+                "home=sys.argv[1];sys.argv=['hook','--codex-home',home];"
+                "hook.retrieve=lambda *args:time.sleep(30);hook.main()")
+        result = subprocess.run([sys.executable, "-c", code, str(self.home), str(Path(hook.__file__).parent)],
+                                input=json.dumps(self.event), capture_output=True,
+                                text=True, encoding="utf-8", timeout=4)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(json.loads(result.stdout)["hookSpecificOutput"]["additionalContext"], "")
+        receipt = hook.read_json(self.home / "mercury-memory/receipts/example-turn.json")
+        self.assertEqual(receipt["error_type"], "TimeoutError")
+        self.assertLess(receipt["elapsed_seconds"], 2)
 
     def test_installed_command_handles_spaces_in_paths(self):
         script = self.home / "owner's directory with spaces" / "probe.py"
