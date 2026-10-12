@@ -1,23 +1,23 @@
-# Revisione della raccolta
+# Collection review
 
-Usa questa procedura quando l'utente chiede di rivedere una raccolta di skill, ridurre duplicazioni o accorpare istruzioni. Il confronto riguarda il contenuto e i suoi utilizzatori; la data di modifica di un file non dimostra che la procedura sia superata.
+Use this procedure when the user asks to review a skill collection, reduce duplication, or consolidate instructions. Compare content and its consumers; a file's modification date does not establish that its procedure is outdated.
 
-## Delimita e confronta
+## Scope and compare
 
-1. Individua le directory richieste, le copie sorgente, le copie installate e gli eventuali componenti gestiti da fornitori. Dichiara la copertura. Esamina prima nomi e descrizioni, poi leggi interamente le skill con responsabilità sovrapposte e i riferimenti necessari a comprenderle.
-2. Raggruppa per problema affrontato, decisioni e procedura compatibile. Nomi simili sono indizi da verificare. Conserva separate le procedure con vincoli incompatibili, destinatari diversi o motivi concreti per essere richiamate autonomamente.
-3. Verifica ciascun candidato rispetto a strumenti e documentazione correnti. Tratta i dati di utilizzo come prove solo se esistono e ne conosci la copertura; l'assenza di dati resta un'incertezza, non un motivo per archiviare.
+1. Identify the requested directories, source copies, installed copies, and any vendor-managed components. State coverage. Examine names and descriptions first, then read skills with overlapping responsibilities in full, along with the references needed to understand them.
+2. Group by problem, decisions, and compatible procedure. Similar names are clues to investigate. Keep procedures separate when they have incompatible constraints, different audiences, or concrete reasons to be invoked independently.
+3. Check each candidate against current tools and documentation. Treat usage data as evidence only when it exists and its coverage is known; missing data remains uncertainty, not a reason to archive.
 
-## Prepara l'accorpamento
+## Prepare consolidation
 
-Per ogni gruppo, indica il proprietario proposto, le sovrapposizioni reali, i casi da preservare e una mappa `vecchia skill → destinazione`. La destinazione può essere una skill esistente con sezioni e riferimenti tematici. Mantieni breve l'ingresso e carica i dettagli quando servono al caso; una skill generale deve continuare a farsi trovare dalle richieste che prima attivavano le skill assorbite.
+For each group, identify the proposed owner, actual overlap, cases to preserve, and an `old skill → destination` map. The destination may be an existing skill with sections and topical references. Keep the entrypoint short and load detail when the case requires it; a broader skill must remain discoverable from requests that previously activated absorbed skills.
 
-Cerca i richiami nei documenti, nelle altre skill, nei manifesti, nei programmi e nelle automazioni accessibili comprese nell'ambito. Segnala quelli che richiedono accessi ulteriori. La rimozione di un nome richiamato richiede una migrazione verificata oppure una compatibilità mantenuta secondo le convenzioni della raccolta.
+Search for callers in documents, other skills, manifests, programs, and accessible automations within scope. Identify callers that require additional access. Removing a referenced name requires a verified migration or compatibility maintained according to the collection's conventions.
 
-Presenta le differenze proposte prima di chiedere un'eventuale autorizzazione mancante. L'approvazione di correggere un testo non si estende da sola a spostare directory, archiviare skill o modificare automazioni.
+Present proposed diffs before requesting any missing authorization. Approval to edit text does not by itself extend to moving directories, archiving skills, or changing automations.
 
-## Applica e controlla
+## Apply and verify
 
-Per un accorpamento autorizzato, conserva una copia recuperabile delle versioni precedenti, inclusi i file locali non registrati pertinenti. Verifica la destinazione della copia prima di spostare qualsiasi directory. Distilla le regole condivise in un unico proprietario e mantieni le eccezioni utili nei riferimenti tematici; conserva le attribuzioni dei contenuti riutilizzati.
+For authorized consolidation, preserve a recoverable copy of previous versions, including relevant untracked local files. Verify the copy's destination before moving any directory. Distill shared rules into a single owner and preserve useful exceptions in topical references; retain attribution for reused content.
 
-Confronta la mappa con ogni procedura sorgente per verificare che i casi utili abbiano una destinazione. Controlla i collegamenti e prova richieste rappresentative delle skill assorbite, comprese quelle che devono restare distinte. Sincronizza le installazioni autorizzate soltanto dopo aver verificato la sorgente. Rendi verificabili i file modificati, le migrazioni e il percorso della copia recuperabile.
+Compare the map with every source procedure to ensure that useful cases have a destination. Check links and test requests representative of absorbed skills, including those that must remain distinct. Synchronize authorized installations only after verifying the source. Make changed files, migrations, and the recoverable copy's location verifiable.
