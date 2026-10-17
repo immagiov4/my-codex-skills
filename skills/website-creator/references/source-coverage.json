@@ -5649,14 +5649,33 @@
       "indexed_posts": 34,
       "archive_status": "visual_review_in_progress",
       "priority_queue": [
+        "DbYehOptZjm",
+        "DehZKF5C4u4",
         "DdZPYr_mJwt",
         "DdT-cLDqEJ2",
         "DcwcdNZCI7P",
+        "DctlOzOtyGe",
+        "DcjNSAxNMkT",
+        "DcRJlqMqrLb",
         "DcLDYBvi_bc",
+        "Db3PX-NN-iM",
         "DbnzvaSt0A9",
+        "DbdpBdXt8XT",
         "DbbGaR0tc8D",
+        "DbVIVMrtdmq",
         "DbS2NJlC0CP",
-        "DZsQ2sxDbxu"
+        "DZxJbQPCwz2",
+        "DZsQ2sxDbxu",
+        "DWjOTZ9jKzq",
+        "DU0ns2QiMC-",
+        "DUk61KliGjh",
+        "DJXI2TGt-2j",
+        "DIzQxfsNSCv",
+        "DIhJ3pWyTn2",
+        "DIMK3oOt8VH",
+        "DH1uoDLN2Bs",
+        "DHl4BLVNKfF",
+        "DGBTqsZt4Bk"
       ],
       "posts": [
         {
@@ -5669,7 +5688,9 @@
         {
           "id": "DbYehOptZjm",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Identify the three SVG, palette and loader tools in the visual demonstration"
         },
         {
           "id": "DehZKF5C4u4",
@@ -5688,7 +5709,9 @@
         {
           "id": "Dd4MYB5GDKZ",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "duplicate",
+          "evidence": "caption",
+          "reason": "OriginKit; existing catalog, retain its custom license and Free/Pro distinction"
         },
         {
           "id": "Ddb3n-ZmGVg",
@@ -5700,144 +5723,211 @@
         {
           "id": "DdZPYr_mJwt",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "allwebsites.design; inspect design-reference filters and reuse scope"
         },
         {
           "id": "DdT-cLDqEJ2",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "lersent001 orb; inspect WebGPU fallback, output and source license"
         },
         {
           "id": "DcwcdNZCI7P",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption_and_primary_docs",
+          "reason": "Gradientool; official editor interface checked, export and output rights pending"
         },
         {
           "id": "DctlOzOtyGe",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Figma cubic-glass workflow; inspect Pattern Hero steps and exportable original result"
         },
         {
           "id": "DcjNSAxNMkT",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "App-design resources; identify original sites from the demonstration"
         },
         {
           "id": "DcRJlqMqrLb",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Figma refraction and warp workflow; inspect plugins, output and access"
         },
         {
           "id": "DcLDYBvi_bc",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "UI.live; inspect Figma file access and template reuse terms"
         },
         {
           "id": "Db3PX-NN-iM",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "3D icons and transitions; identify all three original resources"
         },
         {
           "id": "DbnzvaSt0A9",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Logo animation editor; identify resource and inspect export and output rights"
         },
         {
           "id": "DbdpBdXt8XT",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Poster/branding editor; identify resource and inspect original-image export"
         },
         {
           "id": "DbbGaR0tc8D",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Neuform; inspect design-system reuse and output access"
         },
         {
           "id": "DbVIVMrtdmq",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption_and_primary_docs",
+          "reason": "Ditther; official site checked, visual identity match and export rights pending"
         },
         {
           "id": "DbS2NJlC0CP",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption_and_primary_docs",
+          "reason": "Raylight; official product and commercial/template terms checked, editor export pending"
         },
         {
           "id": "DaxriBaCHYn",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "duplicate",
+          "evidence": "caption",
+          "reason": "OriginKit; existing catalog, preserve current license and access limits"
         },
         {
           "id": "DanXCeqimO_",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "adopted_reference",
+          "evidence": "visual_passage_and_live_editor",
+          "reason": "Animos; original image loaded into Center Stage, 5-second preview, Export requires login; downloaded file and commercial terms pending"
         },
         {
           "id": "DZxJbQPCwz2",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Website-to-Figma import; identify tool, editable output and authorized-source use"
         },
         {
           "id": "DZsQ2sxDbxu",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Refero, Appshots, ABTest.Design and Bento Grids; inspect access and design-reference scope"
         },
         {
           "id": "DWjOTZ9jKzq",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Font collection; inspect actual families and each font license"
         },
         {
           "id": "DU0ns2QiMC-",
           "kind": "reel",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Unicorn Studio dither/ASCII workflow; inspect export, embed access and original asset use"
         },
         {
           "id": "DUk61KliGjh",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Design-tool collection carousel; inspect slides to identify resources"
         },
         {
           "id": "DJXI2TGt-2j",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Original-image packaging treatment; inspect prompt steps and adapt as product media"
         },
         {
           "id": "DIzQxfsNSCv",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Brand typography study; inspect family licenses rather than infer from brand examples"
         },
         {
           "id": "DIhJ3pWyTn2",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Image-to-3D illustration workflow; inspect steps and adapt to current generation tools"
         },
         {
           "id": "DIMK3oOt8VH",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Evernote.Design, Hypercolor, Components.AI and Humaaans; inspect original sites and reuse terms"
         },
         {
           "id": "DH1uoDLN2Bs",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Image-effect workflow carousel; inspect actual steps and current tool support"
         },
         {
           "id": "DHl4BLVNKfF",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Design-resource carousel; identify sites and asset-production uses"
         },
         {
           "id": "DGGEYbLNMvk",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "rejected",
+          "evidence": "caption",
+          "reason": "General design motivation; no resource or reproducible website-material workflow identified"
         },
         {
           "id": "DGBTqsZt4Bk",
           "kind": "p",
-          "decision": "untriaged"
+          "decision": "pending",
+          "evidence": "caption",
+          "reason": "Autoflow, Unsplash, Content Reel, Iconify and Figmotion; check access and asset licenses"
         }
-      ]
+      ],
+      "caption_screened_posts": 34
+    }
+  ],
+  "direct_discoveries": [
+    {
+      "resource": "https://effect.app/",
+      "discovery": "User explicitly confirmed this editor on 2026-10-18",
+      "observed_on": "2026-10-18",
+      "evidence": "live_editor_and_primary_docs",
+      "decision": "adopted_reference",
+      "reason": "Original image loaded, Dither applied, Export requires login; plan-specific commercial permission and downloaded file pending"
     }
   ]
 }

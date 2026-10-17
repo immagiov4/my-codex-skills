@@ -2,6 +2,8 @@
 
 Availability and pricing verified on 29 September 2026. Start with project images and session tools; photographic video is an optional, quoted step.
 
+For visual editors that create website materials from existing images or interface screens, read [asset editors and showcase recipes](social-design-resources.md#create-website-materials): Animos, Effect.app, Raylight, Gradientool and Ditther, checked on 18 October 2026. Choose them for a defined exported result, with their recorded account, plan and reuse conditions.
+
 ## Translate tutorial operations into local tools
 
 These substitutions are implementation proposals. The tutorial provides the sequence and effect; Codex produces local files and verifies them in the project.

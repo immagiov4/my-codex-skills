@@ -29,7 +29,7 @@ Open the [recipe index](references/indice-ricette.md), then read the selected re
 | Editable website with Elementor or WordPress blocks | [WordPress](references/wordpress.md) |
 | A suggested combination for a website type | [Website combinations](references/modelli.md) |
 | Free component, official instructions, license | [Resources and licenses](references/risorse.md), [additional catalogs](references/cataloghi-componenti.md) |
-| Social discoveries: mesh gradients, generative SVG, loaders, GPU effects, icon catalogs | [SetupsAI and Jamux resources and recipes](references/social-design-resources.md) |
+| Social discoveries: mesh gradients, SVG, loaders, GPU effects, icons, asset editors, UI showcase videos | [SetupsAI and Jamux resources and recipes](references/social-design-resources.md) |
 | Codex images, metered video, OpenRouter, or Higgsfield | [Images and video](references/immagini-video.md) |
 | Author, date, popularity, evidence, captured frames | [Video catalog](references/video.md), [visual atlas](references/atlante.md) |
 

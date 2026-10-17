@@ -71,6 +71,8 @@ Choose the effect or task, then open its recipe. Combinations for entire website
 | C19 | A reproducible geometric SVG background | [Social resource recipes](social-design-resources.md#c19) |
 | C20 | A loader tied to a real pending operation | [Social resource recipes](social-design-resources.md#c20) |
 | C21 | A GPU effect with usable HTML underneath | [Social resource recipes](social-design-resources.md#c21) |
+| P11 | Animate original interface screens into website media | [Asset editor recipes](social-design-resources.md#p11) |
+| P12 | Create a photographic treatment for a page | [Asset editor recipes](social-design-resources.md#p12) |
 | W04 | A shop with a theme, Elementor, and WooCommerce | [Bring a composition into WordPress](wordpress.md#w04) |
 | U01 | Editable defaults that shorten a routine task | [Improve concrete user journeys](user-experience.md#u01) |
 | U02 | A useful result preview before account creation | [Improve concrete user journeys](user-experience.md#u02) |
