@@ -1,0 +1,69 @@
+# Resources discovered through SetupsAI and Jamux
+
+Choose by the requested result. These entries were checked on 2026-10-18; the procedures below are this collection's adaptations. Social demonstrations establish discovery and appearance; official pages establish access and reuse conditions. An editor preview or exported file proves that operation, while integration into a website requires the recipe's own checks. Read [source coverage](source-coverage.json) for inspected posts and the remaining archive.
+
+## Choose a resource
+
+| Resource and source demonstration | Useful result and observed evidence | Access, reuse, and next decision |
+|---|---|---|
+| [Photo Gradient](https://photogradient.com/) · [SetupsAI part 961](https://www.instagram.com/setupsai/reel/DVyYrPCjlrT/) | Mesh backgrounds with configurable colors, warp and noise. Changed two colors in Chrome and exported an actual 1296 × 1296 PNG. | Public editor worked without login. Website source and artwork redistribution rights remain unverified; use as an output tool subject to its current terms. C18 covers placement and cropping. |
+| [PaletteMaker](https://palettemaker.com/app) · [SetupsAI part 731](https://www.instagram.com/setupsai/reel/DLzt0TZTVvQ/) | Judge a palette across interface compositions. Selected Web / Mobile UI, opened Export palette → Code, and read five hexadecimal values. | Public editor worked without login. Reuse chosen color values in an original layout; the demonstration templates and illustrations have separate rights. [Author and purpose](https://palettemaker.com/about). |
+| [Book of Shapes](https://bookofshapes.com/) · [SetupsAI part 1134](https://www.instagram.com/setupsai/reel/Dcvgqsuv3Rs/) | Parametric geometric backgrounds. In [Scattered Cube Grid](https://bookofshapes.com/patterns/scattered-cube-grid), changed Grid Dimension from 12 to 5 and downloaded a ZIP containing two SVG variants and LICENSE.txt. | [Output license](https://bookofshapes.com/license) permits modified personal/commercial end products without attribution; excludes standalone pattern packs and competing generators. Joy Division, Joy Division Mesh, and Brockmann Beethoven Arcs are study-only exceptions. Website code and node definitions are outside that output license. Use C19. |
+| [UI Ball LDRS](https://uiball.com/ldrs/) · [SetupsAI part 1076](https://www.instagram.com/setupsai/reel/DaaWs1_hZOM/) | Configurable lightweight loading indicators. Opened the live Ring preview and its size/speed/stroke controls. | [MIT package and instructions](https://github.com/GriffinJohnston/ldrs). Web components are client-only; React imports need the matching CSS. Use C20 for a real pending operation. |
+| [Uiverse](https://uiverse.io/) · [SetupsAI part 826](https://www.instagram.com/setupsai/reel/DP1As0EESyA/) | Small CSS controls, buttons and loading indicators, with selectable implementation variants. Official catalog inspected; individual component integration remains project-specific. | The official catalog labels its UI elements MIT; [source collection](https://github.com/uiverse-io/galaxy). Retain the selected author's notice and inspect dependencies. Preserve native input semantics and labels when adapting decorative controls. |
+| [UI Layouts](https://www.ui-layouts.com/) · [SetupsAI part 896](https://www.instagram.com/setupsai/reel/DTFiJslgep8/) | React blocks and visual layout experiments. The observed social passage demonstrates a clip-path editor; that passage alone does not prove a cursor effect. | Public [repository](https://github.com/ui-layouts/uilayouts) is MIT; the separate Pro catalog has its own access. Select the public component, inspect its code and use the project's existing dependency versions. |
+| [SVG Repo](https://www.svgrepo.com/) · [SetupsAI part 745](https://www.instagram.com/setupsai/reel/DMXw4YsT2q5/) | A consistent set of vector symbols for navigation or illustration. Social demonstration and official licensing page inspected. | [Licensing](https://www.svgrepo.com/page/licensing/): default license allows commercial end products without attribution, but individual SVGs may override it. Check each asset, its trademark status and author. Use V05 for permitted animation; preserve viewBox and accessible names. |
+| [Lordicon](https://lordicon.com/) · [SetupsAI part 303](https://www.instagram.com/setupsai/reel/C-amuoKyDkR/) | Animated icon references and licensed files for meaningful interface events. Video customizer and official terms inspected. | [Free license](https://lordicon.com/licenses) requires attribution and refers to modified CC BY-ND terms; check permitted edits for the selected icon. Pro has separate duration and distribution conditions. Prefer original V01/V05 artwork when editing freedom is required. Account/export access was not exercised in this survey. |
+| [FeralUI Gradient Builder](https://feralui.dev/gradients) · [Jamux demonstration](https://www.instagram.com/jamux.ai/reel/DdB8DG8I91p/) | Procedural gradient editor, shape families, grain and multiple output formats. Opened Export → CSS and downloaded real CSS. Its generated comment explicitly says CSS approximates the mesh field; SVG/PNG preserves the actual field. | [Terms](https://feralui.dev/terms) permit free accountless demos and license published packages under their own MIT files. Keep demo access, generated output, and package source licensing distinct. The downloaded CSS includes a grain image; inspect its size before shipping. Use C18. |
+| [Canvas UI](https://canvasui.dev/) · [Jamux demonstration](https://www.instagram.com/jamux.ai/reel/Ddb3n-ZmGVg/) | GPU effects over live HTML, including Liquid, Particle Reveal, Glass and retro dithering. Social passage and [official rendering introduction](https://canvasui.dev/docs) inspected. | Official site specifies MIT + Commons Clause, rather than the video's plain MIT claim. WebGL and WebGPU builds differ; live HTML-in-canvas needs experimental browser support. Choose the build from current docs, retain normal HTML when unsupported, and test that path. C21 describes adoption. |
+| [ReactVibe](https://reactvibe.com/docs) · [Jamux post](https://www.instagram.com/jamux.ai/reel/DeKN8f-iAwW/) | React motion diagrams, headings, backgrounds and dashboard blocks. Caption and official documentation inspected; the social motion sequence was not evaluated. | [Author repository](https://github.com/siddhantmani/reactvibe) declares MIT; docs also mark some dashboard systems PRO. Check the selected component's source, license and access rather than treating the whole catalog as free. Install only dependencies the component imports. Use for A05 or a labeled process diagram; replace all sample financial data. |
+
+## Visual studies awaiting access or rights clarification
+
+Keep these as references or candidates until their specific gate is resolved. A visible export button establishes an interface option, not a usable licensed file.
+
+| Candidate and discovery | Observed capability | Gate before adoption |
+|---|---|---|
+| [Space Type Generator](https://spacetypegenerator.com/pow.html) by Kiel Mutschelknaus · [SetupsAI part 869](https://www.instagram.com/setupsai/reel/DR1xoywAYKA/) | POW creates expressive typographic compositions; the video shows SVG/JPG/MP4 options. | Establish the selected tool's output rights and complete an export. Adapt the composition using original SVG text when those facts remain unresolved. |
+| [Holocloth](https://holocloth.vercel.app/) · [SetupsAI part 1120](https://www.instagram.com/setupsai/reel/DclL5A5SZis/) | Holographic cloth, material controls, transparent-PNG option. Poke changed the live cloth simulation in Chrome. | Inspect current commercial-use/donation conditions and export an authorized result. Keep as a material and lighting study until then. |
+| [SVG Pattern Builder](https://svg.designcode.io/) · [SetupsAI part 1003](https://www.instagram.com/setupsai/reel/DXhC4CQGbAz/) | Adjustable shapes, spacing, rotation and motion. Editor inspection reached a sign-in gate for designing/downloading. | Account and output terms must be checked before selecting this route. C19 provides an accountless alternative with a verified output license. |
+| [3DLogoLab](https://3dlogolab.io/) · [SetupsAI part 1169](https://www.instagram.com/setupsai/reel/DeJklceha-o/) | 3D logo animation demonstrated socially; official pricing distinguishes image, video and 3D output. | Basic is personal-use with watermark; commercial use and video/3D export require Pro. Validate the selected paid feature before purchase. For an original free route, use the existing Blender/Three.js recipes. |
+| [Valessa by Riotters](https://valessa.riotters.com/) · [Jamux demonstration](https://www.instagram.com/jamux.ai/reel/DehZKF5C4u4/) | Glass/iridescent 3D materials and model controls. Opened the app without login, selected Rounded Star, and observed Image/Video/GLB export choices. | Clarify output/model commercial rights and inspect an exported file before adopting it in a deliverable. A free-access caption does not establish those rights. Use as a lighting study meanwhile. |
+
+## C18
+
+### A palette carried into a mesh background
+
+Use PaletteMaker to compare color relationships across Web / Mobile UI samples, then record actual hexadecimal values through Export palette → Code. Build the page's own color roles from those values and measure text contrast in the actual composition. Palette previews are design comparisons rather than an accessibility guarantee.
+
+For an image background, enter the chosen colors in Photo Gradient, adjust warp/noise, export PNG and inspect the file. For FeralUI, choose a type and palette, then inspect Export before choosing a format: its CSS output can be an approximation of the on-screen mesh. Use SVG/PNG when matching the field matters; use CSS when the simplified result is sufficient. Verify current output terms before distribution.
+
+Place the asset in a bounded opening section using C13, with a solid background color while it loads. Keep headings and actions as HTML. Compare desktop and narrow-screen crops; remove decorative motion under reduced motion, and check the asset's dimensions, weight and text contrast. The verified operations are palette-value inspection, a Photo Gradient PNG export and a FeralUI CSS export; no combined website was built during this survey.
+
+## C19
+
+### A reproducible geometric SVG background
+
+Open Book of Shapes → Scattered Cube Grid. Reduce Grid Dimension before changing density, layers or seed: the default preview reported thousands of elements and warned that slider updates could be slow. Record the selected settings, export with Download SVG, and inspect the ZIP contents. The tested Grid Dimension was 5; treat that as an example rather than a required limit.
+
+Choose a pattern covered by the output license above. Extract the SVG, inspect its viewBox and geometry, and remove editor-only metadata only when it is unnecessary for reproduction. Retain a compact original settings note with the project. Use the SVG as a decorative image or background, with the page's actual colors and a restrained crop; keep content and controls outside it.
+
+Check that the final asset has no scripts or external references, that it scales cleanly at the page's actual widths, and that the pattern does not compete with body text. If the SVG remains expensive, rasterize the authorized output at the needed dimensions. The survey exercised a parameter change and download; website integration and optimization remain checks for the implementing project.
+
+## C20
+
+### A loader tied to a real pending operation
+
+Choose a UI Ball LDRS indicator that fits the existing interface. In React, follow the selected loader's import and matching stylesheet; for Ring, the official guide uses `Ring` from `ldrs/react` and `ldrs/react/Ring.css`. In a plain page, use the documented custom-element registration. Keep web-component initialization on the client in server-rendered projects.
+
+Connect visibility to the real request state and show a stable textual status. Treat the graphic as decorative beside that text. On success show the content; on error show recovery; on cancellation restore the appropriate idle state. For reduced motion use static text or a stopped visual rather than an unbounded decorative loop. Uiverse is an alternative when the project already has a CSS-only implementation and the selected element's license is suitable.
+
+Verify with a request held pending, then resolved, rejected and cancelled. Check keyboard access to recovery, announcement behavior, layout stability and reduced motion. This recipe adapts the observed LDRS preview; the survey did not exercise those application transitions.
+
+## C21
+
+### A GPU effect with usable HTML underneath
+
+Choose Canvas UI for a specific effect over actual content, after reading its current installation and rendering documentation. Select the project's framework and WebGL or WebGPU build, inspect the source and license, and acquire just the selected component through the documented registry. Keep the headline, links and controls in HTML. The social phrase “replaces Framer Motion” describes a discovery claim, not architectural guidance.
+
+Compare the supported effect with the ordinary HTML path in a browser where the experimental capability is unavailable. Check text selection, keyboard activation, pointer behavior and touch. Verify reduced motion, offscreen pausing, teardown on navigation and the mobile rendering cost. Use a static composition or existing CSS recipe if the effect relies on a browser feature the audience cannot use. Official documentation supports these selection constraints; this survey did not run a project integration.

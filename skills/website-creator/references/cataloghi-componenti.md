@@ -1,5 +1,7 @@
 # Resources cited in Adrien's videos: access and licenses
 
+For UI Ball LDRS, Uiverse, UI Layouts, Canvas UI and ReactVibe discovered through other creators, use the separate [social resource catalog](social-design-resources.md#choose-a-resource). It owns their access and licensing notes.
+
 For a bitmap logo or illustration that needs vector geometry, use the separately verified [SVGConverter preparation recipe V06](vettoriale.md#v06), discovered through SetupsAI and checked on 2026-10-18. Its entry records web access, processing conditions, and an observed export.
 
 Verified on 29 September 2026 against official pages and repositories linked by their authors. “Verified” means supported by a primary source; integration requires its own browser test. Recheck prices, quantities, and conditions when using a resource. The skill stores links and procedures; acquire only the selected component code under its license.

@@ -2,6 +2,8 @@
 
 Official-source verification: 29 September 2026. Choose the individual component for the requested result and recheck the license of the version used.
 
+For discoveries checked on 18 October 2026, read [SetupsAI and Jamux resources](social-design-resources.md): palette and mesh generators, geometric SVG, loaders, UI catalogs, animated icons and GPU effects, with per-resource evidence and reuse conditions.
+
 ## Choose a resource by its effect
 
 This table is the collection's implementation proposal. Component and tool names were checked in official catalogs; the mapping to a result is a design judgment.
