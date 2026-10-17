@@ -98,3 +98,4 @@ Choose the effect or task, then open its recipe. Combinations for entire website
 | B04 | Lock a camera path before optional generated video | [Create Blender graphics and camera sequences](blender.md#b04) |
 | B05 | Editable product disassembly and camera beats | [Create Blender graphics and camera sequences](blender.md#b05) |
 | B06 | A sphere-based graphic in a live website hero | [Create Blender graphics and camera sequences](blender.md#b06) |
+| V06 | Prepare a bitmap mark for vector animation | [Create vector animations](vettoriale.md#v06) |

@@ -14,6 +14,8 @@ The Lottie recipes come from a direct Codex demonstration. The player, public fi
 
 - [V05 · Animate an SVG detail](#v05)
 
+- [V06 · Prepare a bitmap mark for vector animation](#v06)
+
 ## V01
 
 ### An original Lottie success animation
@@ -109,3 +111,20 @@ Procedure:
 Source steps: [_SVU3oC4JX8 · 8:51](https://www.youtube.com/watch?v=_SVU3oC4JX8&t=531s), [9NubqbSNbjg · 5:39](https://www.youtube.com/watch?v=9NubqbSNbjg&t=339s).
 
 Result check: The detail is crisp at the sizes used and its action remains understandable.
+
+## V06
+
+### Prepare a bitmap mark for vector animation
+
+Turn an authorized bitmap logo or illustration into editable vector geometry before applying V04 or V05. This preparation fills the gap when an SVG source is unavailable; a simple geometric mark may be clearer to redraw directly.
+
+1. Open [SVGConverter's free web app](https://svgconverter.app/free) and load the bitmap. Use original or authorized artwork appropriate for external processing.
+2. Inspect the palette, background transparency, edges, smoothing, and curve fitting, then select **Vectorize**. Compare the contour, internal holes, and colors with the source; simplify noise before introducing motion.
+3. Select **Download** with SVG output. Inspect the actual file for vector paths and a usable `viewBox`; compare it at the sizes needed in the website. Preserve the mark's geometry while grouping only the parts that must move independently.
+4. Continue with V04 or V05 for animation and their keyboard, responsive, and reduced-motion checks. This conversion alone establishes a static asset.
+
+Discovery: [Tony Chen / SetupsAI, Powerful websites you should know, part 1180](https://www.instagram.com/setupsai/reel/DemCV9SP7-w/), observed in authenticated Chrome on 2026-10-18. The caption and rendered video identify the conversion tool; the procedure above is this collection's adaptation, checked against [official documentation](https://svgconverter.app/docs).
+
+Access: the [EULA](https://svgconverter.app/eula) identifies the online application as free and proprietary and the offline application as paid. The [privacy policy](https://svgconverter.app/privacy-policy) describes temporary server processing of uploaded files. Artwork rights remain a separate input requirement.
+
+Observed result, 2026-10-18: an original 128×128 PNG containing a blue circular mark and a white rectangular cutout was converted and downloaded in Chrome. The SVG parsed as XML with `viewBox="0 0 128 128"`, six paths, and 2,024 bytes; its browser preview retained the mark and cutout. This establishes conversion/export for that sample; assess detailed artwork and the final website separately.
