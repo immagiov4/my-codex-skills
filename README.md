@@ -41,6 +41,8 @@ Pull the repository and run the install script again. For plugin installations, 
 
 ## Contents
 
+`website-creator` is an experimental collection of visual directions, website recipes, video references, and component resources; its [maintenance procedure](skills/website-creator/references/maintenance.md) covers curated updates from YouTube, social discoveries, and official sources.
+
 The optional [Luanti memory hook](hooks/luanti-memory/README.md) connects Codex to a chosen knowledge checkout. Its setup includes the checkout path and hook trust review.
 
 The optional [Mercury native memory hook](hooks/mercury-memory/README.md) selects relevant preferences from the current native Codex archive before each local user turn. It uses Python and OpenRouter with an explicit installer, keeps private memories and credentials outside this repository, and needs no background service or Docker container.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Website Creator"
+  short_description: "Distinct visual direction, website recipes, and UX workflows"
+  default_prompt: "Use $website-creator to ground the visual direction in the subject, choose relevant website or user-experience recipes, and verify the rendered result with visual review and available Impeccable checks."
