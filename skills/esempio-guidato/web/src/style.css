@@ -157,10 +157,11 @@ h1 { margin: 0 0 10px; font-size: 21px; line-height: 1.24; letter-spacing: -.03e
 .concept-map { left: 120px; top: 80px; width: 800px; height: 580px; }
 .concept-map.map-expanded { left: 8px !important; top: 8px !important; width: calc(100vw - 16px); height: calc(100vh - 16px); resize: none; }
 .concept-map .notebook-title strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.map-viewport { flex: 1; min-height: 0; overflow: auto; padding: 12px; background: var(--background); }
+.map-viewport { flex: 1; min-height: 0; overflow: hidden; padding: 12px; background: var(--background); }
 .map-viewport[hidden], #map-source[hidden] { display: none; }
-.map-canvas { width: max-content; min-width: 100%; min-height: 100%; display: grid; place-items: center; }
-.map-canvas svg { display: block; max-width: none !important; }
+.map-canvas { width: 100%; height: 100%; }
+.map-canvas svg { display: block; width: 100%; height: 100%; max-width: none !important; cursor: grab; user-select: none; }
+.map-canvas svg:active { cursor: grabbing; }
 #map-canvas svg .edgeLabel rect { opacity: 1; fill: var(--background); }
 #map-canvas svg .labelBkg { background: var(--background); }
 .map-tools { display: flex; gap: 2px; }

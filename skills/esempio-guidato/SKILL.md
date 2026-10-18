@@ -42,7 +42,11 @@ Il percorso è relativo alla cartella del progetto. Le righe e il codice proveng
 
 Parti da cosa accade concretamente e perché serve. Introduci i termini tecnici e la sintassi necessari a capire quel punto, adattandoti alle conoscenze dichiarate dall'utente. Distingui esplicitamente l'esplorazione del codice già presente dalle modifiche che stai applicando.
 
-Ogni pubblicazione include `diagram`: il sorgente completo della mappa cumulativa. Prima di comporlo, leggi la mappa attuale con `state` o dal risultato di `wait`. Conserva concetti, collegamenti e identificatori già introdotti, aggiungendo ciò che il nuovo passo chiarisce. La mappa è unica per il percorso e rimane la stessa anche quando si consulta un passo precedente. Una correzione motivata può sostituire una relazione errata.
+Ogni pubblicazione include `diagram`: il sorgente completo della mappa cumulativa. Prima di comporlo, leggi la mappa attuale con `state` o dal risultato di `wait`. Conserva il significato dei concetti e delle relazioni già spiegati e aggiungi ciò che il nuovo passo chiarisce. La mappa è unica per il percorso e rimane la stessa anche quando si consulta un passo precedente. Una correzione motivata può sostituire una relazione errata.
+
+Mantieni una vista d'insieme leggibile: raccogli dettagli affini nello stesso nodo e relazioni locali nello stesso gruppo. Collega i gruppi per i passaggi principali, evitando fasci di frecce attraverso tutta la mappa. Quando la struttura diventa affollata, riorganizzala conservando il significato già spiegato; gli identificatori dei concetti che rimangono distinti restano stabili.
+
+Controlla il risultato renderizzato anche a finestra ampia: nodi e titoli devono sfruttare lo spazio disponibile e le frecce devono seguire percorsi leggibili. Lo zoom serve a esplorare i dettagli di una mappa grande; la struttura generale deve restare riconoscibile quando la si adatta alla finestra.
 
 Usa `flowchart` Mermaid senza blocchi Markdown, direttive di configurazione, HTML o callback. Scrivi nomi brevi nella lingua della spiegazione, conserva i simboli reali del codice e indica cosa rappresentano le frecce. Raggruppa inizializzazione, proprietà delle risorse e flusso delle richieste quando aiutano la lettura. Rappresenta solo fatti già verificati e spiegati; distingui con una relazione tratteggiata e un'etichetta le modifiche ancora da realizzare. Il comando verifica la sintassi con Mermaid prima di salvare.
 
@@ -74,3 +78,7 @@ Nelle risposte puoi collegare un file e le sue righe con `[testo](code:src/file.
 Per ricostruire o correggere la mappa senza pubblicare un passo, usa `diagram --session <sessione> --input <mappa.mmd>`. L'icona accanto al taccuino apre una finestra spostabile e ridimensionabile con la mappa corrente e l'esportazione Mermaid.
 
 Esegui prove e controlli nel consueto flusso Codex. Comunica lì un esito negativo e mostra nella pagina il successivo passo di correzione quando cambi il codice. Alla fine invia un breve testo con `finish --session <sessione> --input <riepilogo.txt>` e concludi nella conversazione con il risultato e le verifiche svolte.
+
+## Verifica delle modifiche alla pagina
+
+Quando modifichi questa skill, esegui `npm test` e `npm run build` da `web/`, quindi `python scripts/self_check.py` dalla cartella della skill. Per i comandi della mappa, aprila nel browser con `cua_repl`, importa `scripts/check_map_mouse.mjs` e chiama `checkMapMouse(tab)` sul riferimento alla scheda: verifica rotellina, centro dello zoom e trascinamento attraverso veri eventi del mouse. Controlla visivamente la disposizione della mappa dopo l'adattamento alla finestra.

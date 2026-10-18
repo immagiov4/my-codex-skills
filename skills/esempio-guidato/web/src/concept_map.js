@@ -1,8 +1,8 @@
 import { Code, Download, GripHorizontal, Maximize2, Minimize2, Network, Scan, X, ZoomIn, ZoomOut, createElement } from 'lucide';
 import DOMPurify from 'dompurify';
+import svgPanZoom from 'svg-pan-zoom';
 import { makeFloatingPanel } from './floating_panel.js';
 
-const ZOOM_FACTOR = 1.25;
 let renderId = 0;
 let renderQueue = Promise.resolve();
 
@@ -16,7 +16,7 @@ export function setupConceptMap(ui, projectName) {
   let diagram = null;
   let renderedKey = null;
   let requestedKey = null;
-  let scale = 1;
+  let navigation = null;
   let position = null;
   try { position = JSON.parse(localStorage.getItem('guided-map-position')); }
   catch { /* The panel remains movable without saved positioning. */ }
@@ -29,21 +29,9 @@ export function setupConceptMap(ui, projectName) {
     },
   });
 
-  function zoom(nextScale) {
-    const svg = canvas.querySelector('svg');
-    if (!svg) return;
-    scale = nextScale;
-    const box = svg.viewBox.baseVal;
-    svg.style.width = `${box.width * scale}px`;
-    svg.style.height = `${box.height * scale}px`;
-  }
-
   function fit() {
-    const svg = canvas.querySelector('svg');
-    if (!svg || viewport.hidden) return;
-    const box = svg.viewBox.baseVal;
-    const padding = parseFloat(getComputedStyle(viewport).padding) * 2;
-    zoom(Math.min((viewport.clientWidth - padding) / box.width, (viewport.clientHeight - padding) / box.height));
+    if (!navigation || viewport.hidden || panel.hidden) return;
+    navigation.resize().fit().center();
   }
 
   function render() {
@@ -72,7 +60,12 @@ export function setupConceptMap(ui, projectName) {
       });
       const { svg } = await mermaid.render(`guided-map-${++renderId}`, source);
       if (requestedKey !== key) return;
+      navigation?.destroy();
+      navigation = null;
       canvas.innerHTML = DOMPurify.sanitize(svg, { USE_PROFILES: { svg: true, svgFilters: true } });
+      if (!panel.hidden && !viewport.hidden) {
+        navigation = svgPanZoom(canvas.querySelector('svg'));
+      }
       renderedKey = key;
       ui['map-status'].textContent = `Versione ${diagram.revision}`;
       fit();
@@ -93,13 +86,17 @@ export function setupConceptMap(ui, projectName) {
     const bounds = panel.getBoundingClientRect();
     place(position && Number.isFinite(position.x) && Number.isFinite(position.y) ? position : { x: bounds.x, y: bounds.y });
     render();
+    if (!navigation && canvas.querySelector('svg') && !viewport.hidden) {
+      navigation = svgPanZoom(canvas.querySelector('svg'));
+    }
+    navigation?.resize();
   }
 
   ui['map-toggle'].addEventListener('click', toggle);
   ui['map-close'].addEventListener('click', toggle);
   ui['map-fit'].addEventListener('click', fit);
-  ui['map-zoom-in'].addEventListener('click', () => zoom(scale * ZOOM_FACTOR));
-  ui['map-zoom-out'].addEventListener('click', () => zoom(scale / ZOOM_FACTOR));
+  ui['map-zoom-in'].addEventListener('click', () => navigation?.zoomIn());
+  ui['map-zoom-out'].addEventListener('click', () => navigation?.zoomOut());
   ui['map-expand'].addEventListener('click', () => {
     const expanded = panel.classList.toggle('map-expanded');
     ui['map-expand'].replaceChildren(createElement(expanded ? Minimize2 : Maximize2));
@@ -113,7 +110,10 @@ export function setupConceptMap(ui, projectName) {
     ui['map-source'].hidden = !showingSource;
     viewport.hidden = showingSource;
     ui['map-source-toggle'].setAttribute('aria-pressed', String(showingSource));
-    if (!showingSource) fit();
+    if (!showingSource) {
+      if (!navigation && canvas.querySelector('svg')) navigation = svgPanZoom(canvas.querySelector('svg'));
+      fit();
+    }
   });
   ui['map-export'].addEventListener('click', () => {
     const url = URL.createObjectURL(new Blob([diagram.source], { type: 'text/plain;charset=utf-8' }));
