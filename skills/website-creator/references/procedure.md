@@ -28,6 +28,10 @@ These workflows follow operations shown in the videos; local variants are Codex 
 
 - [P12 · An album-driven landing page with a shared accent palette](#p12)
 
+- [P15 · A coherent asset set for every page section](#p15)
+
+- [P16 · One designed page as the basis for related pages](#p16)
+
 ## P01
 
 ### Separate references for composition, color, and motion
@@ -269,3 +273,27 @@ Original Codex prompt:
 Source steps: [DBJoepxxQdg · 7:24](https://www.youtube.com/watch?v=DBJoepxxQdg&t=444s), [DBJoepxxQdg · 8:27](https://www.youtube.com/watch?v=DBJoepxxQdg&t=507s), [DBJoepxxQdg · 8:45](https://www.youtube.com/watch?v=DBJoepxxQdg&t=525s).
 
 Result check: Select each cover with keyboard and touch, inspect narrow layouts, and test optional playback and reduced motion. Selection, accents, and real playback state agree.
+
+## P15
+
+### A coherent asset set for every page section
+
+Collection adaptation of Adrien's [18 October workflow](https://www.youtube.com/watch?v=pKO8BFKWET4&t=155s), with the [negative-space example](https://www.youtube.com/watch?v=5lDUy7JFNrg&t=292s) from 3 June. English transcripts reviewed; selected visual passages observed on 2026-10-18. The author owns Limora, the service demonstrated. The free guide linked in the description was inaccessible during this check; this procedure uses the video and verified official pages.
+
+1. Establish the business, audience, offer and visitor action, then select references by section using P01 and the visual-direction workflow. Draft the page with real text and image slots whose purpose is explicit.
+2. Record an asset plan: section, meaning, subject, style reference, palette, aspect ratio, empty space needed for HTML text, output file, rights and status. Use authorized reference images. Keep product photographs separate from invented decorative illustrations.
+3. Produce one representative image first with the available image tool. Check it in the actual layout, then use the approved palette, linework, lighting and character details for the remaining set. Pass the same references to later generations; coherence is a result to inspect rather than a guarantee of batch generation.
+4. Replace slots through the asset plan, checking every required section. Edit an existing image for a local correction. Upscale only where the displayed dimensions need it. Vectorize an authorized illustration when its geometry will support SVG animation; the existing V06 and V05 procedures cover conversion and motion.
+5. Compare desktop and mobile: crop, text clearance, relative product scale, missing images, alt text and file weight. A one-bag product must retain a plausible size beside two- and three-bag offers; the source's final page itself exposes a scale inconsistency. Check any vector motion for geometry errors and reduced motion.
+
+The original uses Limora styles and MCP to generate and place images. The native Codex route uses available image tools plus local asset files and the same plan. Limora is an optional paid service with account, credits and output conditions in [the resource catalog](cataloghi-componenti.md#image-production-and-design-references). The survey inspected the tutorial and official terms; provider generation and a complete website implementation require their own run.
+
+## P16
+
+### One designed page as the basis for related pages
+
+Adaptation of [Adrien's three-site rebuild · 6:30–9:00](https://www.youtube.com/watch?v=GewbSNoJCxU&t=390s), checked through transcript and a selected Figma passage on 2026-10-18.
+
+Design the main page with real content and original explanatory graphics, then identify its reusable composition, typography, spacing, navigation and component variants. Carry those decisions into audience and use-case pages while adapting their text, evidence and graphics to each task. Use the existing code's components as the implementation boundary. For a selected Figma design, follow reference fidelity and the available Figma implementation workflow before building.
+
+Keep a page inventory so redesign retains required sections and actions, as in P10. Verify navigation, responsive variants and a full representative visitor journey across pages. A shared template should preserve visual coherence while each page explains a distinct need. The source demonstrates the author's projects; conversion and search-ranking improvements are author claims, not measured results of this collection.

@@ -441,3 +441,45 @@ Recipes: [C13](componenti-css.md#c13), [C14](componenti-css.md#c14), [C15](compo
 At 2:56 in MVOpq3WRnbo, the author proposes an added delay to make work feel substantial. The collection adaptation shows actual phases and a clear outcome; the service can finish immediately. A09–A12 translate the examples into real progress, useful completion, hierarchy, and search. Completion-rate and psychological claims are presented as the author's explanations.
 
 The narration and description of 2TlIg3VokY8 conflict on fake progress and urgency. U04 follows actual expiration policy, A09 counts real work, and U05 compares matching billing periods. The user-experience reference explains these adaptations and the review boundaries for the other app critiques.
+
+## Adrien channel refresh · 18 October 2026
+
+Discovery started from the user-supplied pKO8BFKWET4. English automatic transcripts for four videos were reviewed; descriptions and official sites resolve mistranscribed tool names. Selected passages from three videos were observed in muted Chrome. The Videos tab exposed 20 long-form entries during this check; the channel header reported 124 videos in total, so this is a bounded channel survey. Existing Adrien catalog entries retain their earlier observation dates. The channel target in Decodo returned a parsing error; metadata and subtitle targets returned usable content, with Chrome used for discovery and visual evidence.
+
+### pKO8BFKWET4
+
+[How I Build Websites That Don't Look AI (Full Workflow)](https://www.youtube.com/watch?v=pKO8BFKWET4) — Adrien | AI Designer; published 2026-10-18, observed 2026-10-18.
+
+Coherent section-by-section asset plan and visual style, with local Codex adaptation in P15. Observed selected style and final-site passages; mismatched product scale remains a required result check.
+
+Observed passages: [4:32](https://www.youtube.com/watch?v=pKO8BFKWET4&t=272s), [8:57](https://www.youtube.com/watch?v=pKO8BFKWET4&t=537s). These establish the demonstrated appearance rather than an end-to-end implementation in this collection.
+
+Recipe: [P15](procedure.md#p15).
+
+### GewbSNoJCxU
+
+[I Rebuilt My 3 Companies' Websites (Full Workflow)](https://www.youtube.com/watch?v=GewbSNoJCxU) — Adrien | AI Designer; published 2026-10-02, observed 2026-10-18.
+
+Designed main page as a reusable foundation for use-case pages, adapted in P16. Creator-owned Stage and Limora are optional resources with current access conditions checked.
+
+Observed passages: [6:30](https://www.youtube.com/watch?v=GewbSNoJCxU&t=390s). These establish the demonstrated appearance rather than an end-to-end implementation in this collection.
+
+Recipe: [P16](procedure.md#p16).
+
+### 5lDUy7JFNrg
+
+[How to Design like the Top 10%](https://www.youtube.com/watch?v=5lDUy7JFNrg) — Adrien | AI Designer; published 2026-06-03, observed 2026-10-18.
+
+Layout references, brand-matched assets and restrained motion. Existing visual-direction and motion guidance already covers much of it; P15 adds explicit space for live text.
+
+Observed passages: [4:52](https://www.youtube.com/watch?v=5lDUy7JFNrg&t=292s). These establish the demonstrated appearance rather than an end-to-end implementation in this collection.
+
+Recipe: [P15](procedure.md#p15).
+
+### tfVwp4zXH8U
+
+[Best AI Design Tools in 2026 - The Complete Stack for Web Designers](https://www.youtube.com/watch?v=tfVwp4zXH8U) — Adrien | AI Designer; published 2026-04-08, observed 2026-10-18.
+
+Classifies tools by concept, structure, assets, design and implementation. Transcript reviewed; Google Stitch, Relume and Framer claims need fresh primary checks before adopting a provider-specific workflow. Model rankings and old beta/free offers remain historical claims.
+
+Evidence: metadata, description and transcript; visual behavior remains unverified.

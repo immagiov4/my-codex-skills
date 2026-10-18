@@ -5929,5 +5929,152 @@
       "decision": "adopted_reference",
       "reason": "Original image loaded, Dither applied, Export requires login; plan-specific commercial permission and downloaded file pending"
     }
+  ],
+  "youtube_sources": [
+    {
+      "channel": "https://www.youtube.com/@adrienaidesigner/videos",
+      "channel_id": "UC0hGsp2YuZAq2Tn0WT8k4BQ",
+      "observed_on": "2026-10-18",
+      "reported_total_videos": 124,
+      "indexed_long_form_entries": 20,
+      "archive_status": "bounded_long_form_survey",
+      "videos": [
+        {
+          "id": "pKO8BFKWET4",
+          "title": "How I Build Websites That Don't Look AI (Full Workflow)",
+          "decision": "adopted",
+          "evidence": "transcript_and_selected_passages",
+          "reason": "Coherent section-by-section asset plan and visual style, with local Codex adaptation in P15. Observed selected style and final-site passages; mismatched product scale remains a required result check."
+        },
+        {
+          "id": "0QIIkrBfgNk",
+          "title": "Claude Code vs Codex for Designers",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "GewbSNoJCxU",
+          "title": "I Rebuilt My 3 Companies' Websites (Full Workflow)",
+          "decision": "adopted",
+          "evidence": "transcript_and_selected_passages",
+          "reason": "Designed main page as a reusable foundation for use-case pages, adapted in P16. Creator-owned Stage and Limora are optional resources with current access conditions checked."
+        },
+        {
+          "id": "8GfWKFyAaW4",
+          "title": "8 Underrated Websites Every Vibe Coder Needs",
+          "decision": "already_cataloged",
+          "evidence": "title"
+        },
+        {
+          "id": "ugyBVlgOhxY",
+          "title": "I Built the Grok Bot Avatar for My App",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "Jhx7n9uAKHg",
+          "title": "8 New Websites Every Vibe Coder Needs",
+          "decision": "already_cataloged",
+          "evidence": "title"
+        },
+        {
+          "id": "xXagoRLhxXs",
+          "title": "Design a Beautiful Product Page With AI (in 5 min)",
+          "decision": "already_cataloged",
+          "evidence": "title"
+        },
+        {
+          "id": "9NubqbSNbjg",
+          "title": "8 Free Websites Every Vibe Coder Needs",
+          "decision": "already_cataloged",
+          "evidence": "title"
+        },
+        {
+          "id": "KM8HA2pc6Rg",
+          "title": "Is this the new way to design?",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "a_mZ4Kp3lTM",
+          "title": "How to Build a Premium Dashboard With Claude Code",
+          "decision": "already_cataloged",
+          "evidence": "title"
+        },
+        {
+          "id": "5lDUy7JFNrg",
+          "title": "How to Design like the Top 10%",
+          "decision": "adopted",
+          "evidence": "transcript_and_selected_passages",
+          "reason": "Layout references, brand-matched assets and restrained motion. Existing visual-direction and motion guidance already covers much of it; P15 adds explicit space for live text."
+        },
+        {
+          "id": "749i6YKic2E",
+          "title": "The AI Website Design Process (2026)",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "EiIZBOu4MHk",
+          "title": "3 Claude Design Workflows You Need to Know",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "syoawoSvey8",
+          "title": "How to Build a Real iPhone App (No Code)",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "tfVwp4zXH8U",
+          "title": "Best AI Design Tools in 2026 - The Complete Stack for Web Designers",
+          "decision": "reviewed_reference",
+          "evidence": "transcript",
+          "reason": "Classifies tools by concept, structure, assets, design and implementation. Transcript reviewed; Google Stitch, Relume and Framer claims need fresh primary checks before adopting a provider-specific workflow. Model rankings and old beta/free offers remain historical claims."
+        },
+        {
+          "id": "V2dMmX2tKwk",
+          "title": "Google Stitch vs Figma: Should Designers Be Worried?",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "oechHZEX8PM",
+          "title": "My New AI Design Process",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "h_CPuUpsiEg",
+          "title": "Claude Code for Websites (Full Workflow)",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "N0a8Z_po8o0",
+          "title": "Nano Banana 2 is insane for Designers",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        },
+        {
+          "id": "NMi2LnFrUxw",
+          "title": "Claude Code for Designers in 10 Minutes",
+          "decision": "pending",
+          "evidence": "title",
+          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+        }
+      ]
+    }
   ]
 }

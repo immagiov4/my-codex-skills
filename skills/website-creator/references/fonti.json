@@ -458,5 +458,45 @@
     "views": "512720",
     "lengthSeconds": "60",
     "observed_on": "2026-09-30"
+  },
+  {
+    "id": "pKO8BFKWET4",
+    "url": "https://www.youtube.com/watch?v=pKO8BFKWET4",
+    "title": "How I Build Websites That Don't Look AI (Full Workflow)",
+    "author": "Adrien | AI Designer",
+    "published_date": "2026-10-18",
+    "views": "2919",
+    "lengthSeconds": "684",
+    "observed_on": "2026-10-18"
+  },
+  {
+    "id": "GewbSNoJCxU",
+    "url": "https://www.youtube.com/watch?v=GewbSNoJCxU",
+    "title": "I Rebuilt My 3 Companies' Websites (Full Workflow)",
+    "author": "Adrien | AI Designer",
+    "published_date": "2026-10-02",
+    "views": "1445",
+    "lengthSeconds": "775",
+    "observed_on": "2026-10-18"
+  },
+  {
+    "id": "5lDUy7JFNrg",
+    "url": "https://www.youtube.com/watch?v=5lDUy7JFNrg",
+    "title": "How to Design like the Top 10%",
+    "author": "Adrien | AI Designer",
+    "published_date": "2026-06-03",
+    "views": "2210",
+    "lengthSeconds": "466",
+    "observed_on": "2026-10-18"
+  },
+  {
+    "id": "tfVwp4zXH8U",
+    "url": "https://www.youtube.com/watch?v=tfVwp4zXH8U",
+    "title": "Best AI Design Tools in 2026 - The Complete Stack for Web Designers",
+    "author": "Adrien | AI Designer",
+    "published_date": "2026-04-08",
+    "views": "4627",
+    "lengthSeconds": "565",
+    "observed_on": "2026-10-18"
   }
 ]
