@@ -5739,7 +5739,9 @@
           "kind": "reel",
           "decision": "pending",
           "evidence": "caption_and_primary_docs",
-          "reason": "Gradientool; official editor interface checked, export and output rights pending"
+          "reason": "Gradientool: public Radial editor and actual 1365 x 2048 PNG plus HTML export checked on 2026-10-19. 4K invokes $6 Pro. HTML contains full editor, external fonts and analytics reference. Output rights, video export and social visual passage remain pending.",
+          "editor_checked_on": "2026-10-19",
+          "editor_evidence": "parameter_change_and_downloaded_files"
         },
         {
           "id": "DctlOzOtyGe",
@@ -5917,7 +5919,15 @@
           "reason": "Autoflow, Unsplash, Content Reel, Iconify and Figmotion; check access and asset licenses"
         }
       ],
-      "caption_screened_posts": 34
+      "caption_screened_posts": 34,
+      "latest_access_check": {
+        "observed_on": "2026-10-19",
+        "decodo_target": "instagram_graphql_profile",
+        "profile_identity": "jamux.ai",
+        "timeline_edges_returned": 0,
+        "chrome_connection": "unavailable",
+        "post_archive_refreshed": false
+      }
     }
   ],
   "direct_discoveries": [
@@ -6074,7 +6084,186 @@
           "evidence": "title",
           "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
         }
+      ],
+      "latest_discovery_check": {
+        "observed_on": "2026-10-19",
+        "method": "Decodo youtube-search; Adrien AI Designer; upload-date this_week",
+        "returned_results": 20,
+        "matching_channel_ids": [
+          "pKO8BFKWET4"
+        ],
+        "new_matching_ids": [],
+        "coverage": "search_results_only; channel archive remains bounded"
+      }
+    },
+    {
+      "channel": "https://www.youtube.com/@AILABS-393",
+      "channel_id": "UCelfWQr9sXVMTvBzviPGlFw",
+      "observed_on": "2026-10-19",
+      "indexed_long_form_entries": 1,
+      "archive_status": "selected_video_only",
+      "videos": [
+        {
+          "id": "NZjjmf3I6I4",
+          "title": "6 Insane Trending GitHub AI Design Repos You Need to Use",
+          "decision": "cataloged_docs",
+          "evidence": "metadata_transcript_and_primary_docs",
+          "reason": "Six tool families checked; five documented resources and one overlapping reference, with companion-skill verification pending. Visual passages and local tool execution remain pending.",
+          "resources": [
+            {
+              "url": "https://github.com/INSANE0777/Awwwards-mcp",
+              "decision": "cataloged_docs",
+              "reason": "MIT server; live capture and motion inspection pending; source-site media rights separate"
+            },
+            {
+              "url": "https://github.com/responsively-org/responsively-app",
+              "decision": "cataloged_docs",
+              "reason": "AGPL-3.0; Windows/macOS/Linux supported; local app and MCP checks pending"
+            },
+            {
+              "url": "https://github.com/AThevon/genjutsu",
+              "decision": "reference_only",
+              "reason": "MIT with upstream notices; overlaps existing visual-direction workflow; host/distribution evaluation pending"
+            },
+            {
+              "url": "https://github.com/dembrandt/dembrandt",
+              "decision": "cataloged_docs",
+              "reason": "MIT extractor; Node 18+ and matching browser required; actual token extraction pending"
+            },
+            {
+              "url": "https://github.com/dembrandt/dembrandt-skills",
+              "decision": "pending",
+              "reason": "Companion instructions identified; separate license and host compatibility check before copying"
+            },
+            {
+              "url": "https://github.com/ParthJadhav/app-store-screenshots",
+              "decision": "cataloged_docs",
+              "reason": "MIT code; Apple device-bezel restrictions separate; local editor and PNG export pending"
+            },
+            {
+              "url": "https://github.com/latent-spaces/brag",
+              "decision": "cataloged_docs",
+              "reason": "MIT repository; full versus Slim requirements differ; actual rendering and audio/asset rights check pending"
+            }
+          ]
+        }
       ]
     }
-  ]
+  ],
+  "latest_discovery_checkpoint": {
+    "observed_on": "2026-10-19",
+    "query": "website design animation tools",
+    "provider": "Decodo youtube-search; upload-date this_week",
+    "returned_results": 20,
+    "candidate_evidence": "search_title_and_author_only_except_selected_video",
+    "candidates": [
+      {
+        "id": "NZjjmf3I6I4",
+        "title": "6 Insane Trending GitHub AI Design Repos You Need to Use",
+        "decision": "cataloged_docs"
+      },
+      {
+        "id": "wQHN72Ht2KA",
+        "title": "Best AI Tool to Build Local Websites & Sell Them",
+        "decision": "pending"
+      },
+      {
+        "id": "UukK2oDWuTo",
+        "title": "Opus 5.5 Can Do THIS Now? (3D Web Design)",
+        "decision": "pending"
+      },
+      {
+        "id": "au2TI8sdq8E",
+        "title": "Google Just Fixed AI Design By Releasing This",
+        "decision": "pending"
+      },
+      {
+        "id": "xiWJE3FPJSE",
+        "title": "Gemini 4 Just Killed 3D Web Design",
+        "decision": "pending"
+      },
+      {
+        "id": "dXRrvjUBG_k",
+        "title": "3 AI Websites That Make Motion Graphics in Minutes!",
+        "decision": "pending"
+      },
+      {
+        "id": "yf2OwchM9nw",
+        "title": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+        "decision": "pending"
+      },
+      {
+        "id": "ZVqy_U6GPH8",
+        "title": "Build an Animated Website With AI — Step by Step (Beginner Friendly)",
+        "decision": "pending"
+      },
+      {
+        "id": "Dl_d2C7nUTE",
+        "title": "Nexora — SaaS Explainer Video | Product UI Animation & Motion Design",
+        "decision": "pending"
+      },
+      {
+        "id": "KRbNZPF9Ox8",
+        "title": "Vibe Code a REAL Animated WordPress Website with Claude + Elementor",
+        "decision": "pending"
+      },
+      {
+        "id": "cvIReWEdjT0",
+        "title": "How I Created This 3D Premium Scroll Animation Website in Minutes (AI + No Code)",
+        "decision": "pending"
+      },
+      {
+        "id": "T2Wfds62ZjM",
+        "title": "Building Real-Time Animation with Gemini 4 Argon",
+        "decision": "pending"
+      },
+      {
+        "id": "wTROHTxRqFY",
+        "title": "Design award winning websites using these resources",
+        "decision": "pending"
+      },
+      {
+        "id": "bapcQ39yfsg",
+        "title": "How to Build a 3D Animated Website with AI (And Sell It to Clients)",
+        "decision": "pending"
+      },
+      {
+        "id": "eoSUmV4nQeo",
+        "title": "Luxury Travel Website with Parallax Animation | Google AI Studio Website Tutorial",
+        "decision": "pending"
+      },
+      {
+        "id": "RSe268YFglA",
+        "title": "Create FREE Motion Graphics with Claude Code + Javascript",
+        "decision": "pending"
+      },
+      {
+        "id": "w-v37mVFSW8",
+        "title": "Shades by Inspo AI — Create Animated Website Backgrounds in Seconds",
+        "decision": "pending"
+      },
+      {
+        "id": "SoR5HCEee1I",
+        "title": "I Built a STUNNING 3D Website Using AI 🤯 | No Manual Coding!",
+        "decision": "pending"
+      },
+      {
+        "id": "YL5TO9zp3zw",
+        "title": "Webloom AI Website Builder — Motion Design Promo | After Effects | Blender | 3D Animation",
+        "decision": "pending"
+      },
+      {
+        "id": "TjrJ8kST3H8",
+        "title": "3D & Animated Website Templates: Scrollhaus Demo + Lovable Workflow",
+        "decision": "pending"
+      }
+    ],
+    "remaining_scope": "New social posts inaccessible this run. SetupsAI and Jamux historical visual review, pending Adrien videos and uninspected search candidates remain open.",
+    "tiktok_probe": {
+      "profile": "https://www.tiktok.com/@beasttechx",
+      "identity_matched": true,
+      "reported_video_count": 307,
+      "video_entries_returned": 0
+    }
+  }
 }

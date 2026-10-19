@@ -442,6 +442,12 @@ At 2:56 in MVOpq3WRnbo, the author proposes an added delay to make work feel sub
 
 The narration and description of 2TlIg3VokY8 conflict on fake progress and urgency. U04 follows actual expiration policy, A09 counts real work, and U05 compares matching billing periods. The user-experience reference explains these adaptations and the review boundaries for the other app critiques.
 
+## NZjjmf3I6I4
+
+[6 Insane Trending GitHub AI Design Repos You Need to Use](https://www.youtube.com/watch?v=NZjjmf3I6I4) — AI LABS; published 2026-10-17, observed 2026-10-19. Decodo returned usable metadata, chapter times and an English timed transcript. The six tool families and the companion Dembrandt-skills repository each have an outcome in source-coverage.json. Their current official documentation and licenses inform [reference research, layout checks and product media](cataloghi-componenti.md#reference-research-layout-checks-and-product-media).
+
+The tutorial's model comparisons and sponsor offers remain author claims. Browser access reached a paused preroll, so the visual passages remain pending; tool descriptions and primary-source checks support this catalog entry. App Store Screenshots' actual PNG export and Brag's actual video rendering require local execution before delivery.
+
 ## Adrien channel refresh · 18 October 2026
 
 Discovery started from the user-supplied pKO8BFKWET4. English automatic transcripts for four videos were reviewed; descriptions and official sites resolve mistranscribed tool names. Selected passages from three videos were observed in muted Chrome. The Videos tab exposed 20 long-form entries during this check; the channel header reported 124 videos in total, so this is a bounded channel survey. Existing Adrien catalog entries retain their earlier observation dates. The channel target in Decodo returned a parsing error; metadata and subtitle targets returned usable content, with Chrome used for discovery and visual evidence.
