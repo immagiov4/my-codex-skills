@@ -38,6 +38,9 @@ remaining limit names the evidence that would resolve it.
 
 - Follow the repository's language convention. Use English when no convention exists.
 - Use the smallest set of contract sections that carries the available information.
+- Shape the prose with `writing-for-humans` (reader card, one question, click first): the visible
+  part says the problem in user-visible terms, the evidence (observed vs expected, numbers or a
+  screenshot) and the outcome wanted; the investigation ledger goes in a collapsed Details block.
 - Keep hypotheses and unapproved options out of desired behavior and acceptance criteria.
 - Acceptance criteria restate the requested or approved outcome in observable terms. The agent
   does not decide additional requirements. Omit a separate criteria list when the clear outcome
