@@ -5,7 +5,21 @@ description: "Write or revise text for people, including conversation, documents
 
 # Writing for humans
 
-Start with what this reader needs to understand, decide or do, using the author's voice and the requested language, medium and structure. Infer their knowledge from the task and supplied examples, then develop the evidence, mechanism and consequence at that level. Preserve good passages and the scope of a narrow edit.
+Start with what this reader needs to understand, decide or do, using the author's voice and the requested language, medium and structure. Preserve good passages and the scope of a narrow edit.
+
+## Reader card and zoom
+
+Before drafting, write a three-line **reader card** for yourself: who reads this, what they already know, and the one question they open it to answer (for a PR reviewer: what problem, what approach, what measurable result). Every paragraph must serve that question; a true, well-written paragraph the card does not need is cut.
+
+Then set the **zoom**, like level of detail in a game: the top of the text is far zoom, a reader who stops after it has the answer. Zoom is separate from style and from density: plain, dense prose at the wrong zoom still fails.
+
+- **Far zoom, always visible:** the answer in two or three sentences or a short list. Results as numbers or observable change: before/after, percent, time, count, a screenshot.
+- **Near zoom, only what the card asks for:** the approach in a few lines; a before/after diagram or table when the shape of a system, flow or metric changed, instead of paragraphs describing it.
+- **Deep zoom, collapsed or omitted:** procedure, file lists, test commands, edge cases, tool names. Put it in a `<details>` block titled "Details" when some reader may want it; delete it when the code, the config or the history already records it.
+
+**Jargon budget:** name a tool, flag, file or acronym only when the reader acts on that name. "Static analysis now runs in the cloud on every PR" beats a list of the job, action, variables and project key that implement it.
+
+Length follows the card, not the amount of work done: a large change can have a short description. If the far zoom is not readable in ten seconds, the text is not ready.
 
 Write each plain-text or Markdown prose paragraph on one physical line and let the reader's interface wrap it visually. This includes Git commit messages, PR/MR descriptions, documentation and chat messages; fixed-width conventions such as 72-column commit bodies do not override this rule. Use blank lines between distinct paragraphs and preserve structural line breaks in code, lists, tables and other syntax. Before saving, committing or publishing, inspect the actual text for inserted line breaks inside prose paragraphs.
 
@@ -21,6 +35,7 @@ Preserve attribution, quantities, dates, negation, substantive exceptions and th
 
 Read only the references the task calls for, alongside [prose patterns](references/prose-patterns.md) when drafting or polishing more than a brief reply:
 
+- [Change reports](references/change-reports.md) for pull requests, issues, commit messages and status reports about work done.
 - [Conversation and messages](references/conversation.md) for explanations, correspondence, progress updates and short replies.
 - [Documentation](references/documentation.md) for document sets, manuals, readmes and guides; add [software reference](references/software-reference.md) when describing interfaces or observable behavior.
 - [Reports](references/reports.md) for analytical, academic and project writing.
@@ -33,7 +48,7 @@ For mixed work, choose guidance by deliverable. Instructions an agent executes b
 
 Before sending any prose, read it in context for the intended meaning, useful connections and the reader's level. When the user identifies a recurring defect, check every affected part, including notes, rather than repairing only the quote.
 
-Then test each sentence against the reader: do they already know it, or would removing it change what they understand or decide? If neither, delete it. How the work was done in the session, such as commands run, restarts, attempts and the writer's own process, usually fails this test.
+Then test each sentence against the reader card: do they already know it, or would removing it change what they understand or decide? If neither, delete it; if only some readers need it, move it into the collapsed details. How the work was done in the session, such as commands run, restarts, attempts and the writer's own process, usually fails this test.
 
 Private responses and documents intended only for the requester use the guidance and local reread above, including substantive drafts and document-wide revisions.
 
