@@ -5,6 +5,8 @@ description: Map implicit requirements before implementing a substantial new req
 
 # Requirements blast radius
 
+If this file is outside the current repository and the repository contains `.agents/skills/requirements-blast-radius/SKILL.md`, read and follow that canonical copy instead. Resolve the path from the Git root and its references from the canonical skill directory.
+
 Turn the request into a short, evidenced requirements map before choosing an implementation. The input is the human request and any agreed requirements it changes. For an orchestrator brief containing a `Requirements map` section, reuse that map and investigate only uncovered changes. Handle tiny edits and straightforward localized fixes directly when their outcome and affected path are already clear.
 
 ## 1. State the outcome
@@ -49,3 +51,7 @@ Use the heading `Requirements map` so delegated work can recognize the handoff. 
 - **Discovery gaps:** uncovered consumers, unavailable evidence or incomplete screen results, and the next useful check.
 
 Mark claims as observed in source, inferred, or runtime-verified according to the evidence. Source inspection establishes requirements and ownership; implementation verification establishes behavior. Continue authorized work independent of unresolved questions; route dependent decisions before implementing them. Update the map when later steering changes the outcome.
+
+## Installation
+
+For global or repository installation, use the [install and check instructions](references/screen.md#install-and-check). Repository installs carry the canonical skill, the Claude entry point and both prompt-hook declarations; the repository copy takes precedence over the global hook.
