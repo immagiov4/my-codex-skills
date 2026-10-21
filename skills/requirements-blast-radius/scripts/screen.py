@@ -187,6 +187,10 @@ def run(args):
     if args.inventory_only:
         print(json.dumps({'revision': revision, 'files': len(files), 'chunks': len(chunks), 'excluded': len(exclusions)}))
         return 0
+    if not args.inventory_only and args.mode != 'grep' and not os.environ.get('OPENROUTER_API_KEY'):
+        output.write_text(json.dumps({'revision': revision, 'skipped': True, 'complete': False, 'reason': 'OPENROUTER_API_KEY is absent; semantic screen skipped.'}, indent=2), encoding='utf-8')
+        print('OPENROUTER_API_KEY is absent; semantic screen skipped. Continue with lexical search and caller tracing.')
+        return 0
     rows, errors = [], []
     if args.mode == 'grep':
         # Plain lexical baseline: distinct request words found as literal substrings.

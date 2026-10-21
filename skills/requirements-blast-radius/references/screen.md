@@ -1,6 +1,6 @@
 # Semantic screen
 
-Use the screen to prioritize source reading for a requirements map. Run it after checking the repository's data-sharing rules. Its provider modes send every committed non-test source file to OpenRouter; review the source inventory and authorization first. Keep credentials in `OPENROUTER_API_KEY` in the child process environment. The program reads that variable and never loads credential files.
+Use the screen to prioritize source reading for a requirements map. Run it after checking the repository's data-sharing rules. Its provider modes send every committed non-test source file to OpenRouter; review the source inventory and authorization first. Keep credentials in `OPENROUTER_API_KEY` in the child process environment. Supply it through the shell that launches the screen or a local secret manager. A repository may document that setup in an ignored environment file and explicitly export it before launch; the program reads only the process environment. Without the variable, provider modes report a skipped screen and return to lexical search and caller tracing. Inventory-only and grep modes work without it.
 
 ## Run
 
@@ -38,4 +38,14 @@ Run `python <skill>/scripts/test_screen.py` for source-boundary, chunk-coverage,
 python <skill>/scripts/install.py --claude-home <claude-home> --codex-home <codex-home> --backup-dir <fresh-backup-dir>
 ```
 
-The prompt hook uses Bun, stdin and stdout only. It injects the instruction for the agent to judge request size and changed scope, and to reuse an orchestrator's existing `Requirements map`. Client hook review/trust remains under the client's documented mechanism. Claude uses `settings.json`; Codex uses `hooks.json` in its active home (`CODEX_HOME` when configured). Codex's `/hooks` reviews newly installed hook definitions. A global `AGENTS.md` pointer can also route requirements while hook trust is pending or in clients that consume instructions without running CLI hooks.
+For a repository install, run:
+
+```sh
+python <skill>/scripts/install.py --project <repo> --backup-dir <external-backup-dir>
+```
+
+Commit `.agents/skills/requirements-blast-radius/`, `.claude/skills/requirements-blast-radius/SKILL.md`, `.claude/settings.json` and `.codex/hooks.json`. If `.claude/` is ignored, allowlist those two Claude paths; keep `settings.local.json` ignored. Codex discovers the canonical `.agents/skills` copy. The Claude entry point links to that same copy. Re-running the installer updates it in place and preserves unrelated settings and hooks; an existing backup directory retains the initial backup. Omit `--backup-dir` to use a fresh OS temporary directory; the installer prints its location.
+
+The prompt hook runs with Bun from the repository root or its subdirectories on Windows, macOS and Linux, resolving project commands from the nearest Git root for project installs. It reads stdin and local hook declarations, writes context to stdout, and performs no network calls or subprocess launches. When both levels are installed, the global hook yields to a declared project hook for that client; the repository version supplies the instruction and explicitly names its canonical skill path. The global skill also routes to that path when selected, because clients resolve same-name skills differently. A skill folder without a matching hook declaration leaves global injection active. Global installs use the selected client homes (`CODEX_HOME` when configured).
+
+Client hook review/trust remains under the client's documented mechanism. Codex's `/hooks` reviews newly installed definitions. Run both `test_screen.py` and `test_project.py` to check source screening, installation, preservation and combined global/project injection.
