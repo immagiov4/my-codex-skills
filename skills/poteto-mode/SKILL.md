@@ -30,8 +30,7 @@ These rules apply to every playbook and reference linked from this skill.
 - Start multi-step work with a short plan. Keep it current.
 - Ground unfamiliar code with `$how`. Use `$why` only when historical intent can change the decision.
 - Name the data shape before writing stateful code. Prefer a table, typed model, state machine, registry, or the right collection over scattered branches.
-- Use `$architect` when a consequential change crosses module seams. Use `$arena` only when competing designs would change the result.
-- Use `$interrogate` for an adversarial review of risky or contested work.
+- Use `$architect` when a consequential change crosses module seams.
 - Use `$tdd` when the bug has a cheap, meaningful regression seam or the user asks for TDD.
 - Use `$diagnosing-bugs` for hard bugs. Build a red-capable feedback loop before settling on a cause.
 - Use `$show-me-your-work` for long unattended runs that need a decision trail.

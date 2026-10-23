@@ -64,6 +64,5 @@ Load this first, then follow the Codex-style skill/instruction using the mapping
 ## Known skills needing the most adaptation
 
 - `code-review` (nested `codex exec`, AGENTS.md); name also collides with the built-in `code-review`, so prefer invoking the built-in unless the user asks for the Codex version explicitly.
-- `interrogate` (multi-model reviewers → subagents).
 - `create-verification-skill`, `maintain-verification-skill` (write into `.codex/` → write into `.claude/`).
 - `setup-matt-pocock-skills`, `writing-for-agents`, `receiving-pr-reviews`, `problem-to-github-issue`, `engineering-workflow`, `orchestrate-nous-backlog` (AGENTS.md → CLAUDE.md).
