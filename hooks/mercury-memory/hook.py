@@ -30,7 +30,7 @@ ENDPOINT = "https://openrouter.ai/api/alpha/decisions"
 DEFAULTS = {"threshold": 0.65, "request_timeout_seconds": 8,
             "history_messages": 4, "history_characters": 8000, "enabled": True,
             "memory_model": MODEL, "skill_model": SKILL_MODEL, "skills_enabled": True,
-            "skill_threshold": 0.75, "max_skills": 2, "skill_dirs": [],
+            "skill_threshold": 0.75, "max_skills": None, "skill_dirs": [],
             "memory_dirs": [], "pinned": [], "batch_size": 80}
 INSTRUCTION = (
     "Is the specified memory practically useful for carrying out message, taking history "

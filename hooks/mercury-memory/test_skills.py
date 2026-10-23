@@ -56,6 +56,15 @@ class SkillSuggestionTests(unittest.TestCase):
         receipt = hook.read_json(self.home / "mercury-memory/receipts/t.json")
         self.assertEqual(receipt["suggested_skills"], ["issue-writer"])
 
+    def test_every_skill_above_threshold_is_suggested_by_default(self):
+        write_skill(self.home / "skills", "bug-triage", "Use when a bug is reported.")
+        write_skill(self.home / "skills", "repro-steps", "Use to write reproduction steps.")
+        fake = respond({"issue-writer": 0.9, "bug-triage": 0.85, "repro-steps": 0.8, "unrelated": 0.1})
+        with patch.object(hook, "api_key", return_value="k"), patch.object(hook.urllib.request, "urlopen", fake):
+            hook.run(self.event, self.home)
+        receipt = hook.read_json(self.home / "mercury-memory/receipts/t.json")
+        self.assertEqual(receipt["suggested_skills"], ["issue-writer", "bug-triage", "repro-steps"])
+
     def test_skill_failure_keeps_memories(self):
         memory_only = respond({"Write skills": 0.9})
         def failing_skills(request, timeout):
