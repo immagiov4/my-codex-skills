@@ -3,7 +3,7 @@
 This optional `UserPromptSubmit` hook runs once per user message, for Codex or Claude Code. It does two things through OpenRouter decision models:
 
 - **Memories:** selects the relevant ones and injects their full text.
-- **Skills:** suggests at most two skills that match the message, as an explicit "load this skill" note, because agents rarely load skills on their own.
+- **Skills:** suggests the skills that match the message, as an explicit "load this skill" note, because agents rarely load skills on their own.
 
 It needs Python 3.9 or newer and the standard library only: no daemon, container or database. Each client keeps its own memory system; the hook only reads it.
 
@@ -42,7 +42,7 @@ The two requests run in parallel, and large candidate sets are split into parall
 
 ## Skills
 
-Candidates are the user skills (`$CODEX_HOME/skills` or `~/.claude/skills`), plus the skills of the repository that contains the current directory (`.agents/skills` or `.claude/skills`) and any `skill_dirs`. Only the name and description are sent. Each suggestion carries the `SKILL.md` path, so skills kept out of the agent's catalog to save context (`allow_implicit_invocation: false` or `disable-model-invocation: true`) stay reachable through the hook. A skill is suggested at **0.75** or above, at most `max_skills` (2). A skill failure never drops memories. Disable suggestions with `"skills_enabled": false`.
+Candidates are the user skills (`$CODEX_HOME/skills` or `~/.claude/skills`), plus the skills of the repository that contains the current directory (`.agents/skills` or `.claude/skills`) and any `skill_dirs`. Only the name and description are sent. Each suggestion carries the `SKILL.md` path, so skills kept out of the agent's catalog to save context (`allow_implicit_invocation: false` or `disable-model-invocation: true`) stay reachable through the hook. A skill is suggested at **0.75** or above, with no count limit by default; set `max_skills` to cap it. On the labeled set (19 prompts, 2 runs), the cap of 2 found 44 of 68 expected skills, while no cap found 52 with 1.6 suggestions per message on average and none on small talk. A skill failure never drops memories. Disable suggestions with `"skills_enabled": false`.
 
 ## Native source and selection
 
