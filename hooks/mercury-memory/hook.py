@@ -27,11 +27,11 @@ MEMORY_BODY_CHARACTERS = 1500
 MODEL = "perplexity/pplx-decider-flash-v1.2"
 SKILL_MODEL = "perplexity/pplx-decider-v1.2"
 ENDPOINT = "https://openrouter.ai/api/alpha/decisions"
-DEFAULTS = {"threshold": 0.65, "request_timeout_seconds": 6,
+DEFAULTS = {"threshold": 0.65, "request_timeout_seconds": 8,
             "history_messages": 4, "history_characters": 8000, "enabled": True,
             "memory_model": MODEL, "skill_model": SKILL_MODEL, "skills_enabled": True,
             "skill_threshold": 0.75, "max_skills": 2, "skill_dirs": [],
-            "memory_dirs": [], "pinned": []}
+            "memory_dirs": [], "pinned": [], "batch_size": 80}
 INSTRUCTION = (
     "Is the specified memory practically useful for carrying out message, taking history "
     "and supplied files into account? Judge only the specified memory and this "
@@ -339,6 +339,24 @@ def decide(model, event, entries, history, settings):
     return scores_from(answer, [entry["id"] for entry in entries]), answer, payload
 
 
+def decide_batched(model, event, entries, history, settings):
+    """Large candidate sets are split into parallel requests so latency stays near one batch."""
+    size = settings["batch_size"]
+    batches = [entries[start:start + size] for start in range(0, len(entries), size)]
+    if len(batches) == 1:
+        return decide(model, event, entries, history, settings)
+    with ThreadPoolExecutor(len(batches)) as pool:
+        results = list(pool.map(lambda batch: decide(model, event, batch, history, settings), batches))
+    scores = {key: value for result, _, _ in results for key, value in result.items()}
+    usage = {}
+    for _, answer, _ in results:
+        for key, value in (answer.get("usage") or {}).items():
+            if isinstance(value, (int, float)):
+                usage[key] = usage.get(key, 0) + value
+    answer = dict(results[0][1], usage=usage)
+    return scores, answer, results[0][2]
+
+
 def skill_context(skills, scores, settings):
     chosen = sorted((entry for entry in skills if scores[entry["id"]] >= settings["skill_threshold"]),
                     key=lambda entry: -scores[entry["id"]])[:settings["max_skills"]]
@@ -380,8 +398,8 @@ def retrieve(event, home, settings, receipt, client="codex"):
         receipt.update({"native_sha256": source_hash, "source_mode": mode, "candidate_count": len(memories)})
     skills = load_skills(home, event, settings, client) if settings["skills_enabled"] else []
     with ThreadPoolExecutor(2) as pool:
-        memory_job = pool.submit(decide, settings["memory_model"], event, memories, history, settings) if memories else None
-        skill_job = pool.submit(decide, settings["skill_model"], event, skills, history, settings) if skills else None
+        memory_job = pool.submit(decide_batched, settings["memory_model"], event, memories, history, settings) if memories else None
+        skill_job = pool.submit(decide_batched, settings["skill_model"], event, skills, history, settings) if skills else None
         scores, answer, payload = memory_job.result() if memory_job else ({}, {}, {"state": {"history": history}})
         suggestions, suggested = "", []
         if skill_job:

@@ -38,7 +38,7 @@ The models were picked by comparing decision models on labeled prompt sets: 19 p
 | Memories | `perplexity/pplx-decider-flash-v1.2` | 17/19 expected memories at 0.65, 9 extra; Mercury: 14/19, 18 extra |
 | Skills | `perplexity/pplx-decider-v1.2` | 15/16 prompts matched, 5 wrong suggestions, none on small talk; Mercury: 18 wrong |
 
-The two requests run in parallel, which takes about 1.5 s and $0.0006 per message. Change them with `memory_model` and `skill_model` in settings.
+The two requests run in parallel, and large candidate sets are split into parallel batches (`batch_size`, 80). A Claude Code store of 30 memories and 77 skills takes about 1.5 s and $0.0006 per message; a Codex archive of 396 preferences and 138 skills takes about 3.5 s and $0.0023. Change them with `memory_model` and `skill_model` in settings.
 
 ## Skills
 
@@ -54,7 +54,7 @@ An optional private reviewed view can preserve a manually consolidated preferenc
 
 ## Settings, receipts and failure behavior
 
-Local settings live in `$CODEX_HOME/mercury-memory/settings.json`. The defaults in `hook.py` are the authoritative setting definitions. The entire retrieval has a six-second deadline, including archive loading, history extraction, DNS, TLS and response-body reading. The HTTP socket timeout is also six seconds, with no retry inside a user turn; the Codex handler deadline is ten seconds, leaving time for process startup and receipt output. A deadline expires without injecting partial results; the one-shot hook process exits without waiting for its background retrieval thread. An API error, missing key, invalid response or timeout produces an availability warning and lets the user's task proceed with native Codex memory. Disable retrieval with `"enabled": false` in settings.
+Local settings live in `$CODEX_HOME/mercury-memory/settings.json`. The defaults in `hook.py` are the authoritative setting definitions. The entire retrieval has an eight-second deadline, including archive loading, history extraction, DNS, TLS and response-body reading. The HTTP socket timeout is also eight seconds, with no retry inside a user turn; the handler deadline is twelve seconds, leaving time for process startup and receipt output. A deadline expires without injecting partial results; the one-shot hook process exits without waiting for its background retrieval thread. An API error, missing key, invalid response or timeout produces an availability warning and lets the user's task proceed with native Codex memory. Disable retrieval with `"enabled": false` in settings.
 
 Every attempted retrieval writes a separate receipt under `$CODEX_HOME/mercury-memory/receipts/`. Successful receipts contain native source hash, source mode, scores, selected memory text, provider usage, elapsed time and the exact injected context. Failed receipts contain status, error type and elapsed time. They also include source and request metadata when the retrieval worker returns it; a total-deadline receipt contains only invocation metadata because the worker has not returned. These private receipts make delivery inspectable; a Codex session rollout establishes that the hook output actually reached the model. The prompt is represented by a hash in the receipt. Receipt files are retained locally until the owner removes them; inspect directory size during routine maintenance. Missing or unsupported transcript data means selection uses the current message without history.
 
