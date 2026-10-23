@@ -77,13 +77,50 @@ def install(home, reviewed_view=None):
     return target
 
 
+def install_claude(claude_home, remove=False):
+    """Claude Code: copy the runtime and merge one UserPromptSubmit handler into settings.json."""
+    target = claude_home / "hooks" / "mercury-memory" / "hook.py"
+    settings_path = claude_home / "settings.json"
+    existing = read_json(settings_path) if settings_path.exists() else {}
+    groups = existing.setdefault("hooks", {}).setdefault("UserPromptSubmit", [])
+    for group in groups:
+        group["hooks"] = [handler for handler in group.get("hooks", [])
+                          if not (handler.get("statusMessage") == STATUS_MESSAGE
+                                  and target.as_posix() in handler.get("command", "").replace("\\", "/"))]
+    groups[:] = [group for group in groups if group.get("hooks")]
+    if not remove:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        source = Path(__file__).with_name("hook.py")
+        if source.resolve() != target.resolve():
+            shutil.copy2(source, target)
+        command = shlex.join([Path(sys.executable).as_posix(), "-I", target.as_posix(), "--client", "claude"])
+        groups.append({"hooks": [{"type": "command", "command": command, "timeout": HOOK_TIMEOUT_SECONDS,
+                                  "statusMessage": STATUS_MESSAGE}]})
+        state = claude_home / "mercury-memory" / "settings.json"
+        if not state.exists():
+            write_json(state, DEFAULTS)
+    if settings_path.exists():
+        timestamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+        backup = claude_home / "mercury-memory" / "backups" / (timestamp + "-settings.json")
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(settings_path, backup)
+    write_json(settings_path, existing)
+    return target
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--codex-home", type=Path, default=codex_home())
     parser.add_argument("--reviewed-view", type=Path,
                         help="Private optional JSON: native_sha256 and memories, never a repository file")
     parser.add_argument("--remove", action="store_true")
+    parser.add_argument("--client", choices=["codex", "claude"], default="codex")
+    parser.add_argument("--claude-home", type=Path, default=Path.home() / ".claude")
     args = parser.parse_args()
+    if args.client == "claude":
+        target = install_claude(args.claude_home.resolve(), args.remove)
+        print(("Removed " if args.remove else "Installed ") + str(target))
+        return
     home = args.codex_home.resolve()
     if args.remove:
         configure(home, remove=True)
