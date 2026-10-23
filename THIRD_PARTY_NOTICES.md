@@ -12,7 +12,7 @@ Source: [backnotprop/pstack](https://github.com/backnotprop/pstack)
 
 Copyright 2026 Lauren Tan. MIT License. See [`licenses/PSTACK-MIT.txt`](licenses/PSTACK-MIT.txt).
 
-The local collection includes adapted PStack workflows such as `architect`, `arena`, `blast-radius`, `bro`, `create-verification-skill`, `figure-it-out`, `how`, `interrogate`, `maintain-verification-skill`, `poteto-mode`, `show-me-your-work`, `writing-for-humans` (incorporating `unslop`), and `why`.
+The local collection includes adapted PStack workflows such as `architect`, `blast-radius`, `bro`, `create-verification-skill`, `figure-it-out`, `how`, `maintain-verification-skill`, `poteto-mode`, `show-me-your-work`, `writing-for-humans` (incorporating `unslop`), `why`, and the `principle-*` skills.
 
 ## Matt Pocock's skills
 
