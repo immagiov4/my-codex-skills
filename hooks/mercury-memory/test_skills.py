@@ -50,6 +50,7 @@ class SkillSuggestionTests(unittest.TestCase):
         with patch.object(hook, "api_key", return_value="k"), patch.object(hook.urllib.request, "urlopen", recording):
             context = hook.run(self.event, self.home)["hookSpecificOutput"]["additionalContext"]
         self.assertIn("issue-writer", context)
+        self.assertIn("skills/issue-writer/SKILL.md", context)
         self.assertNotIn("unrelated", context)
         self.assertEqual(sorted(seen), sorted([hook.MODEL, hook.SKILL_MODEL]))
         receipt = hook.read_json(self.home / "mercury-memory/receipts/t.json")
