@@ -92,7 +92,6 @@ For bug fixes, the loop is reproduce on the surface, fix, verify on the same sur
 In the overview, name which poteto-mode non-negotiables the implementer must apply, by name:
 
 - the **how** skill over each unfamiliar subsystem before changing it.
-- the **interrogate** skill for adversarial review on contested designs before shipping.
 - `$writing-for-humans` over prose, comments, commit messages, and pull request text.
 - the **show-me-your-work** skill to keep a decision trail when the plan is large enough to need an auditable record.
 - the Babysit playbook after opening an authorized pull request.
