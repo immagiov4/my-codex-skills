@@ -191,7 +191,8 @@ def load_skills(home, event, settings, client):
             name, description, _ = front_matter(path)
             if description and not path.parent.name.startswith(".") and name not in entries:
                 entries[name] = {"id": "skill_" + digest(name.encode())[:24], "kind": "skill",
-                                 "name": name, "text": description[:SKILL_DESCRIPTION_CHARACTERS]}
+                                 "name": name, "text": description[:SKILL_DESCRIPTION_CHARACTERS],
+                                 "path": path.as_posix()}
     return list(entries.values())
 
 
@@ -362,9 +363,10 @@ def skill_context(skills, scores, settings):
                     key=lambda entry: -scores[entry["id"]])[:settings["max_skills"]]
     if not chosen:
         return "", []
-    return ("<skill_suggestions>\nThese skills match this message. Load each one before acting, "
-            "unless it clearly does not apply:\n"
-            + "\n".join("- %s: %s" % (entry["name"], entry["text"][:200]) for entry in chosen)
+    # Suggestions carry the path: skills hidden from the catalog to save context stay reachable.
+    return ("<skill_suggestions>\nThese skills match this message. Before acting, read each "
+            "SKILL.md at the given path and follow it, unless it clearly does not apply:\n"
+            + "\n".join("- %s (%s): %s" % (entry["name"], entry["path"], entry["text"][:200]) for entry in chosen)
             + "\n</skill_suggestions>"), [entry["name"] for entry in chosen]
 
 

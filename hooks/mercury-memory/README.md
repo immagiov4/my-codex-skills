@@ -42,7 +42,7 @@ The two requests run in parallel, and large candidate sets are split into parall
 
 ## Skills
 
-Candidates are the user skills (`$CODEX_HOME/skills` or `~/.claude/skills`), plus the skills of the repository that contains the current directory (`.agents/skills` or `.claude/skills`) and any `skill_dirs`. Only the name and description are sent. A skill is suggested at **0.75** or above, at most `max_skills` (2). A skill failure never drops memories. Disable suggestions with `"skills_enabled": false`.
+Candidates are the user skills (`$CODEX_HOME/skills` or `~/.claude/skills`), plus the skills of the repository that contains the current directory (`.agents/skills` or `.claude/skills`) and any `skill_dirs`. Only the name and description are sent. Each suggestion carries the `SKILL.md` path, so skills kept out of the agent's catalog to save context (`allow_implicit_invocation: false` or `disable-model-invocation: true`) stay reachable through the hook. A skill is suggested at **0.75** or above, at most `max_skills` (2). A skill failure never drops memories. Disable suggestions with `"skills_enabled": false`.
 
 ## Native source and selection
 
