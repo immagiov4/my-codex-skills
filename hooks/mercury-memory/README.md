@@ -1,6 +1,11 @@
-# Mercury native memory hook
+# Mercury memory and skill hook
 
-This optional Codex `UserPromptSubmit` hook selects relevant preferences from the current native memory archive and supplies their complete text as developer context before each user turn. It uses `inception/mercury-decide` through OpenRouter, Python 3.9 or newer and the standard library. The native memory system remains enabled and owns its archive and automatic summary. The hook runs once per user message, with no daemon, Docker container, database or self-hosted service.
+This optional `UserPromptSubmit` hook runs once per user message, for Codex or Claude Code. It does two things through OpenRouter decision models:
+
+- **Memories:** selects the relevant ones and injects their full text.
+- **Skills:** suggests at most two skills that match the message, as an explicit "load this skill" note, because agents rarely load skills on their own.
+
+It needs Python 3.9 or newer and the standard library only: no daemon, container or database. Each client keeps its own memory system; the hook only reads it.
 
 ## Install
 
@@ -15,6 +20,29 @@ python hooks/mercury-memory/install.py
 The installer resolves `$CODEX_HOME`, falling back to `~/.codex`. Use `--codex-home /absolute/path` for a different installation. It copies the runtime into that directory, merges one handler into `hooks.json`, preserves other handlers and backs up the previous file. Review and trust **Mercury native memory** through Codex `/hooks`, then start a new local chat. The same user-level hook applies to local CLI and desktop Codex sessions on that machine. Cloud-orchestrated Work chats have different hook support; see the [official hook documentation](https://learn.chatgpt.com/docs/hooks).
 
 The collection's regular skill installer and plugin distribute skills. Installing this hook is a separate explicit action because it sends private memory and conversation content to the configured API provider. Carry this directory to another machine, set that machine's API key and run the installer there; its native memory stays local to that machine.
+
+### Claude Code
+
+```sh
+python hooks/mercury-memory/install.py --client claude
+```
+
+This copies the runtime to `~/.claude/hooks/mercury-memory/` and adds one handler to `~/.claude/settings.json`, preserving the other handlers. Settings and receipts live in `~/.claude/mercury-memory/`. Claude Code memories are the Markdown files next to the session transcript (`<project>/memory/*.md`, the `MEMORY.md` index excluded), plus any `memory_dirs` in settings. Memories listed by name in `pinned` are injected on every turn, even when the provider is unavailable.
+
+## Models
+
+The models were picked by comparing decision models on labeled prompt sets: 19 prompts against 77 skills, and 15 prompts against 30 memories.
+
+| Use | Model | Result |
+| --- | --- | --- |
+| Memories | `perplexity/pplx-decider-flash-v1.2` | 17/19 expected memories at 0.65, 9 extra; Mercury: 14/19, 18 extra |
+| Skills | `perplexity/pplx-decider-v1.2` | 15/16 prompts matched, 5 wrong suggestions, none on small talk; Mercury: 18 wrong |
+
+The two requests run in parallel, which takes about 1.5 s and $0.0006 per message. Change them with `memory_model` and `skill_model` in settings.
+
+## Skills
+
+Candidates are the user skills (`$CODEX_HOME/skills` or `~/.claude/skills`), plus the skills of the repository that contains the current directory (`.agents/skills` or `.claude/skills`) and any `skill_dirs`. Only the name and description are sent. A skill is suggested at **0.75** or above, at most `max_skills` (2). A skill failure never drops memories. Disable suggestions with `"skills_enabled": false`.
 
 ## Native source and selection
 
