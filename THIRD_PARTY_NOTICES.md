@@ -14,6 +14,8 @@ Copyright 2026 Lauren Tan. MIT License. See [`licenses/PSTACK-MIT.txt`](licenses
 
 The local collection includes adapted PStack workflows such as `architect`, `blast-radius`, `bro`, `create-verification-skill`, `figure-it-out`, `how`, `maintain-verification-skill`, `poteto-mode`, `show-me-your-work`, `writing-for-humans` (incorporating `unslop`), `why`, and the `principle-*` skills.
 
+`benchmark-checklist` is adapted from `skills/benchmark-checklist/SKILL.md` at PStack revision `f51fdeba3d803ef90e4eaa4a95ffb4e76008ab37`, Git blob `e901d1fdbc9ffce53e94d6514be7d9a22e771a1a`. The identical procedure is in `cursor/plugins` at revision `99b609a72323b70204eab407c622f436e858e112`, path `pstack/skills/benchmark-checklist/SKILL.md`. The adaptation maps explicit invocation to Codex metadata, routes the three playbooks to this collection's existing `poteto-mode`, and adds Windows observation guidance. The measurement questions, run counts, and verdict rules are unchanged. A copy of the MIT notice accompanies the skill in `skills/benchmark-checklist/LICENSE.txt` so copy installations retain it.
+
 ## Matt Pocock's skills
 
 Source: [mattpocock/skills](https://github.com/mattpocock/skills)
