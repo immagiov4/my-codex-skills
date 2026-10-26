@@ -5804,7 +5804,9 @@
           "kind": "reel",
           "decision": "pending",
           "evidence": "caption_and_primary_docs",
-          "reason": "Ditther; official site checked, visual identity match and export rights pending"
+          "reason": "Ditther: original synthetic image loaded and pixel preview observed; PNG at default HD 720px invokes Create account, no file returned. Terms link loops in browser and web retrieval; output rights and social visual match remain pending.",
+          "editor_checked_on": "2026-10-26",
+          "editor_evidence": "original_media_preview_and_export_account_gate"
         },
         {
           "id": "DbS2NJlC0CP",
@@ -5921,7 +5923,7 @@
       ],
       "caption_screened_posts": 34,
       "latest_access_check": {
-        "observed_on": "2026-10-19",
+        "observed_on": "2026-10-26",
         "decodo_target": "instagram_graphql_profile",
         "profile_identity": "jamux.ai",
         "timeline_edges_returned": 0,
@@ -5944,11 +5946,70 @@
     {
       "channel": "https://www.youtube.com/@adrienaidesigner/videos",
       "channel_id": "UC0hGsp2YuZAq2Tn0WT8k4BQ",
-      "observed_on": "2026-10-18",
-      "reported_total_videos": 124,
-      "indexed_long_form_entries": 20,
+      "observed_on": "2026-10-26",
+      "reported_total_videos": 133,
+      "indexed_long_form_entries": 21,
       "archive_status": "bounded_long_form_survey",
       "videos": [
+        {
+          "id": "YtSGWAAf5OU",
+          "title": "How to Build a Custom CRM (Claude Code + Taste)",
+          "decision": "cataloged_docs",
+          "evidence": "channel_index_metadata_transcript_and_primary_docs",
+          "reason": "MIT template documented with runtime gates; Vercel business-hosting advice corrected. Visual passages and actual CRM integration pending.",
+          "resources": [
+            {
+              "resource": "Sales CRM template",
+              "decision": "cataloged_docs",
+              "reason": "Official repository declares MIT; UI starting point, actual build, synchronization, authentication and roles pending"
+            },
+            {
+              "resource": "Claude Code and Cursor",
+              "decision": "already_covered",
+              "reason": "Existing agent workflow; model settings are author preferences"
+            },
+            {
+              "resource": "Notion",
+              "decision": "pending",
+              "reason": "Two-way sync described; exact implementation and API permissions need primary checks before adoption"
+            },
+            {
+              "resource": "Taste skill",
+              "decision": "pending",
+              "reason": "Exact distribution/source link absent; identify before installation"
+            },
+            {
+              "resource": "Stage",
+              "decision": "already_cataloged",
+              "reason": "Author product; current access conditions remain in catalog"
+            },
+            {
+              "resource": "Limora",
+              "decision": "already_cataloged",
+              "reason": "Author product; SVG editing/export described, account export test pending"
+            },
+            {
+              "resource": "Vercel",
+              "decision": "corrected",
+              "reason": "Hobby official docs restrict personal non-commercial use; business CRM requires eligible hosting"
+            },
+            {
+              "resource": "Free CRM Build Guide",
+              "decision": "pending",
+              "reason": "External guide linked; guide access and reuse remain pending"
+            },
+            {
+              "resource": "Screen Studio and Loom",
+              "decision": "pending",
+              "reason": "Transcript names recording alternatives; assess current access before use"
+            },
+            {
+              "resource": "Google Sheets",
+              "decision": "pending",
+              "reason": "Import/sync alternative described; schema and two-way behavior pending"
+            }
+          ]
+        },
         {
           "id": "pKO8BFKWET4",
           "title": "How I Build Websites That Don't Look AI (Full Workflow)",
@@ -6024,9 +6085,56 @@
         {
           "id": "749i6YKic2E",
           "title": "The AI Website Design Process (2026)",
-          "decision": "pending",
-          "evidence": "title",
-          "reason": "Inspect description and demonstrated workflow; compare with existing recipes before adoption"
+          "decision": "already_covered_with_corrections",
+          "evidence": "metadata_transcript_and_primary_docs",
+          "reason": "Brand/design-system/section brief/assets overlap P01-P04 and P15-P16. Hosting claim qualified; motion skill identity and visual passages pending.",
+          "resources": [
+            {
+              "resource": "Figma",
+              "decision": "already_covered",
+              "reason": "Brand source; use authorized design files"
+            },
+            {
+              "resource": "Claude Design",
+              "decision": "pending",
+              "reason": "Historical design-system export described; current access/export needs primary verification"
+            },
+            {
+              "resource": "Claude Code",
+              "decision": "already_covered",
+              "reason": "Existing local implementation workflow"
+            },
+            {
+              "resource": "Taste Skill",
+              "decision": "pending",
+              "reason": "Exact source/distribution absent"
+            },
+            {
+              "resource": "Re-motion Skill",
+              "decision": "pending",
+              "reason": "Exact linked skill absent; SVG/hover attribution does not establish standard Remotion runtime"
+            },
+            {
+              "resource": "Limora",
+              "decision": "already_cataloged",
+              "reason": "Owner product, existing access/rights conditions apply"
+            },
+            {
+              "resource": "Vercel",
+              "decision": "corrected",
+              "reason": "Hobby is personal non-commercial only"
+            },
+            {
+              "resource": "Paper",
+              "decision": "pending",
+              "reason": "Official product identified; manual editor access and export not exercised"
+            },
+            {
+              "resource": "Free Workflow Breakdown",
+              "decision": "pending",
+              "reason": "External guide access/reuse not checked"
+            }
+          ]
         },
         {
           "id": "EiIZBOu4MHk",
@@ -6086,14 +6194,14 @@
         }
       ],
       "latest_discovery_check": {
-        "observed_on": "2026-10-19",
-        "method": "Decodo youtube-search; Adrien AI Designer; upload-date this_week",
+        "observed_on": "2026-10-26",
+        "method": "Decodo weekly author search then public YouTube Latest tab in internal browser",
         "returned_results": 20,
-        "matching_channel_ids": [
-          "pKO8BFKWET4"
+        "matching_channel_ids": [],
+        "new_matching_ids": [
+          "YtSGWAAf5OU"
         ],
-        "new_matching_ids": [],
-        "coverage": "search_results_only; channel archive remains bounded"
+        "coverage": "21 visible long-form entries; header reports 133 total videos; historical archive remains bounded"
       }
     },
     {
@@ -6148,63 +6256,74 @@
           ]
         }
       ]
+    },
+    {
+      "channel": "https://www.youtube.com/channel/UCjnuBkgYrryPxDuKz0eG09Q",
+      "channel_id": "UCjnuBkgYrryPxDuKz0eG09Q",
+      "observed_on": "2026-10-26",
+      "indexed_long_form_entries": 1,
+      "archive_status": "selected_video_only",
+      "videos": [
+        {
+          "id": "tWNgzLG9-2c",
+          "title": "Introducing Spline for ChatGPT",
+          "decision": "existing_resource_updated",
+          "evidence": "metadata_and_primary_docs",
+          "reason": "Hosted versus desktop authoring, OAuth and tool-call allowances clarified; actual connection and export pending. Existing pricing constraints preserved."
+        }
+      ]
     }
   ],
   "latest_discovery_checkpoint": {
-    "observed_on": "2026-10-19",
+    "observed_on": "2026-10-26",
     "query": "website design animation tools",
     "provider": "Decodo youtube-search; upload-date this_week",
     "returned_results": 20,
     "candidate_evidence": "search_title_and_author_only_except_selected_video",
     "candidates": [
       {
-        "id": "NZjjmf3I6I4",
-        "title": "6 Insane Trending GitHub AI Design Repos You Need to Use",
-        "decision": "cataloged_docs"
-      },
-      {
-        "id": "wQHN72Ht2KA",
-        "title": "Best AI Tool to Build Local Websites & Sell Them",
+        "id": "eQEkqBqFF6s",
+        "title": "Watch Me Build an Animated Mobile Website with AI (and How to Sell It)",
         "decision": "pending"
       },
       {
-        "id": "UukK2oDWuTo",
-        "title": "Opus 5.5 Can Do THIS Now? (3D Web Design)",
+        "id": "1YV23MC_Aig",
+        "title": "Build a $10,000 3D Animated Website with Google AI (Antigravity + Flow Tutorial)",
         "decision": "pending"
       },
       {
-        "id": "au2TI8sdq8E",
-        "title": "Google Just Fixed AI Design By Releasing This",
+        "id": "Ge1B-Ok1Pfk",
+        "title": "Claude Makes a New Kind of Video - Full Tutorial",
         "decision": "pending"
       },
       {
-        "id": "xiWJE3FPJSE",
-        "title": "Gemini 4 Just Killed 3D Web Design",
+        "id": "-7jk1Y7AU7w",
+        "title": "Build $10,000 Websites using ChatGPT (Ultimate Guide)",
         "decision": "pending"
       },
       {
-        "id": "dXRrvjUBG_k",
-        "title": "3 AI Websites That Make Motion Graphics in Minutes!",
+        "id": "tWNgzLG9-2c",
+        "title": "Introducing Spline for ChatGPT 🚀",
+        "decision": "existing_resource_updated"
+      },
+      {
+        "id": "B9_7jowi3zw",
+        "title": "How I Make Beautiful AI Websites with Kling 4.0 - Full Guide",
         "decision": "pending"
       },
       {
-        "id": "yf2OwchM9nw",
-        "title": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+        "id": "SVNy5Wk-Wy4",
+        "title": "The Ultimate Reusable Digital Food Menu | SVGator Animation Challenge",
         "decision": "pending"
       },
       {
-        "id": "ZVqy_U6GPH8",
-        "title": "Build an Animated Website With AI — Step by Step (Beginner Friendly)",
+        "id": "KphrV76DJoI",
+        "title": "Claude Video 2.0 Just Changed Everything (FREE Skill)",
         "decision": "pending"
       },
       {
-        "id": "Dl_d2C7nUTE",
-        "title": "Nexora — SaaS Explainer Video | Product UI Animation & Motion Design",
-        "decision": "pending"
-      },
-      {
-        "id": "KRbNZPF9Ox8",
-        "title": "Vibe Code a REAL Animated WordPress Website with Claude + Elementor",
+        "id": "D5qpBbEWTxo",
+        "title": "How I Make $880/Day with AI Motion Design (Claude Motion)",
         "decision": "pending"
       },
       {
@@ -6213,57 +6332,154 @@
         "decision": "pending"
       },
       {
-        "id": "T2Wfds62ZjM",
-        "title": "Building Real-Time Animation with Gemini 4 Argon",
+        "id": "FKPvTTmYaik",
+        "title": "From AI to Cybersecurity: These UI Designs Are INSANE",
         "decision": "pending"
       },
       {
-        "id": "wTROHTxRqFY",
-        "title": "Design award winning websites using these resources",
+        "id": "mbhzwZEYiYQ",
+        "title": "I Built a 3D Animated Website with Claude AI + MotionSites",
         "decision": "pending"
       },
       {
-        "id": "bapcQ39yfsg",
-        "title": "How to Build a 3D Animated Website with AI (And Sell It to Clients)",
+        "id": "vx3-BZvbEG8",
+        "title": "CSS animation library: find the right motion in 150",
         "decision": "pending"
       },
       {
-        "id": "eoSUmV4nQeo",
-        "title": "Luxury Travel Website with Parallax Animation | Google AI Studio Website Tutorial",
+        "id": "YeS8bZs6Z4M",
+        "title": "Batley Carr Website Design Animation",
         "decision": "pending"
       },
       {
-        "id": "RSe268YFglA",
-        "title": "Create FREE Motion Graphics with Claude Code + Javascript",
+        "id": "wSe9UyslYys",
+        "title": "Designer bookmark: animated sites",
         "decision": "pending"
       },
       {
-        "id": "w-v37mVFSW8",
-        "title": "Shades by Inspo AI — Create Animated Website Backgrounds in Seconds",
+        "id": "7pxKmuRGObc",
+        "title": "How I made a scrollytelling animation for my website using AI",
         "decision": "pending"
       },
       {
-        "id": "SoR5HCEee1I",
-        "title": "I Built a STUNNING 3D Website Using AI 🤯 | No Manual Coding!",
+        "id": "MlZYbzL3CoU",
+        "title": "How to create a $2500 React website for free | ChatGPT | Google Gemini | GSAP | AI",
         "decision": "pending"
       },
       {
-        "id": "YL5TO9zp3zw",
-        "title": "Webloom AI Website Builder — Motion Design Promo | After Effects | Blender | 3D Animation",
+        "id": "iSbx76unA8s",
+        "title": "CSS Only Animation Effects | Infinity",
         "decision": "pending"
       },
       {
-        "id": "TjrJ8kST3H8",
-        "title": "3D & Animated Website Templates: Scrollhaus Demo + Lovable Workflow",
+        "id": "_1z5j7vft3E",
+        "title": "Animated Agency Website with a Portfolio, Built with AI (Oxygen)",
+        "decision": "pending"
+      },
+      {
+        "id": "laVwZ3YEFuc",
+        "title": "Claude Code Makes Websites Look Like Movies",
         "decision": "pending"
       }
     ],
-    "remaining_scope": "New social posts inaccessible this run. SetupsAI and Jamux historical visual review, pending Adrien videos and uninspected search candidates remain open.",
+    "remaining_scope": "New Instagram posts inaccessible this run. Historical SetupsAI/Jamux visual review, pending Adrien videos and uninspected search candidates remain open. Previous unresolved discovery candidates retained in discovery_backlog.",
     "tiktok_probe": {
       "profile": "https://www.tiktok.com/@beasttechx",
       "identity_matched": true,
-      "reported_video_count": 307,
+      "reported_video_count": 308,
       "video_entries_returned": 0
     }
-  }
+  },
+  "discovery_backlog": [
+    {
+      "id": "wQHN72Ht2KA",
+      "title": "Best AI Tool to Build Local Websites & Sell Them",
+      "decision": "pending"
+    },
+    {
+      "id": "UukK2oDWuTo",
+      "title": "Opus 5.5 Can Do THIS Now? (3D Web Design)",
+      "decision": "pending"
+    },
+    {
+      "id": "au2TI8sdq8E",
+      "title": "Google Just Fixed AI Design By Releasing This",
+      "decision": "pending"
+    },
+    {
+      "id": "xiWJE3FPJSE",
+      "title": "Gemini 4 Just Killed 3D Web Design",
+      "decision": "pending"
+    },
+    {
+      "id": "dXRrvjUBG_k",
+      "title": "3 AI Websites That Make Motion Graphics in Minutes!",
+      "decision": "pending"
+    },
+    {
+      "id": "yf2OwchM9nw",
+      "title": "Claude Just Dropped MOTION. (Get Ahead of 95% in 11 Minutes.)",
+      "decision": "pending"
+    },
+    {
+      "id": "ZVqy_U6GPH8",
+      "title": "Build an Animated Website With AI — Step by Step (Beginner Friendly)",
+      "decision": "pending"
+    },
+    {
+      "id": "Dl_d2C7nUTE",
+      "title": "Nexora — SaaS Explainer Video | Product UI Animation & Motion Design",
+      "decision": "pending"
+    },
+    {
+      "id": "KRbNZPF9Ox8",
+      "title": "Vibe Code a REAL Animated WordPress Website with Claude + Elementor",
+      "decision": "pending"
+    },
+    {
+      "id": "T2Wfds62ZjM",
+      "title": "Building Real-Time Animation with Gemini 4 Argon",
+      "decision": "pending"
+    },
+    {
+      "id": "wTROHTxRqFY",
+      "title": "Design award winning websites using these resources",
+      "decision": "pending"
+    },
+    {
+      "id": "bapcQ39yfsg",
+      "title": "How to Build a 3D Animated Website with AI (And Sell It to Clients)",
+      "decision": "pending"
+    },
+    {
+      "id": "eoSUmV4nQeo",
+      "title": "Luxury Travel Website with Parallax Animation | Google AI Studio Website Tutorial",
+      "decision": "pending"
+    },
+    {
+      "id": "RSe268YFglA",
+      "title": "Create FREE Motion Graphics with Claude Code + Javascript",
+      "decision": "pending"
+    },
+    {
+      "id": "w-v37mVFSW8",
+      "title": "Shades by Inspo AI — Create Animated Website Backgrounds in Seconds",
+      "decision": "pending"
+    },
+    {
+      "id": "SoR5HCEee1I",
+      "title": "I Built a STUNNING 3D Website Using AI 🤯 | No Manual Coding!",
+      "decision": "pending"
+    },
+    {
+      "id": "YL5TO9zp3zw",
+      "title": "Webloom AI Website Builder — Motion Design Promo | After Effects | Blender | 3D Animation",
+      "decision": "pending"
+    },
+    {
+      "id": "TjrJ8kST3H8",
+      "title": "3D & Animated Website Templates: Scrollhaus Demo + Lovable Workflow",
+      "decision": "pending"
+    }
+  ]
 }

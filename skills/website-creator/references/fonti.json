@@ -508,5 +508,35 @@
     "views": "32749",
     "lengthSeconds": "620",
     "observed_on": "2026-10-19"
+  },
+  {
+    "id": "YtSGWAAf5OU",
+    "url": "https://www.youtube.com/watch?v=YtSGWAAf5OU",
+    "title": "How to Build a Custom CRM (Claude Code + Taste)",
+    "author": "Adrien | AI Designer",
+    "published_date": "2026-10-26",
+    "views": "47",
+    "lengthSeconds": "748",
+    "observed_on": "2026-10-26"
+  },
+  {
+    "id": "749i6YKic2E",
+    "url": "https://www.youtube.com/watch?v=749i6YKic2E",
+    "title": "The AI Website Design Process (2026)",
+    "author": "Adrien | AI Designer",
+    "published_date": "2026-05-02",
+    "views": "10536",
+    "lengthSeconds": "521",
+    "observed_on": "2026-10-26"
+  },
+  {
+    "id": "tWNgzLG9-2c",
+    "url": "https://www.youtube.com/watch?v=tWNgzLG9-2c",
+    "title": "Introducing Spline for ChatGPT 🚀",
+    "author": "Spline",
+    "published_date": "2026-10-21",
+    "views": "335885",
+    "lengthSeconds": "31",
+    "observed_on": "2026-10-26"
   }
 ]

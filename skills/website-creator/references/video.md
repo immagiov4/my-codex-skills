@@ -442,6 +442,20 @@ At 2:56 in MVOpq3WRnbo, the author proposes an added delay to make work feel sub
 
 The narration and description of 2TlIg3VokY8 conflict on fake progress and urgency. U04 follows actual expiration policy, A09 counts real work, and U05 compares matching billing periods. The user-experience reference explains these adaptations and the review boundaries for the other app critiques.
 
+## YtSGWAAf5OU
+
+[How to Build a Custom CRM (Claude Code + Taste)](https://www.youtube.com/watch?v=YtSGWAAf5OU) — Adrien | AI Designer; published and observed 2026-10-26. The public channel's Latest tab exposed this upload, while Decodo's weekly author search returned 20 unrelated-channel results. Decodo metadata and English timed transcript were usable. [0:38](https://www.youtube.com/watch?v=YtSGWAAf5OU&t=38s) identifies the template, [6:29](https://www.youtube.com/watch?v=YtSGWAAf5OU&t=389s) discusses synchronization and [11:20](https://www.youtube.com/watch?v=YtSGWAAf5OU&t=680s) discusses deployment. These are textual chapter references; visual passages and a functioning CRM integration remain pending.
+
+See [CRM template and deployment conditions](cataloghi-componenti.md#crm-template-and-deployment-conditions) for the MIT starting point and the correction to the author's free-business-hosting claim. Stage/Limora promotion, model preferences and speed/savings claims remain attributed to the author. Each named resource has an outcome or pending check in source-coverage.json.
+
+## 749i6YKic2E
+
+[The AI Website Design Process (2026)](https://www.youtube.com/watch?v=749i6YKic2E) — Adrien | AI Designer; published 2026-05-02, observed 2026-10-26. Metadata and English timed transcript reviewed. Brand guidelines, a design system, a section/content brief and coherent generated assets overlap P01–P04 and P15–P16; retain those recipes. The transcript additionally names Paper as a manual-editing surface, with runtime/access evaluation pending. Its “Re-motion Skill” for live SVG/hover effects lacks an exact source link: identify it before recommending an installation. The Vercel free-hosting statement has the commercial-use qualification in the CRM note above. Visual passages remain pending.
+
+## tWNgzLG9-2c
+
+[Introducing Spline for ChatGPT](https://www.youtube.com/watch?v=tWNgzLG9-2c) — Spline; published 2026-10-21, observed 2026-10-26. Official video metadata and linked product documentation establish a new hosted authoring route; this collection's connection and output remain pending. Update the existing Spline resource rather than adding a duplicate 3D recipe: [cloud authoring and delivery boundaries](cataloghi-componenti.md#spline-cloud-authoring-and-delivery-boundaries).
+
 ## NZjjmf3I6I4
 
 [6 Insane Trending GitHub AI Design Repos You Need to Use](https://www.youtube.com/watch?v=NZjjmf3I6I4) — AI LABS; published 2026-10-17, observed 2026-10-19. Decodo returned usable metadata, chapter times and an English timed transcript. The six tool families and the companion Dembrandt-skills repository each have an outcome in source-coverage.json. Their current official documentation and licenses inform [reference research, layout checks and product media](cataloghi-componenti.md#reference-research-layout-checks-and-product-media).
