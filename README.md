@@ -41,7 +41,7 @@ Pull the repository and run the install script again. For plugin installations, 
 
 ## Contents
 
-`website-creator` is an experimental collection of visual directions, website recipes, video references, and component resources; its [maintenance procedure](skills/website-creator/references/maintenance.md) covers curated updates from YouTube, social discoveries, and official sources.
+The website design collection has moved to the Geppetto [website-tools memory bucket](https://github.com/immagiov4/llm-memories/tree/main/buckets/website-tools). The `website-creator` skill routes existing invocations to that bucket; recipes, sources, licenses and weekly maintenance live there.
 
 The optional [Luanti memory hook](hooks/luanti-memory/README.md) connects Codex to a chosen knowledge checkout. Its setup includes the checkout path and hook trust review.
 

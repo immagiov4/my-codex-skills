@@ -1,4 +1,4 @@
 interface:
-  display_name: "Website Creator"
-  short_description: "Distinct visual direction, website recipes, and UX workflows"
-  default_prompt: "Use $website-creator to ground the visual direction in the subject, choose relevant website or user-experience recipes, and verify the rendered result with visual review and available Impeccable checks."
+  display_name: "Website Tools (Geppetto)"
+  short_description: "Website resources in the Geppetto website-tools bucket"
+  default_prompt: "Use $geppetto-memory to read the website-tools bucket index and follow the relevant website guide or maintenance procedure."

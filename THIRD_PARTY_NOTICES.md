@@ -2,7 +2,7 @@
 
 ## Website Creator design references
 
-`website-creator` adapts Anthropic's Frontend Design and Peter Bakāus's Impeccable under Apache License 2.0. [Source revisions and contributions](skills/website-creator/references/design-sources.md) and the [license](skills/website-creator/licenses/apache-2.0.txt) accompany the skill. Tutorial authors and timestamps are identified in its video catalog and visual atlas; their media retain their authors' rights. Resource links carry their own licensing conditions.
+The former `website-creator` collection has moved to the Geppetto [website-tools bucket](https://github.com/immagiov4/llm-memories/tree/main/buckets/website-tools). Its [provenance and licenses](https://github.com/immagiov4/llm-memories/blob/main/buckets/website-tools/NOTICE.md) retain the Apache-2.0 adaptations, source revisions, tutorial attribution and media-rights distinctions. This repository retains a routing skill; the original collection remains available in Git history.
 
 Several skills are adapted from public MIT-licensed projects. Their instructions have been edited for Codex and for this collection's workflow. The original authors do not endorse these adaptations.
 
