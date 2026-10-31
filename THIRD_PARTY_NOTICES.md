@@ -26,6 +26,8 @@ Copyright 2026 Matt Pocock. MIT License. See [`licenses/MATTPOCOCK-MIT.txt`](lic
 
 The local collection includes adapted engineering and writing workflows from this project, including `codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grill-with-docs`, `grilling`, `handoff`, `prototype`, `research`, `retro`, `setup-matt-pocock-skills`, `tdd`, `teach`, `to-spec`, `to-tickets`, `wayfinder`, `wizard`, and `writing-for-agents`.
 
+`write-pr` additionally adapts the [engineering/pr skill](https://github.com/mattpocock/skills/blob/main/skills/engineering/pr/SKILL.md), retrieved 2026-10-31. Upstream credits Dex Horthy / Humanlayer [show-me](https://github.com/humanlayer/skills/blob/main/plugins/show-me/skills/show-me/SKILL.md). Its MIT notice is retained at `skills/write-pr/LICENSE`.
+
 ## Qwen Code
 
 Source: [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code), Apache License 2.0.
