@@ -41,6 +41,8 @@ Pull the repository and run the install script again. For plugin installations, 
 
 ## Contents
 
+`write-pr` drafts concise, evidence-backed PR descriptions when no maintainer-selected procedure owns the task. It preserves project formats and validators, uses comparisons when useful, and explains material reversibility and affected scope.
+
 The website design collection has moved to the Geppetto [website-tools memory bucket](https://github.com/immagiov4/llm-memories/tree/main/buckets/website-tools). The `website-creator` skill routes existing invocations to that bucket; recipes, sources, licenses and weekly maintenance live there.
 
 The optional [Luanti memory hook](hooks/luanti-memory/README.md) connects Codex to a chosen knowledge checkout. Its setup includes the checkout path and hook trust review.
