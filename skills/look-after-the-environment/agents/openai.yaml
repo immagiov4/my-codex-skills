@@ -1,0 +1,3 @@
+interface:
+  display_name: "Look After the Environment"
+  short_description: "Riusa le dipendenze e ripulisci dopo le prove"

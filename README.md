@@ -41,6 +41,8 @@ Pull the repository and run the install script again. For plugin installations, 
 
 ## Contents
 
+[`look-after-the-environment`](skills/look-after-the-environment/SKILL.md) reuses compatible development tools and owns task cleanup. Its Windows procedure enables Git long paths before worktree removal and provides a tested same-volume archiving helper when archiving is authorized. It keeps deletion and disk-space recovery distinct from moving files and reports refused deletion as blocked.
+
 `write-pr` drafts concise, evidence-backed PR descriptions when no maintainer-selected procedure owns the task. It preserves project formats and validators, uses comparisons when useful, and explains material reversibility and affected scope.
 
 The website design collection has moved to the Geppetto [website-tools memory bucket](https://github.com/immagiov4/llm-memories/tree/main/buckets/website-tools). The `website-creator` skill routes existing invocations to that bucket; recipes, sources, licenses and weekly maintenance live there.
