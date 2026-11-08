@@ -41,7 +41,7 @@ Pull the repository and run the install script again. For plugin installations, 
 
 ## Contents
 
-[`look-after-the-environment`](skills/look-after-the-environment/SKILL.md) reuses compatible development tools and owns task cleanup. Its Windows procedure enables Git long paths before worktree removal and provides a tested same-volume archiving helper when archiving is authorized. It keeps deletion and disk-space recovery distinct from moving files and reports refused deletion as blocked.
+[`look-after-the-environment`](skills/look-after-the-environment/SKILL.md) reuses compatible development tools and owns task cleanup. Its Windows procedure enables Git long paths before worktree removal and provides a tested same-volume archiving helper when archiving is authorized. It keeps deletion and disk-space recovery distinct from moving files and reports refused deletion as blocked. On Windows, the maintainer can explicitly approve permanent disposal of an archived directory in a desktop window with an activity indicator.
 
 `write-pr` drafts concise, evidence-backed PR descriptions when no maintainer-selected procedure owns the task. It preserves project formats and validators, uses comparisons when useful, and explains material reversibility and affected scope.
 

@@ -36,3 +36,13 @@ Inspect the resolved target, then run the same command with `-Execute` within th
 The agent executes the authorized operation and verifies its actual result. Keep execution in the normal tool approval channel: a script location or launch queue does not grant permission to run rejected operations. If the requested operation is refused, preserve the data and report that specific operation as pending, without substituting an archive or assigning the maintainer a one-off script as a completed cleanup.
 
 Recoverable archiving is complete only after the active target directory and its Git worktree registration are absent, recovery storage contains the tree, and preserved neighbors remain intact. Deletion or space-reclamation requests retain their own completion criteria. When changing the helper, run [its Windows behavior tests](scripts/test-retire-directory.ps1) with `-TestRoot <external-test-directory>`; they exercise preview, invalid scope, junctions, long paths, actual restoration and repeat execution using disposable fixtures.
+
+### Desktop approval for permanent disposal
+
+For a task-owned directory already in Codex's worktree recovery store, use the [desktop approval window](scripts/request-deletion.py) when the maintainer requests interactive disposal. Recheck ownership, running consumers, and whether the contents are still needed. On Windows, launch Python 3.11 or later with Tk in the maintainer's graphical session. The target must be a direct child of `worktree-recovery` under `CODEX_HOME` (default `~/.codex`):
+
+```powershell
+python <skill>/scripts/request-deletion.py <absolute-recovery-directory> --reason "<why this directory can be deleted>"
+```
+
+The window shows the exact path and requires the maintainer to click **Approva** to delete it permanently. **Rifiuta** or closing the window before approval leaves the directory in place. After approval, an animated progress indicator stays visible until the operation finishes. The agent must never press the approval button for a real request. Report a pending decision while the window is open. On completion, read the outcome and verify the path is absent before reporting deletion. If an error occurs, check what remains and require a fresh request before retrying. This is a separate human-initiated action and does not change Codex's own command approval policy.
