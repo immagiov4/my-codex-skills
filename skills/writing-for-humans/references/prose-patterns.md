@@ -53,7 +53,7 @@ words, established terminology and substantive conditions.
 ### Plain speech
 
 27. **Vague benefits.** In factual prose, explain the supported behavior or consequence: "`.toSQL()` returns the exact string sent to the database" or "a column rename fails the build". Keep interpretation, reader context, and required standard wording when they serve the document; make project-specific claims specific.
-28. **Mechanical fragmentation.** Repeated standalone sentences can obscure a shared reason, condition, or consequence. Connect the thought naturally, preserving the reader's level; simplify overloaded syntax where it forces backtracking. Do not alternate sentence lengths by formula.
+28. **Mechanical fragmentation.** Individually clear sentences can hide a close logical relationship between them. Apply [Write the prose](../SKILL.md#5-write-the-prose): express the relationship through lean, connected syntax, retaining sentence boundaries where they serve the thought. Check comprehension rather than a sentence-length formula.
 29. **Voice and agency.** Prefer active voice when it clarifies who acts: "the compiler validates queries" names the actor. Preserve passive constructions that fit the genre, authorial voice, or intended emphasis.
 30. **Unsupported intensifiers.** Replace "significantly improves" with a supported effect or measured difference. Keep adverbs that specify a real degree, time, frequency, or condition.
 31. **Prefer the plain word.** "utilize" becomes "use", "leverage" becomes "use", "facilitate" becomes "help", "numerous" becomes "many", "in the event that" becomes "if". The fancier synonym is rarely clearer.

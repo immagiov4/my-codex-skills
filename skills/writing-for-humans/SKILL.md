@@ -18,7 +18,7 @@ Each text answers one question. Name it in a sentence before drafting: "what is 
 
 When "what it is" is small, what and how can share one short text. When "what it is" already needs a page, keep how-it-works out and link to it. A long manual is a set of such texts joined by chapters and an index; each chapter still answers one question.
 
-Zoom is recursive. A reader at a deeper document has read the levels above it: use what those levels established without repeating it. The same rules then apply inside each section and each entry.
+Zoom is recursive. Use what higher levels established when the brief or reading route makes that prior knowledge reliable; a direct entry may need a short local introduction. The same rules then apply inside each section and each entry.
 
 ## 2. Reader card
 
@@ -34,6 +34,8 @@ Everything in the text serves this card. A true, well-written paragraph the card
 ## 3. Reading path
 
 For explanatory text, first sketch the reasoning in working notes: what this reader is trying to understand, what they know at the starting point, and how the explanation takes them to an answer. Select facts for their role in that reasoning. A sequence of topics or component names is still an inventory; build the relationships before drafting. Use the worked example in [documentation](references/documentation.md#build-an-explanation) when a technical explanation starts to read like an inventory.
+
+Order the explanation by prerequisites. At the first meaningful use of an unfamiliar element, establish what it is or does and why it enters this explanation, before asking the reader to reason about it. An apposition may be enough for a simple object; a mechanism may need a worked explanation. Use only the reader's established knowledge and what the text has already explained or explains in that local passage. A name, link, later definition or fact known from the author's conversation does not supply a missing introduction. If an element needs too much background where it appears, move it to where its purpose and prerequisites can be understood instead of inserting a premature digression.
 
 People read like foragers: they keep going while each step promises more value for little effort, and leave as soon as that promise fades. Lay the text out as a path that keeps the promise fresh:
 
@@ -63,6 +65,8 @@ Write each plain-text or Markdown prose paragraph on one physical line and let t
 
 An explanatory paragraph must carry a thought forward: start from something the reader can place, develop the mechanism or reason, and reach a useful consequence. At a topic change, establish why the next subject is needed to continue the answer. If a fact has no such role, remove it or put it in a genuine lookup section. Adding connective words to unrelated facts does not establish that role. Preserve discrete steps in procedures and facts in reference lists. Read the explanation back as a reader: can you explain its answer from the text, including why its parts follow? Choose familiar, precise words, one name per concept, and clear actors. Preserve product, skill and interface names in their established form. Preserve attribution, quantities, dates, negation, substantive exceptions and the difference between observed behaviour and plans, and match factual claims to evidence actually checked. Use [prose patterns](references/prose-patterns.md) when drafting or polishing more than a brief reply.
 
+When adjacent sentences share a close causal, conditional, explanatory or other logical relationship, express that relationship in their grammar. Prefer one integrated sentence when it carries the thought more naturally: remove repeated subjects and unnecessary wording rather than just joining the original sentences into a longer one. Keep a sentence boundary when the thought changes or the syntax needs relief, retaining a clear bridge where the reasoning continues. Sentence length is not the goal, and proximity alone is not evidence of causation.
+
 ## Genre guidance
 
 Read only the references the deliverable calls for:
@@ -79,6 +83,8 @@ Instructions an agent executes belong to `writing-for-agents`; apply this skill 
 ## Check and review
 
 Reread the draft as the reader on the card. Check: the question is answerable from the opening; every section moves along the path; each sentence either changes what this reader understands or decides, or it goes (into details, a link, or nowhere). How the work was done in the session (commands, restarts, attempts) almost never passes. When the user identifies a recurring defect, check every affected part, not only the quoted one.
+
+Read in order, checking the first introduction and the transition across each sentence boundary without borrowing explanations from later passages. Repair missing prerequisites and broken connections, then inspect the revised passage with its surroundings for both comprehension and preserved meaning. A repair is complete when the resulting text supplies the introduction or relationship; having the rule in the prompt or reporting that it was checked is not evidence.
 
 Private responses and documents only for the requester use this reread. For material published or read beyond the requester, a substantive draft or rewrite, or a requested correction across a document, also requires an independent reviewer following [independent review](references/independent-review.md); a typo or a routine short reply needs only the local check.
 
