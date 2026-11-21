@@ -75,8 +75,8 @@ function liveRefs(repo) {
 }
 
 export function readWorktrees(porcelain) {
-  return porcelain.split('\0\0').filter(Boolean).map(block =>
-    Object.fromEntries(block.split('\0').filter(Boolean).map(line => {
+  return porcelain.split(/\r?\n\r?\n/).filter(Boolean).map(block =>
+    Object.fromEntries(block.split(/\r?\n/).filter(Boolean).map(line => {
       const space = line.indexOf(' ');
       return space < 0 ? [line, true] : [line.slice(0, space), line.slice(space + 1)];
     })));
@@ -103,9 +103,9 @@ export function inventory(config) {
   const queried = new Set();
   for (const repo of repositories.values()) {
     try {
-      const common = key(git(repo, 'rev-parse', '--path-format=absolute', '--git-common-dir'));
+      const trees = readWorktrees(git(repo, '-c', 'core.quotepath=false', 'worktree', 'list', '--porcelain'));
+      const common = key(trees[0].worktree);
       if (queried.has(common)) continue;
-      const trees = readWorktrees(git(repo, 'worktree', 'list', '--porcelain', '-z'));
       queried.add(common);
       for (const [index, tree] of trees.entries()) {
         if (index === 0) continue;
