@@ -1,6 +1,6 @@
 ---
 name: look-after-the-environment
-description: Reuse compatible tools, dependencies, browsers and test data before installing them, and clean up temporary test artifacts and worktrees after verification or before publishing. Use when preparing a test environment, installing a dependency, or closing out work that created temporary files.
+description: Reuse compatible tools, dependencies, browsers and test data before installing them. Clean up temporary artifacts and worktrees, or present named Windows directories for the maintainer's explicit deletion approval.
 ---
 
 ## Before installing
@@ -18,6 +18,16 @@ Keep temporary work in one task directory and separate inputs from generated out
 Before publication and again after verification, account for what the task created. Keep the evidence needed for an open review or for a reproducible test. Remove task-owned outputs, scratch dependencies and temporary worktrees as soon as their purpose ends. Verify the intended publication payload and the cleanup.
 
 When you find older leftovers, establish ownership and check for running consumers, Git changes and unique commits, open reviews, and test inputs or evidence that still matter. Remove confirmed disposable material within the user's authorization. Preserve recoverable local work before removing a checkout, and verify the resolved destination before a recursive operation. Keep shared caches and reusable test data under their existing owner.
+
+### Worktrees whose work is already published
+
+Harness-created worktrees outlive their task. The [worktree pruner](scripts/prune-worktrees.mjs) removes only linked worktrees under one root that are idle, clean, unlocked, unused by any process, and whose `HEAD` is on a remote or equals a merged pull request's head; everything else is kept with its reason. It is a dry run unless `--execute` is passed and appends one JSON line per worktree to `~/.look-after-the-environment/prune-worktrees.log`:
+
+```sh
+node <skill>/scripts/prune-worktrees.mjs --repo <main checkout> --root <worktrees dir> [--min-idle-days 3] [--execute]
+```
+
+The maintainer authorized it to run weekly and unattended for the T3 worktree roots (2026-11-21), through a hidden scheduled task. Add a repository to that task's launcher instead of removing worktrees by hand. Report kept worktrees with uncommitted changes or unpublished commits to the maintainer; they are never removed automatically.
 
 ### Windows worktrees and residual directories
 
@@ -39,10 +49,10 @@ Recoverable archiving is complete only after the active target directory and its
 
 ### Desktop approval for permanent disposal
 
-For a task-owned directory already in Codex's worktree recovery store, use the [desktop approval window](scripts/request-deletion.py) when the maintainer requests interactive disposal. Recheck ownership, running consumers, and whether the contents are still needed. On Windows, launch Python 3.11 or later with Tk in the maintainer's graphical session. The target must be a direct child of `worktree-recovery` under `CODEX_HOME` (default `~/.codex`):
+When the maintainer requests interactive disposal, use the [desktop approval window](scripts/request-deletion.py) to show one or more explicitly named Windows directories. Recheck ownership, running consumers, and whether the contents are still needed. Pass each absolute directory path as a separate argument in the maintainer's graphical session, using Python 3.11 or later with Tk.
 
 ```powershell
-python <skill>/scripts/request-deletion.py <absolute-recovery-directory> --reason "<why this directory can be deleted>"
+python <skill>/scripts/request-deletion.py "C:\absolute\task\cache" "D:\absolute\task\scratch" --reason "<why these directories can be deleted>"
 ```
 
-The window shows the exact path and requires the maintainer to click **Approva** to delete it permanently. **Rifiuta** or closing the window before approval leaves the directory in place. After approval, an animated progress indicator stays visible until the operation finishes. The agent must never press the approval button for a real request. Report a pending decision while the window is open. On completion, read the outcome and verify the path is absent before reporting deletion. If an error occurs, check what remains and require a fresh request before retrying. This is a separate human-initiated action and does not change Codex's own command approval policy.
+The window lists the exact resolved paths. **Approva** applies to the entire list and shows progress during permanent deletion. **Rifiuta** or closing the window before approval leaves the directories in place. The maintainer presses the approval button for a real request. Report a pending decision while the window is open. After it closes, verify the presence or absence of each path before reporting the outcome. If an error occurs, check what remains and require a fresh request before retrying. Use the applicable tool approval channel for execution. This separate desktop decision cannot override an execution refusal.
