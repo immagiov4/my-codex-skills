@@ -27,7 +27,9 @@ Harness-created worktrees outlive their task. The [worktree pruner](scripts/prun
 node <skill>/scripts/prune-worktrees.mjs --repo <main checkout> --root <worktrees dir> [--min-idle-days 3] [--execute]
 ```
 
-The maintainer authorized it to run weekly and unattended for the T3 worktree roots (2026-11-21), through a hidden scheduled task. Add a repository to that task's launcher instead of removing worktrees by hand. Report kept worktrees with uncommitted changes or unpublished commits to the maintainer; they are never removed automatically.
+For the weekly Windows inventory, run the same entry point with `--config <json>`. The JSON next to the launcher defines `repositoryRoots`, `worktreeRoots`, `leftoverRoots`, optional `containerDepth` by root, and `minIdleDays` (at least 1.5). The task writes `worktree-inventory.json` next to the configuration unless `output` selects another destination. Repository discovery includes nested repositories and linked worktrees. Discovery skips dependency directories and does not follow directory links.
+
+Review missing paths, unreadable directories, ignored files and possible process references before proposing an exact deletion list. File sizes are logical bytes. A hard-linked file may occupy space shared with another checkout. Process command lines and executable paths can reveal active consumers, but do not expose every current directory or open handle. Residual directories are inventoried for manual review because their Git, data and reference checks differ from registered worktrees. Configuration mode never deletes. Run the weekly task in this mode while candidate deletion requires separate approval.
 
 ### Windows worktrees and residual directories
 

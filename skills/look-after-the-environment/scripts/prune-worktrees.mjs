@@ -8,9 +8,15 @@ import { execFileSync, spawnSync } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, statSync, readFileSync } from 'node:fs';
 import { dirname, resolve, sep } from 'node:path';
 import { homedir } from 'node:os';
+import { writeInventory } from './worktree-inventory.mjs';
 
 const args = process.argv.slice(2);
 const opt = name => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : undefined; };
+if (args.includes('--config')) {
+  if (args.includes('--execute')) throw new Error('Config mode is inventory only');
+  writeInventory(opt('--config'));
+  process.exit(0);
+}
 const repo = opt('--repo'), root = opt('--root');
 if (!repo || !root) { console.error('Usage: prune-worktrees.mjs --repo <main checkout> --root <worktrees dir> [--min-idle-days 3] [--execute] [--log <file>]'); process.exit(2); }
 const minIdleDays = Number(opt('--min-idle-days') ?? 3), execute = args.includes('--execute');
