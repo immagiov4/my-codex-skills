@@ -162,18 +162,18 @@ export function inventory(config) {
     results.push(row);
   }
   for (const root of config.worktreeRoots) {
-    for (const depth of [config.containerDepth?.[root] ?? 1]) {
-      function collect(path, remaining) {
-        if (registered.has(key(path))) return;
-        if (remaining === 0) { if (!repositories.has(key(path))) leftovers.set(key(path), path); return; }
-        try {
-          for (const entry of readdirSync(path, { withFileTypes: true })) {
-            if (entry.isDirectory()) collect(join(path, entry.name), remaining - 1);
-          }
-        } catch (error) { errors.push({ path, error: error.message }); }
-      }
-      collect(root, depth);
+    function collect(path, remaining) {
+      if (registered.has(key(path)) || repositories.has(key(path))) return;
+      try {
+        const children = readdirSync(path, { withFileTypes: true }).filter(entry => entry.isDirectory());
+        if (path !== root && (remaining <= 0 || children.length === 0)) {
+          leftovers.set(key(path), path);
+          return;
+        }
+        for (const child of children) collect(join(path, child.name), remaining - 1);
+      } catch (error) { errors.push({ path, error: error.message }); }
     }
+    collect(root, config.containerDepth?.[root] ?? 1);
   }
   for (const [pathKey, path] of leftovers) {
     if (registered.has(pathKey)) continue;
