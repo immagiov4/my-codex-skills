@@ -20,7 +20,7 @@ export function discover(roots, errors) {
   const seen = new Set();
   function walk(path) {
     try {
-      const canonical = realpathSync(path);
+      const canonical = path;
       if (seen.has(key(canonical))) return;
       seen.add(key(canonical));
       const entries = readdirSync(canonical, { withFileTypes: true });
@@ -33,7 +33,10 @@ export function discover(roots, errors) {
       }
     } catch (error) { errors.push({ path, error: error.message }); }
   }
-  for (const root of roots) walk(root);
+  for (const root of roots) {
+    try { walk(realpathSync.native(root)); }
+    catch (error) { errors.push({ path: root, error: error.message }); }
+  }
   return { repositories, leftovers };
 }
 
